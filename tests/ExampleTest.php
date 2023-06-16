@@ -1,6 +1,6 @@
 <?php
 
-namespace Spotify\Spotify\Tests;
+namespace Tests;
 
 use PHPUnit\Framework\TestCase;
 
