@@ -31,7 +31,7 @@ class Arr
 
     public static function get(array $array, array|string|null $key, mixed $default = null): mixed
     {
-        if (!self::accessible($array)) {
+        if (! self::accessible($array)) {
             return $default;
         }
 
@@ -43,7 +43,7 @@ class Arr
             return $array[$key];
         }
 
-        if (!str_contains($key, '.')) {
+        if (! str_contains($key, '.')) {
             return $array[$key] ?? $default;
         }
 

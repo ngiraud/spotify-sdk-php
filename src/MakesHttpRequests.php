@@ -44,7 +44,7 @@ trait MakesHttpRequests
             empty($payload) ? [] : [$verb === 'GET' ? 'query' : 'form_params' => $payload]
         );
 
-        if (!$this->isSuccessful($response)) {
+        if (! $this->isSuccessful($response)) {
             $this->handleRequestError($response);
 
             return null;
@@ -57,7 +57,7 @@ trait MakesHttpRequests
 
     public function isSuccessful($response): bool
     {
-        if (!$response) {
+        if (! $response) {
             return false;
         }
 
