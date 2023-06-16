@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Spotify\Spotify\Tests;
 
 use PHPUnit\Framework\TestCase;
 
