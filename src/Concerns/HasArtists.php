@@ -22,7 +22,6 @@ trait HasArtists
      * Doc: https://developer.spotify.com/documentation/web-api/reference/get-multiple-artists
      *
      * @param  array<string>  $ids
-     *
      * @return array<Artist>
      */
     public function artists(array $ids): array
@@ -34,7 +33,7 @@ trait HasArtists
         }
 
         return array_values(array_map(
-            fn($artist) => new Artist($artist),
+            fn ($artist) => new Artist($artist),
             $results['artists']
         ));
     }

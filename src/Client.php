@@ -4,7 +4,6 @@ namespace Spotify;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\ClientInterface;
-use Spotify\Concerns;
 
 class Client
 {
