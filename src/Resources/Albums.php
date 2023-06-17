@@ -13,6 +13,7 @@ class Albums extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-an-album
      *
      * @param  string|array<string>  $id
+     * @param  array  $payload
      *
      * @return Album|PaginatedResults<Album>
      */
@@ -29,6 +30,7 @@ class Albums extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-multiple-albums
      *
      * @param  array<string>  $ids
+     * @param  array  $payload
      *
      * @return PaginatedResults<Album>
      */
@@ -58,6 +60,8 @@ class Albums extends SpotifyResource
 
     /**
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-albums
+     *
+     * @param  array  $payload
      *
      * @return PaginatedResults<SavedAlbum>
      */
