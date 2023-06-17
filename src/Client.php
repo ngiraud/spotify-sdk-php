@@ -6,6 +6,7 @@ use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\ClientInterface;
 use Spotify\Resources\Albums;
 use Spotify\Resources\Artists;
+use Spotify\Resources\Tracks;
 
 class Client
 {
@@ -51,5 +52,10 @@ class Client
     public function albums(): Albums
     {
         return new Albums($this);
+    }
+
+    public function tracks(): Tracks
+    {
+        return new Tracks($this);
     }
 }

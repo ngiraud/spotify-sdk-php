@@ -118,9 +118,7 @@ class Albums extends SpotifyResource
      */
     public function checkSaved(string|array $ids): mixed
     {
-        $ids = (array) $ids;
-
-        return $this->client->get('me/albums/contains', ['ids' => implode(',', $ids)]);
+        return $this->client->get('me/albums/contains', ['ids' => implode(',', (array) $ids)]);
     }
 
     /**
@@ -128,7 +126,7 @@ class Albums extends SpotifyResource
      *
      * @param  array  $payload
      *
-     * @return PaginatedResults<SavedAlbum>
+     * @return PaginatedResults<Album>
      */
     public function newReleases(array $payload = []): PaginatedResults
     {
