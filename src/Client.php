@@ -7,6 +7,8 @@ use GuzzleHttp\ClientInterface;
 use Spotify\Resources\Albums;
 use Spotify\Resources\Artists;
 use Spotify\Resources\Categories;
+use Spotify\Resources\Genres;
+use Spotify\Resources\Markets;
 use Spotify\Resources\Tracks;
 
 class Client
@@ -63,5 +65,15 @@ class Client
     public function categories(): Categories
     {
         return new Categories($this);
+    }
+
+    public function genres(): Genres
+    {
+        return new Genres($this);
+    }
+
+    public function markets(): Markets
+    {
+        return new Markets($this);
     }
 }
