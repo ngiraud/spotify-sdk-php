@@ -4,12 +4,12 @@ namespace Spotify;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\ClientInterface;
+use Spotify\Resources\Albums;
+use Spotify\Resources\Artists;
 
 class Client
 {
     use MakesHttpRequests;
-    use Concerns\HasSearch;
-    use Concerns\HasArtists;
 
     protected string $endpoint = 'https://api.spotify.com/v1';
 
@@ -41,5 +41,15 @@ class Client
     public function client(): ?ClientInterface
     {
         return $this->client;
+    }
+
+    public function artists(): Artists
+    {
+        return new Artists($this);
+    }
+
+    public function albums(): Albums
+    {
+        return new Albums($this);
     }
 }

@@ -16,22 +16,25 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         string $mappingClass,
         Client $client,
         array $payload = [],
-        string $itemsKey = 'items'
+        string $itemsKey = 'items',
+        ?string $entryKey = null
     ): self {
         $response = $client->get($endpoint, $payload);
 
         $results = array_map(
-            fn ($attributes) => new $mappingClass($attributes),
-            Arr::get($response, $itemsKey),
+            fn($attributes) => new $mappingClass($attributes),
+            Arr::get(Arr::get($response, $entryKey), $itemsKey),
         );
 
         return new self(
             $results,
-            Arr::only($response, ['next', 'previous']),
-            Arr::only($response, ['href', 'limit', 'offset', 'total']),
+            Arr::only(Arr::get($response, $entryKey), ['next', 'previous']),
+            Arr::only(Arr::get($response, $entryKey), ['href', 'limit', 'offset', 'total']),
             $client,
             $mappingClass,
-            $payload
+            $payload,
+            $itemsKey,
+            $entryKey
         );
     }
 
@@ -42,7 +45,8 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         protected Client $client,
         protected string $mappingClass,
         protected array $payload = [],
-        protected string $itemsKey = 'items'
+        protected string $itemsKey = 'items',
+        protected ?string $entryKey = null
     ) {
     }
 
@@ -51,19 +55,24 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         return $this->results;
     }
 
+    public function links(): array
+    {
+        return $this->links;
+    }
+
     public function previousUrl(): ?string
     {
-        return $this->links['previous'];
+        return Arr::get($this->links, 'previous');
     }
 
     public function nextUrl(): ?string
     {
-        return $this->links['next'];
+        return Arr::get($this->links, 'next');
     }
 
     public function previous(): ?self
     {
-        if (! $previousUrl = $this->previousUrl()) {
+        if (!$previousUrl = $this->previousUrl()) {
             return null;
         }
 
@@ -72,12 +81,13 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
             mappingClass: $this->mappingClass,
             client: $this->client,
             itemsKey: $this->itemsKey,
+            entryKey: $this->entryKey
         );
     }
 
     public function next(): ?self
     {
-        if (! $nextUrl = $this->nextUrl()) {
+        if (!$nextUrl = $this->nextUrl()) {
             return null;
         }
 
@@ -86,6 +96,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
             mappingClass: $this->mappingClass,
             client: $this->client,
             itemsKey: $this->itemsKey,
+            entryKey: $this->entryKey
         );
     }
 
@@ -96,7 +107,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
 
     public function total(): int
     {
-        return $this->meta['total'];
+        return Arr::get($this->meta, 'total');
     }
 
     public function offsetExists(mixed $offset): bool

@@ -1,6 +1,6 @@
 <?php
 
-namespace Spotify\Resources;
+namespace Spotify\SingleObjects;
 
 class Album extends ApiResource
 {

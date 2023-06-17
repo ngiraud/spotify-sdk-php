@@ -1,6 +1,6 @@
 <?php
 
-namespace Spotify\Resources;
+namespace Spotify\SingleObjects;
 
 #[\AllowDynamicProperties]
 class ApiResource
@@ -27,7 +27,6 @@ class ApiResource
     {
         $publicProperties = get_object_vars($this);
         unset($publicProperties['attributes']);
-        unset($publicProperties['mailcoach']);
 
         $properties = [];
 

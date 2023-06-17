@@ -11,40 +11,42 @@ use Spotify\Exceptions\UnauthorizedException;
 
 trait MakesHttpRequests
 {
-    public function get(string $uri, array $payload = [])
+    public function get(string $uri, array $payload = []): mixed
     {
         return $this->request('GET', $uri, $payload);
     }
 
-    public function post(string $uri, array $payload = [])
+    public function post(string $uri, array $payload = []): mixed
     {
         return $this->request('POST', $uri, $payload);
     }
 
-    public function put(string $uri, array $payload = [])
+    public function put(string $uri, array $payload = []): mixed
     {
         return $this->request('PUT', $uri, $payload);
     }
 
-    public function patch(string $uri, array $payload = [])
+    public function patch(string $uri, array $payload = []): mixed
     {
         return $this->request('PATCH', $uri, $payload);
     }
 
-    public function delete(string $uri, array $payload = [])
+    public function delete(string $uri, array $payload = []): mixed
     {
         return $this->request('DELETE', $uri, $payload);
     }
 
     public function request(string $verb, string $uri, array $payload = []): mixed
     {
+        $verb = strtoupper($verb);
+
         $response = $this->client->request(
             $verb,
             $uri,
-            empty($payload) ? [] : [$verb === 'GET' ? 'query' : 'form_params' => $payload]
+            empty($payload) ? [] : [($verb === 'GET' ? 'query' : 'form_params') => $payload]
         );
 
-        if (! $this->isSuccessful($response)) {
+        if (!$this->isSuccessful($response)) {
             $this->handleRequestError($response);
 
             return null;
@@ -57,26 +59,11 @@ trait MakesHttpRequests
 
     public function isSuccessful($response): bool
     {
-        if (! $response) {
+        if (!$response) {
             return false;
         }
 
         return (int) substr($response->getStatusCode(), 0, 1) === 2;
-    }
-
-    protected function buildFilterString(array $filters): string
-    {
-        if (count($filters) === 0) {
-            return '';
-        }
-
-        $preparedFilters = [];
-
-        foreach ($filters as $name => $value) {
-            $preparedFilters["filter[{$name}]"] = $value;
-        }
-
-        return '?'.http_build_query($preparedFilters);
     }
 
     protected function handleRequestError(ResponseInterface $response): void
