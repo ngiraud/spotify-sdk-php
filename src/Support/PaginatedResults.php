@@ -22,7 +22,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         $response = $client->get($endpoint, $payload);
 
         $results = array_map(
-            fn($attributes) => new $mappingClass($attributes),
+            fn ($attributes) => new $mappingClass($attributes),
             Arr::get(Arr::get($response, $entryKey), $itemsKey),
         );
 
@@ -72,7 +72,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
 
     public function previous(): ?self
     {
-        if (!$previousUrl = $this->previousUrl()) {
+        if (! $previousUrl = $this->previousUrl()) {
             return null;
         }
 
@@ -87,7 +87,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
 
     public function next(): ?self
     {
-        if (!$nextUrl = $this->nextUrl()) {
+        if (! $nextUrl = $this->nextUrl()) {
             return null;
         }
 

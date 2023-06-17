@@ -18,8 +18,6 @@ class Categories extends SpotifyResource
     /**
      * @see https://developer.spotify.com/documentation/web-api/reference/get-categories
      *
-     * @param  array  $payload
-     *
      * @return PaginatedResults<Category>
      */
     public function browse(array $payload = []): PaginatedResults

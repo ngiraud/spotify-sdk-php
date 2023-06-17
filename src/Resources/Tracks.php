@@ -15,8 +15,6 @@ class Tracks extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-track
      *
      * @param  string|array<string>  $id
-     * @param  array  $payload
-     *
      * @return Track|PaginatedResults<Track>
      */
     public function find(string|array $id, array $payload): Track|PaginatedResults
@@ -32,8 +30,6 @@ class Tracks extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-several-tracks
      *
      * @param  array<string>  $ids
-     * @param  array  $payload
-     *
      * @return PaginatedResults<Track>
      */
     public function findMultiple(array $ids, array $payload): PaginatedResults
@@ -49,8 +45,6 @@ class Tracks extends SpotifyResource
 
     /**
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-tracks
-     *
-     * @param  array  $payload
      *
      * @return PaginatedResults<SavedTrack>
      */
@@ -114,7 +108,6 @@ class Tracks extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-audio-features
      *
      * @param  string|array<string>  $id
-     *
      * @return AudioFeature|PaginatedResults<Track>
      */
     public function audioFeature(string|array $id): AudioFeature|PaginatedResults
@@ -128,8 +121,6 @@ class Tracks extends SpotifyResource
 
     /**
      * @see https://developer.spotify.com/documentation/web-api/reference/get-several-audio-features
-     *
-     * @param  string|array  $ids
      *
      * @return PaginatedResults<AudioFeature>
      */
@@ -154,8 +145,6 @@ class Tracks extends SpotifyResource
 
     /**
      * @see https://developer.spotify.com/documentation/web-api/reference/get-recommendations
-     *
-     * @param  array  $payload
      *
      * @return PaginatedResults<SavedAlbum>
      */
