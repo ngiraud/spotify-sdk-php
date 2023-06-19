@@ -36,20 +36,18 @@ trait MakesHttpRequests
         return $this->request('DELETE', $uri, $payload);
     }
 
-    public function request(string $verb, string $uri, array $payload = []): mixed
+    public function request(string $verb, string $uri, mixed $payload = [], string $payloadType = 'json'): mixed
     {
         $verb = strtoupper($verb);
 
         $response = $this->client->request(
             $verb,
             $uri,
-            empty($payload) ? [] : [($verb === 'GET' ? 'query' : 'form_params') => $payload]
+            empty($payload) ? [] : [($verb === 'GET' ? 'query' : $payloadType) => $payload]
         );
 
         if (! $this->isSuccessful($response)) {
             $this->handleRequestError($response);
-
-            return null;
         }
 
         $responseBody = (string) $response->getBody();
@@ -59,10 +57,6 @@ trait MakesHttpRequests
 
     public function isSuccessful(ResponseInterface $response): bool
     {
-        if (! $response) {
-            return false;
-        }
-
         return (int) substr($response->getStatusCode(), 0, 1) === 2;
     }
 

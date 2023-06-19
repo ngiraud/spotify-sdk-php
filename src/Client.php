@@ -11,6 +11,7 @@ use Spotify\Resources\Categories;
 use Spotify\Resources\Episodes;
 use Spotify\Resources\Genres;
 use Spotify\Resources\Markets;
+use Spotify\Resources\Playlists;
 use Spotify\Resources\Shows;
 use Spotify\Resources\Tracks;
 use Spotify\Resources\Users;
@@ -99,5 +100,10 @@ class Client
     public function users(): Users
     {
         return new Users($this);
+    }
+
+    public function playlists(): Playlists
+    {
+        return new Playlists($this);
     }
 }
