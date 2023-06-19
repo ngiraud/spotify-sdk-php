@@ -15,6 +15,7 @@ use Spotify\Resources\Playlists;
 use Spotify\Resources\Shows;
 use Spotify\Resources\Tracks;
 use Spotify\Resources\Users;
+use Spotify\SingleObjects\Search;
 
 class Client
 {
@@ -50,6 +51,16 @@ class Client
     public function client(): ?ClientInterface
     {
         return $this->client;
+    }
+
+    /**
+     * @see https://developer.spotify.com/documentation/web-api/reference/search
+     */
+    public function search(string $q, string|array $type, array $payload = []): Search
+    {
+        return new Search(
+            $this->get('search', ['q' => $q, 'type' => implode(',', (array) $type), ...$payload])
+        );
     }
 
     public function artists(): Artists
