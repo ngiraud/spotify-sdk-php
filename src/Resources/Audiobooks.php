@@ -76,11 +76,7 @@ class Audiobooks extends SpotifyResource
      */
     public function save(string|array $ids): mixed
     {
-        $ids = (array) $ids;
-
-        return $this->client->put(
-            sprintf('me/audiobooks?ids=%s', implode(',', array_slice($ids, 0, 20)))
-        );
+        return $this->client->put(sprintf('me/audiobooks?ids=%s', implode(',', (array) $ids)));
     }
 
     /**
@@ -90,11 +86,7 @@ class Audiobooks extends SpotifyResource
      */
     public function deleteSaved(string|array $ids): mixed
     {
-        $ids = (array) $ids;
-
-        return $this->client->delete(
-            sprintf('me/audiobooks?ids=%s', implode(',', array_slice($ids, 0, 20)))
-        );
+        return $this->client->delete(sprintf('me/audiobooks?ids=%s', implode(',', (array) $ids)));
     }
 
     /**

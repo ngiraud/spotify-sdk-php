@@ -8,8 +8,10 @@ use Spotify\Resources\Albums;
 use Spotify\Resources\Artists;
 use Spotify\Resources\Audiobooks;
 use Spotify\Resources\Categories;
+use Spotify\Resources\Episodes;
 use Spotify\Resources\Genres;
 use Spotify\Resources\Markets;
+use Spotify\Resources\Shows;
 use Spotify\Resources\Tracks;
 
 class Client
@@ -81,5 +83,15 @@ class Client
     public function audiobooks(): Audiobooks
     {
         return new Audiobooks($this);
+    }
+
+    public function episodes(): Episodes
+    {
+        return new Episodes($this);
+    }
+
+    public function shows(): Shows
+    {
+        return new Shows($this);
     }
 }

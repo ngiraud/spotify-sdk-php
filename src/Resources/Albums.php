@@ -70,37 +70,23 @@ class Albums extends SpotifyResource
     }
 
     /**
-     * IDs passed in the body seems not to be saved, even with the "Try it" from the docs.
-     *
      * @see https://developer.spotify.com/documentation/web-api/reference/save-albums-user
      *
      * @param  string|array<string>  $ids
      */
     public function save(string|array $ids): mixed
     {
-        $ids = (array) $ids;
-
-        return $this->client->put(
-            sprintf('me/albums?ids=%s', implode(',', array_slice($ids, 0, 20))),
-            count($ids) > 20 ? ['ids' => array_slice($ids, 20)] : []
-        );
+        return $this->client->put(sprintf('me/albums?ids=%s', implode(',', (array) $ids)));
     }
 
     /**
-     * IDs passed in the body seems not to be saved, even with the "Try it" from the docs.
-     *
      * @see https://developer.spotify.com/documentation/web-api/reference/remove-albums-user
      *
      * @param  string|array<string>  $ids
      */
     public function deleteSaved(string|array $ids): mixed
     {
-        $ids = (array) $ids;
-
-        return $this->client->delete(
-            sprintf('me/albums?ids=%s', implode(',', array_slice($ids, 0, 20))),
-            count($ids) > 20 ? ['ids' => array_slice($ids, 20)] : []
-        );
+        return $this->client->delete(sprintf('me/albums?ids=%s', implode(',', (array) $ids)));
     }
 
     /**
