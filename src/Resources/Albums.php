@@ -89,7 +89,7 @@ class Albums extends SpotifyResource
     /**
      * IDs passed in the body seems not to be saved, even with the "Try it" from the docs.
      *
-     * @see https://developer.spotify.com/documentation/web-api/reference/save-albums-user
+     * @see https://developer.spotify.com/documentation/web-api/reference/remove-albums-user
      *
      * @param  string|array<string>  $ids
      */
@@ -106,7 +106,7 @@ class Albums extends SpotifyResource
     /**
      * IDs passed in the body seems not to be saved, even with the "Try it" from the docs.
      *
-     * @see https://developer.spotify.com/documentation/web-api/reference/save-albums-user
+     * @see https://developer.spotify.com/documentation/web-api/reference/check-users-saved-albums
      *
      * @param  string|array<string>  $ids
      */

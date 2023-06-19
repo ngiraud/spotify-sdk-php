@@ -6,6 +6,7 @@ use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\ClientInterface;
 use Spotify\Resources\Albums;
 use Spotify\Resources\Artists;
+use Spotify\Resources\Audiobooks;
 use Spotify\Resources\Categories;
 use Spotify\Resources\Genres;
 use Spotify\Resources\Markets;
@@ -75,5 +76,10 @@ class Client
     public function markets(): Markets
     {
         return new Markets($this);
+    }
+
+    public function audiobooks(): Audiobooks
+    {
+        return new Audiobooks($this);
     }
 }
