@@ -29,7 +29,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         return new self(
             $results,
             Arr::only(Arr::get($response, $entryKey), ['next', 'previous']),
-            Arr::only(Arr::get($response, $entryKey), ['href', 'limit', 'offset', 'total', 'seeds']),
+            Arr::only(Arr::get($response, $entryKey), ['href', 'limit', 'offset', 'total', 'seeds', 'cursors']),
             $client,
             $mappingClass,
             $payload,

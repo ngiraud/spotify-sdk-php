@@ -57,7 +57,7 @@ trait MakesHttpRequests
         return json_decode($responseBody, true) ?: $responseBody;
     }
 
-    public function isSuccessful($response): bool
+    public function isSuccessful(ResponseInterface $response): bool
     {
         if (! $response) {
             return false;

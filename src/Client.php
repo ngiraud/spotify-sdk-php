@@ -13,6 +13,7 @@ use Spotify\Resources\Genres;
 use Spotify\Resources\Markets;
 use Spotify\Resources\Shows;
 use Spotify\Resources\Tracks;
+use Spotify\Resources\Users;
 
 class Client
 {
@@ -93,5 +94,10 @@ class Client
     public function shows(): Shows
     {
         return new Shows($this);
+    }
+
+    public function users(): Users
+    {
+        return new Users($this);
     }
 }
