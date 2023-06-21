@@ -4,22 +4,13 @@ namespace Spotify\SingleObjects;
 
 class Album extends ApiResource
 {
-    public function __construct(array $attributes)
-    {
-        parent::__construct($attributes);
+    protected array $singleObjectLists = [
+        'artists' => Artist::class,
+        'copyrights' => Copyright::class,
+        'images' => Image::class,
+    ];
 
-        $this->mapArtists();
-    }
-
-    protected function mapArtists(): void
-    {
-        if (! is_array($this->artists)) {
-            return;
-        }
-
-        $this->artists = array_map(
-            fn (array $attributes) => new Artist($attributes),
-            $this->artists
-        );
-    }
+    protected array $paginatedResults = [
+        'tracks' => ['mappingClass' => Track::class, 'entryKey' => 'tracks'],
+    ];
 }

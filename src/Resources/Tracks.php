@@ -17,7 +17,7 @@ class Tracks extends SpotifyResource
      * @param  string|array<string>  $id
      * @return Track|PaginatedResults<Track>
      */
-    public function find(string|array $id, array $payload): Track|PaginatedResults
+    public function find(string|array $id, array $payload = []): Track|PaginatedResults
     {
         if (is_array($id)) {
             return $this->findMultiple($id, $payload);
@@ -32,7 +32,7 @@ class Tracks extends SpotifyResource
      * @param  array<string>  $ids
      * @return PaginatedResults<Track>
      */
-    public function findMultiple(array $ids, array $payload): PaginatedResults
+    public function findMultiple(array $ids, array $payload = []): PaginatedResults
     {
         return PaginatedResults::make(
             endpoint: 'tracks',

@@ -2,9 +2,9 @@
 
 namespace Spotify\SingleObjects;
 
-class SavedAlbum extends ApiResource
+class PlaylistTrack extends ApiResource
 {
     protected array $singleObjects = [
-        'album' => Album::class,
+        'track' => Track::class,
     ];
 }

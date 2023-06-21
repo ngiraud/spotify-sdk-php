@@ -3,7 +3,7 @@
 namespace Spotify\Resources;
 
 use Spotify\SingleObjects\Playlist;
-use Spotify\SingleObjects\Track;
+use Spotify\SingleObjects\PlaylistTrack;
 use Spotify\Support\PaginatedResults;
 
 class Playlists extends SpotifyResource
@@ -60,7 +60,7 @@ class Playlists extends SpotifyResource
     {
         return PaginatedResults::make(
             endpoint: "playlists/{$id}/tracks",
-            mappingClass: Track::class,
+            mappingClass: PlaylistTrack::class,
             client: $this->client,
             payload: $payload
         );

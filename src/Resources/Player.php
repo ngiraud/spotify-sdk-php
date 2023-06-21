@@ -3,6 +3,8 @@
 namespace Spotify\Resources;
 
 use Spotify\Helpers\Arr;
+use Spotify\SingleObjects\Device;
+use Spotify\SingleObjects\Player as PlayerSingleObject;
 use Spotify\SingleObjects\PlayHistory;
 use Spotify\Support\PaginatedResults;
 
@@ -13,7 +15,7 @@ class Player extends SpotifyResource
      */
     public function state(array $payload = []): mixed
     {
-        return $this->client->get('me/player', $payload);
+        return new PlayerSingleObject($this->client->get('me/player', $payload));
     }
 
     /**
@@ -32,7 +34,10 @@ class Player extends SpotifyResource
      */
     public function availableDevices(): mixed
     {
-        return Arr::get((array) $this->client->get('me/player/devices'), 'devices');
+        return array_map(
+            fn ($attributes) => new Device($attributes),
+            Arr::get((array) $this->client->get('me/player/devices'), 'devices', [])
+        );
     }
 
     /**
@@ -40,7 +45,7 @@ class Player extends SpotifyResource
      */
     public function currentlyPlayingTrack(array $payload = []): mixed
     {
-        return $this->client->get('me/player/currently-playing', $payload);
+        return new PlayerSingleObject($this->client->get('me/player/currently-playing', $payload));
     }
 
     /**
@@ -137,7 +142,7 @@ class Player extends SpotifyResource
      */
     public function queue(): mixed
     {
-        return $this->client->get('me/player/queue');
+        return new PlayerSingleObject($this->client->get('me/player/queue'));
     }
 
     /**
