@@ -11,6 +11,6 @@ class Album extends ApiResource
     ];
 
     protected array $paginatedResults = [
-        'tracks' => ['mappingClass' => Track::class, 'entryKey' => 'tracks'],
+        'tracks' => Track::class,
     ];
 }

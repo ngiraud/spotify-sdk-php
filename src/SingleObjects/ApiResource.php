@@ -110,13 +110,19 @@ class ApiResource
         return $this;
     }
 
-    protected function mapToPaginatedResults(string $attribute, array $parameters): self
+    protected function mapToPaginatedResults(string $attribute, string|array $parameters): self
     {
         if (! property_exists($this, $attribute)) {
             return $this;
         }
 
-        $this->{$attribute} = new PaginatedResults(...['response' => $this->attributes, ...$parameters]);
+        if (is_string($parameters)) {
+            $parameters = ['mappingClass' => $parameters, 'entryKey' => $attribute];
+        }
+
+        $parameters['response'] = $this->attributes;
+
+        $this->{$attribute} = new PaginatedResults(...$parameters);
 
         return $this;
     }

@@ -10,6 +10,6 @@ class Show extends ApiResource
     ];
 
     protected array $paginatedResults = [
-        'episodes' => ['mappingClass' => Episode::class, 'entryKey' => 'episodes'],
+        'episodes' => Episode::class,
     ];
 }

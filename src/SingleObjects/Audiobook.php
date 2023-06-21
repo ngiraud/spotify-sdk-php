@@ -16,6 +16,6 @@ class Audiobook extends ApiResource
     ];
 
     protected array $paginatedResults = [
-        'chapters' => ['mappingClass' => Chapter::class, 'entryKey' => 'chapters'],
+        'chapters' => Chapter::class,
     ];
 }
