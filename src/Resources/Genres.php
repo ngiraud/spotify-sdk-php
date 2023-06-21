@@ -13,7 +13,8 @@ class Genres extends SpotifyResource
     {
         return Arr::get(
             (array) $this->client->get('recommendations/available-genre-seeds'),
-            'genres'
+            'genres',
+            []
         );
     }
 }

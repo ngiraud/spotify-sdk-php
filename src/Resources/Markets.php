@@ -13,7 +13,8 @@ class Markets extends SpotifyResource
     {
         return Arr::get(
             (array) $this->client->get('markets'),
-            'markets'
+            'markets',
+            []
         );
     }
 }

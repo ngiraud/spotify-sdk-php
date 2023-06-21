@@ -11,6 +11,25 @@ use Traversable;
 
 class PaginatedResults implements ArrayAccess, IteratorAggregate
 {
+    protected array $results;
+
+    protected array $links = [];
+
+    protected array $meta = [];
+
+    public function __construct(
+        protected array $response,
+        protected string $mappingClass,
+        protected string $itemsKey = 'items',
+        protected ?string $entryKey = null
+    ) {
+        $this->mapResults();
+
+        $this->setLinks();
+
+        $this->setMeta();
+    }
+
     public static function make(
         string $endpoint,
         string $mappingClass,
@@ -19,35 +38,12 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         string $itemsKey = 'items',
         ?string $entryKey = null
     ): self {
-        $response = $client->get($endpoint, $payload);
-
-        $results = array_map(
-            fn ($attributes) => new $mappingClass($attributes),
-            Arr::get(Arr::get($response, $entryKey), $itemsKey),
-        );
-
         return new self(
-            $results,
-            Arr::only(Arr::get($response, $entryKey), ['next', 'previous']),
-            Arr::only(Arr::get($response, $entryKey), ['href', 'limit', 'offset', 'total', 'seeds', 'cursors']),
-            $client,
+            $client->get($endpoint, $payload),
             $mappingClass,
-            $payload,
             $itemsKey,
             $entryKey
         );
-    }
-
-    public function __construct(
-        protected array $results,
-        protected array $links,
-        protected array $meta,
-        protected Client $client,
-        protected string $mappingClass,
-        protected array $payload = [],
-        protected string $itemsKey = 'items',
-        protected ?string $entryKey = null
-    ) {
     }
 
     public function results(): array
@@ -70,7 +66,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         return Arr::get($this->links, 'next');
     }
 
-    public function previous(): ?self
+    public function previous(Client $client): ?self
     {
         if (! $previousUrl = $this->previousUrl()) {
             return null;
@@ -79,13 +75,13 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         return PaginatedResults::make(
             endpoint: $previousUrl,
             mappingClass: $this->mappingClass,
-            client: $this->client,
+            client: $client,
             itemsKey: $this->itemsKey,
             entryKey: $this->entryKey
         );
     }
 
-    public function next(): ?self
+    public function next(Client $client): ?self
     {
         if (! $nextUrl = $this->nextUrl()) {
             return null;
@@ -94,7 +90,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         return PaginatedResults::make(
             endpoint: $nextUrl,
             mappingClass: $this->mappingClass,
-            client: $this->client,
+            client: $client,
             itemsKey: $this->itemsKey,
             entryKey: $this->entryKey
         );
@@ -105,9 +101,39 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         return $this->meta;
     }
 
-    public function total(): int
+    public function total(): ?int
     {
         return Arr::get($this->meta, 'total');
+    }
+
+    protected function mapResults(): self
+    {
+        $this->results = array_map(
+            fn ($attributes) => new $this->mappingClass($attributes),
+            Arr::get(Arr::get($this->response, $this->entryKey, []), $this->itemsKey, []),
+        );
+
+        return $this;
+    }
+
+    protected function setLinks(): self
+    {
+        $this->links = Arr::only(
+            Arr::get($this->response, $this->entryKey, []),
+            ['next', 'previous']
+        );
+
+        return $this;
+    }
+
+    protected function setMeta(): self
+    {
+        $this->meta = Arr::only(
+            Arr::get($this->response, $this->entryKey, []),
+            ['href', 'limit', 'offset', 'total', 'seeds', 'cursors']
+        );
+
+        return $this;
     }
 
     public function offsetExists(mixed $offset): bool

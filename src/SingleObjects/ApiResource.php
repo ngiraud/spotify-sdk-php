@@ -5,7 +5,7 @@ namespace Spotify\SingleObjects;
 #[\AllowDynamicProperties]
 class ApiResource
 {
-    public array $attributes = [];
+    protected array $attributes = [];
 
     public function __construct(array $attributes)
     {
