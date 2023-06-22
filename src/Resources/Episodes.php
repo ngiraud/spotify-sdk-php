@@ -15,6 +15,7 @@ class Episodes extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-an-episode
      *
      * @param  string|array<string>  $id
+     * @param  array<string, string>  $payload
      *
      * @return Episode|PaginatedResults<Episode>
      */
@@ -34,6 +35,7 @@ class Episodes extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-multiple-episodes
      *
      * @param  array<string>  $ids
+     * @param  array<string, string>  $payload
      *
      * @return PaginatedResults<Episode>
      */
@@ -54,6 +56,8 @@ class Episodes extends SpotifyResource
      *
      * @scope user-read-playback-position, user-library-read
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-episodes
+     *
+     * @param  array<string, string|integer>  $payload
      *
      * @return PaginatedResults<SavedEpisode>
      */

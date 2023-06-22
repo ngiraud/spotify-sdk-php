@@ -11,6 +11,9 @@ class Arr
         return is_array($value) || $value instanceof ArrayAccess;
     }
 
+    /**
+     * @param  array<mixed>|ArrayAccess  $array
+     */
     public static function exists(array|ArrayAccess $array, int|float|string $key): bool
     {
         if ($array instanceof ArrayAccess) {
@@ -24,14 +27,24 @@ class Arr
         return array_key_exists($key, $array);
     }
 
+    /**
+     * @param  array<mixed>  $array
+     * @param  array<mixed>|string  $keys
+     *
+     * @return array<mixed>
+     */
     public static function only(array $array, array|string $keys): array
     {
         return array_intersect_key($array, array_flip((array) $keys));
     }
 
+    /**
+     * @param  array<mixed>  $array
+     * @param  array<string>|string|null  $key
+     */
     public static function get(array $array, array|string|null $key, mixed $default = null): mixed
     {
-        if (! self::accessible($array)) {
+        if (!self::accessible($array)) {
             return $default;
         }
 
@@ -43,7 +56,7 @@ class Arr
             return $array[$key];
         }
 
-        if (! str_contains($key, '.')) {
+        if (!str_contains($key, '.')) {
             return $array[$key] ?? $default;
         }
 

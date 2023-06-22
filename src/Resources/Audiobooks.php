@@ -16,6 +16,7 @@ class Audiobooks extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-an-audiobook
      *
      * @param  string|array<string>  $id
+     * @param  array<string, string>  $payload
      *
      * @return Audiobook|PaginatedResults<Audiobook>
      */
@@ -35,6 +36,7 @@ class Audiobooks extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-multiple-audiobooks
      *
      * @param  array<string>  $ids
+     * @param  array<string, string>  $payload
      *
      * @return PaginatedResults<Audiobook>
      */
@@ -54,6 +56,8 @@ class Audiobooks extends SpotifyResource
      * Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.
      *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-audiobook-chapters
+     *
+     * @param  array<string, string|integer>  $payload
      */
     public function chapters(string $id, array $payload = []): PaginatedResults
     {
@@ -70,6 +74,8 @@ class Audiobooks extends SpotifyResource
      *
      * @scope user-library-read
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-audiobooks
+     *
+     * @param  array<string, integer>  $payload
      *
      * @return PaginatedResults<SavedAudiobook>
      */

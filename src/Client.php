@@ -58,11 +58,14 @@ class Client
      * Get Spotify catalog information about albums, artists, playlists, tracks, shows, episodes or audiobooks that match a keyword string.
      *
      * @see https://developer.spotify.com/documentation/web-api/reference/search
+     *
+     * @param  string|array<string>  $type
+     * @param  array<string|integer>  $payload
      */
     public function search(string $q, string|array $type, array $payload = []): Search
     {
         return new Search(
-            $this->get('search', ['q' => $q, 'type' => implode(',', (array) $type), ...$payload])
+            (array) $this->get('search', ['q' => $q, 'type' => implode(',', (array) $type), ...$payload])
         );
     }
 

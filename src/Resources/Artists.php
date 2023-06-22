@@ -51,6 +51,8 @@ class Artists extends SpotifyResource
      * Get Spotify catalog information about an artist's albums.
      *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-an-artists-albums
+     *
+     * @param  array<string, string|integer>  $payload
      */
     public function albums(string $id, array $payload = []): PaginatedResults
     {
@@ -66,6 +68,8 @@ class Artists extends SpotifyResource
      * Get Spotify catalog information about an artist's top tracks by country.
      *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-an-artists-top-tracks
+     *
+     * @param  array<string, string>  $payload
      */
     public function topTracks(string $id, array $payload = []): PaginatedResults
     {

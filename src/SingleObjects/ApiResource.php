@@ -7,33 +7,48 @@ use Spotify\Support\PaginatedResults;
 #[\AllowDynamicProperties]
 class ApiResource
 {
+    /**
+     * @var array<string, mixed>
+     */
     protected array $attributes = [];
 
+    /**
+     * @var array<string, string>
+     */
     protected array $singleObjectLists = [];
 
+    /**
+     * @var array<string, string>
+     */
     protected array $singleObjects = [];
 
+    /**
+     * @var array<string, string|array<string, mixed>>
+     */
     protected array $paginatedResults = [];
 
+    /**
+     * @param  array<mixed>  $attributes
+     */
     public function __construct(array $attributes)
     {
         $this->attributes = $attributes;
 
         $this->fill();
 
-        if (! empty($this->singleObjectLists)) {
+        if (!empty($this->singleObjectLists)) {
             foreach ($this->singleObjectLists as $attribute => $mappingClass) {
                 $this->mapToSingleObjectArray($attribute, $mappingClass);
             }
         }
 
-        if (! empty($this->singleObjects)) {
+        if (!empty($this->singleObjects)) {
             foreach ($this->singleObjects as $attribute => $mappingClass) {
                 $this->mapToSingleObject($attribute, $mappingClass);
             }
         }
 
-        if (! empty($this->paginatedResults)) {
+        if (!empty($this->paginatedResults)) {
             foreach ($this->paginatedResults as $attribute => $parameters) {
                 $this->mapToPaginatedResults($attribute, $parameters);
             }
@@ -49,6 +64,9 @@ class ApiResource
         }
     }
 
+    /**
+     * @return array<mixed>
+     */
     public function toArray(): array
     {
         $publicProperties = get_object_vars($this);
@@ -83,16 +101,16 @@ class ApiResource
 
     protected function mapToSingleObjectArray(string $attribute, string $mappingClass): self
     {
-        if (! property_exists($this, $attribute)) {
+        if (!property_exists($this, $attribute)) {
             return $this;
         }
 
-        if (! is_array($this->{$attribute})) {
+        if (!is_array($this->{$attribute})) {
             return $this;
         }
 
         $this->{$attribute} = array_map(
-            fn (array $attributes) => new $mappingClass($attributes),
+            fn(array $attributes) => new $mappingClass($attributes),
             $this->{$attribute}
         );
 
@@ -101,7 +119,7 @@ class ApiResource
 
     protected function mapToSingleObject(string $attribute, string $mappingClass): self
     {
-        if (! property_exists($this, $attribute)) {
+        if (!property_exists($this, $attribute)) {
             return $this;
         }
 
@@ -110,9 +128,12 @@ class ApiResource
         return $this;
     }
 
+    /**
+     * @param  string|array<string, mixed>  $parameters
+     */
     protected function mapToPaginatedResults(string $attribute, string|array $parameters): self
     {
-        if (! property_exists($this, $attribute)) {
+        if (!property_exists($this, $attribute)) {
             return $this;
         }
 

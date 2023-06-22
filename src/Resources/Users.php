@@ -41,6 +41,10 @@ class Users extends SpotifyResource
      * @scope user-top-read
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
      *
+     * @param  array<string, string|integer>  $payload
+     *
+     * @return PaginatedResults<Artist>
+     *
      * @throws ResourceNotFoundException
      */
     public function topArtists(array $payload = []): PaginatedResults
@@ -54,6 +58,10 @@ class Users extends SpotifyResource
      * @scope user-top-read
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
      *
+     * @param  array<string, string|integer>  $payload
+     *
+     * @return PaginatedResults<Track>
+     *
      * @throws ResourceNotFoundException
      */
     public function topTracks(array $payload = []): PaginatedResults
@@ -66,6 +74,8 @@ class Users extends SpotifyResource
      *
      * @scope user-top-read
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
+     *
+     * @param  array<string, string|integer>  $payload
      *
      * @return PaginatedResults<Artist|Track>
      *
@@ -111,6 +121,8 @@ class Users extends SpotifyResource
      * Check to see if one or more Spotify users are following a specified playlist.
      *
      * @see https://developer.spotify.com/documentation/web-api/reference/check-if-user-follows-playlist
+     *
+     * @param  array<string>  $ids
      */
     public function followingPlaylist(string $id, string|array $ids): mixed
     {
@@ -124,6 +136,8 @@ class Users extends SpotifyResource
      *
      * @scope user-follow-read
      * @see https://developer.spotify.com/documentation/web-api/reference/get-followed
+     *
+     * @param  array<string, string|integer>  $payload
      */
     public function followedArtists(string $type = 'artist', array $payload = []): PaginatedResults
     {
@@ -141,6 +155,8 @@ class Users extends SpotifyResource
      *
      * @scope user-follow-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/follow-artists-users
+     *
+     * @param  array<string>  $ids
      */
     public function followArtists(string|array $ids): mixed
     {
@@ -152,6 +168,8 @@ class Users extends SpotifyResource
      *
      * @scope user-follow-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/follow-artists-users
+     *
+     * @param  array<string>  $ids
      */
     public function followUsers(string|array $ids): mixed
     {
@@ -163,6 +181,8 @@ class Users extends SpotifyResource
      *
      * @scope user-follow-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/follow-artists-users
+     *
+     * @param  array<string>  $ids
      */
     public function followArtistsOrUsers(string $type, string|array $ids): mixed
     {
@@ -176,6 +196,8 @@ class Users extends SpotifyResource
      *
      * @scope user-follow-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/unfollow-artists-users
+     *
+     * @param  array<string>  $ids
      */
     public function unfollowArtists(string|array $ids): mixed
     {
@@ -187,6 +209,8 @@ class Users extends SpotifyResource
      *
      * @scope user-follow-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/unfollow-artists-users
+     *
+     * @param  array<string>  $ids
      */
     public function unfollowUsers(string|array $ids): mixed
     {
@@ -198,6 +222,8 @@ class Users extends SpotifyResource
      *
      * @scope user-follow-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/unfollow-artists-users
+     *
+     * @param  array<string>  $ids
      */
     public function unfollowArtistsOrUsers(string $type, string|array $ids): mixed
     {
@@ -211,6 +237,8 @@ class Users extends SpotifyResource
      *
      * @scope user-follow-read
      * @see https://developer.spotify.com/documentation/web-api/reference/check-current-user-follows
+     *
+     * @param  array<string>  $ids
      */
     public function followingArtists(string|array $ids): mixed
     {
@@ -222,6 +250,8 @@ class Users extends SpotifyResource
      *
      * @scope user-follow-read
      * @see https://developer.spotify.com/documentation/web-api/reference/check-current-user-follows
+     *
+     * @param  array<string>  $ids
      */
     public function followingUsers(string|array $ids): mixed
     {
@@ -233,6 +263,8 @@ class Users extends SpotifyResource
      *
      * @scope user-follow-read
      * @see https://developer.spotify.com/documentation/web-api/reference/check-current-user-follows
+     *
+     * @param  array<string>  $ids
      */
     public function followingArtistsOrUsers(string $type, string|array $ids): mixed
     {

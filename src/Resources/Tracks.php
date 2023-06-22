@@ -17,6 +17,7 @@ class Tracks extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-track
      *
      * @param  string|array<string>  $id
+     * @param  array<string, string>  $payload
      *
      * @return Track|PaginatedResults<Track>
      */
@@ -35,6 +36,7 @@ class Tracks extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-several-tracks
      *
      * @param  array<string>  $ids
+     * @param  array<string, string>  $payload
      *
      * @return PaginatedResults<Track>
      */
@@ -54,6 +56,8 @@ class Tracks extends SpotifyResource
      *
      * @scope user-library-read
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-tracks
+     *
+     * @param  array<string, string|integer>  $payload
      *
      * @return PaginatedResults<SavedTrack>
      */
@@ -148,6 +152,8 @@ class Tracks extends SpotifyResource
      * For artists and tracks that are very new or obscure there might not be enough data to generate a list of tracks.
      *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-recommendations
+     *
+     * @param  array<string, string|integer|numeric>  $payload
      *
      * @return PaginatedResults<SavedAlbum>
      */

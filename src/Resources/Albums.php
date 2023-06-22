@@ -15,6 +15,7 @@ class Albums extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-an-album
      *
      * @param  string|array<string>  $id
+     * @param  array<string, string>  $payload
      *
      * @return Album|PaginatedResults<Album>
      */
@@ -33,6 +34,7 @@ class Albums extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-multiple-albums
      *
      * @param  array<string>  $ids
+     * @param  array<string, string>  $payload
      *
      * @return PaginatedResults<Album>
      */
@@ -52,6 +54,8 @@ class Albums extends SpotifyResource
      * Optional parameters can be used to limit the number of tracks returned.
      *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-an-albums-tracks
+     *
+     * @param  array<string, string|integer>  $payload
      */
     public function tracks(string $id, array $payload = []): PaginatedResults
     {
@@ -68,6 +72,8 @@ class Albums extends SpotifyResource
      *
      * @scope user-library-read
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-albums
+     *
+     * @param  array<string, string|integer>  $payload
      *
      * @return PaginatedResults<SavedAlbum>
      */
@@ -124,6 +130,8 @@ class Albums extends SpotifyResource
      * Get a list of new album releases featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).
      *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-albums
+     *
+     * @param  array<string, string|integer>  $payload
      *
      * @return PaginatedResults<Album>
      */

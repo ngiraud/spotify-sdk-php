@@ -15,6 +15,8 @@ class Player extends SpotifyResource
      *
      * @scope user-read-playback-state
      * @see https://developer.spotify.com/documentation/web-api/reference/get-information-about-the-users-current-playback
+     *
+     * @param  array<string, string>  $payload
      */
     public function state(array $payload = []): mixed
     {
@@ -26,6 +28,8 @@ class Player extends SpotifyResource
      *
      * @scope user-modify-playback-state
      * @see https://developer.spotify.com/documentation/web-api/reference/transfer-a-users-playback
+     *
+     * @param  array<string>  $deviceIds
      */
     public function transfer(array $deviceIds, bool $play = false): mixed
     {
@@ -54,6 +58,8 @@ class Player extends SpotifyResource
      *
      * @scope user-read-currently-playing
      * @see https://developer.spotify.com/documentation/web-api/reference/get-the-users-currently-playing-track
+     *
+     * @param  array<string, string>  $payload
      */
     public function currentlyPlayingTrack(array $payload = []): mixed
     {
@@ -166,6 +172,8 @@ class Player extends SpotifyResource
      *
      * @scope user-read-recently-played
      * @see https://developer.spotify.com/documentation/web-api/reference/get-recently-played
+     *
+     * @param  array<string, string|integer>  $payload
      */
     public function recentlyPlayedTracks(array $payload = []): PaginatedResults
     {

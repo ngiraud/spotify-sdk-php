@@ -16,6 +16,7 @@ class Shows extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-a-show
      *
      * @param  string|array<string>  $id
+     * @param  array<string, string>  $payload
      *
      * @return Show|PaginatedResults<Show>
      */
@@ -34,6 +35,7 @@ class Shows extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-multiple-shows
      *
      * @param  array<string>  $ids
+     * @param  array<string, string>  $payload
      *
      * @return PaginatedResults<Show>
      */
@@ -53,6 +55,8 @@ class Shows extends SpotifyResource
      *
      * @scope user-read-playback-position
      * @see https://developer.spotify.com/documentation/web-api/reference/get-a-shows-episodes
+     *
+     * @param  array<string, string|integer>  $payload
      */
     public function episodes(string $id, array $payload = []): PaginatedResults
     {
@@ -69,6 +73,8 @@ class Shows extends SpotifyResource
      *
      * @scope user-library-read
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-shows
+     *
+     * @param  array<string, integer>  $payload
      *
      * @return PaginatedResults<SavedShow>
      */

@@ -10,6 +10,8 @@ class Markets extends SpotifyResource
      * Get the list of markets where Spotify is available.
      *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-available-markets
+     *
+     * @return array<string>
      */
     public function all(): array
     {

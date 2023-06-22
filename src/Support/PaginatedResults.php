@@ -11,12 +11,24 @@ use Traversable;
 
 class PaginatedResults implements ArrayAccess, IteratorAggregate
 {
+    /**
+     * @var array<mixed>
+     */
     protected array $results;
 
+    /**
+     * @var array<mixed>
+     */
     protected array $links = [];
 
+    /**
+     * @var array<mixed>
+     */
     protected array $meta = [];
 
+    /**
+     * @param  array<mixed>  $response
+     */
     public function __construct(
         protected array $response,
         protected string $mappingClass,
@@ -30,6 +42,11 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         $this->setMeta();
     }
 
+    /**
+     * @param  array<string, mixed>  $payload
+     *
+     * @return self
+     */
     public static function make(
         string $endpoint,
         string $mappingClass,
@@ -46,11 +63,17 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         );
     }
 
+    /**
+     * @return array<mixed>
+     */
     public function results(): array
     {
         return $this->results;
     }
 
+    /**
+     * @return array<mixed>
+     */
     public function links(): array
     {
         return $this->links;
@@ -68,7 +91,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
 
     public function previous(Client $client): ?self
     {
-        if (! $previousUrl = $this->previousUrl()) {
+        if (!$previousUrl = $this->previousUrl()) {
             return null;
         }
 
@@ -83,7 +106,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
 
     public function next(Client $client): ?self
     {
-        if (! $nextUrl = $this->nextUrl()) {
+        if (!$nextUrl = $this->nextUrl()) {
             return null;
         }
 
@@ -96,6 +119,9 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         );
     }
 
+    /**
+     * @return array<mixed>
+     */
     public function meta(): array
     {
         return $this->meta;
@@ -109,7 +135,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
     protected function mapResults(): self
     {
         $this->results = array_map(
-            fn ($attributes) => new $this->mappingClass($attributes),
+            fn($attributes) => new $this->mappingClass($attributes),
             Arr::get(Arr::get($this->response, $this->entryKey, []), $this->itemsKey, []),
         );
 

@@ -14,6 +14,7 @@ class Chapters extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-a-chapter
      *
      * @param  string|array<string>  $id
+     * @param  array<string, string>  $payload
      *
      * @return Chapter|PaginatedResults<Chapter>
      */
@@ -33,6 +34,7 @@ class Chapters extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-several-chapters
      *
      * @param  array<string>  $ids
+     * @param  array<string, string>  $payload
      *
      * @return PaginatedResults<Chapter>
      */

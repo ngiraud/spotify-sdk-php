@@ -12,31 +12,49 @@ use Spotify\Exceptions\UnauthorizedException;
 
 trait MakesHttpRequests
 {
+    /**
+     * @param  array<string, mixed>  $payload
+     */
     public function get(string $uri, array $payload = []): mixed
     {
         return $this->request('GET', $uri, $payload);
     }
 
+    /**
+     * @param  array<string, mixed>  $payload
+     */
     public function post(string $uri, array $payload = []): mixed
     {
         return $this->request('POST', $uri, $payload);
     }
 
+    /**
+     * @param  array<string, mixed>  $payload
+     */
     public function put(string $uri, array $payload = []): mixed
     {
         return $this->request('PUT', $uri, $payload);
     }
 
+    /**
+     * @param  array<string, mixed>  $payload
+     */
     public function patch(string $uri, array $payload = []): mixed
     {
         return $this->request('PATCH', $uri, $payload);
     }
 
+    /**
+     * @param  array<string, mixed>  $payload
+     */
     public function delete(string $uri, array $payload = []): mixed
     {
         return $this->request('DELETE', $uri, $payload);
     }
 
+    /**
+     * @param  mixed|array<string, mixed>  $payload
+     */
     public function request(string $verb, string $uri, mixed $payload = [], string $payloadType = 'json'): mixed
     {
         $verb = strtoupper($verb);
@@ -58,7 +76,7 @@ trait MakesHttpRequests
 
     public function isSuccessful(ResponseInterface $response): bool
     {
-        return (int) substr($response->getStatusCode(), 0, 1) === 2;
+        return (int) substr((string) $response->getStatusCode(), 0, 1) === 2;
     }
 
     protected function handleRequestError(ResponseInterface $response): void
