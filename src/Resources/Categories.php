@@ -8,6 +8,8 @@ use Spotify\Support\PaginatedResults;
 class Categories extends SpotifyResource
 {
     /**
+     * Get a single category used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab).
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-a-category
      */
     public function find(string $id, array $payload = []): Category
@@ -16,6 +18,8 @@ class Categories extends SpotifyResource
     }
 
     /**
+     * Get a list of categories used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab).
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-categories
      *
      * @return PaginatedResults<Category>

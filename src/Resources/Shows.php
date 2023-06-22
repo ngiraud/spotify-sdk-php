@@ -10,9 +10,13 @@ use Spotify\Support\PaginatedResults;
 class Shows extends SpotifyResource
 {
     /**
+     * Get Spotify catalog information for a single or multiple shows identified by their unique Spotify IDs.
+     *
+     * @scope user-read-playback-position
      * @see https://developer.spotify.com/documentation/web-api/reference/get-a-show
      *
      * @param  string|array<string>  $id
+     *
      * @return Show|PaginatedResults<Show>
      */
     public function find(string|array $id, array $payload = []): Show|PaginatedResults
@@ -25,9 +29,12 @@ class Shows extends SpotifyResource
     }
 
     /**
+     * Get Spotify catalog information for several shows based on their Spotify IDs.
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-multiple-shows
      *
      * @param  array<string>  $ids
+     *
      * @return PaginatedResults<Show>
      */
     public function findMultiple(array $ids, array $payload = []): PaginatedResults
@@ -42,6 +49,9 @@ class Shows extends SpotifyResource
     }
 
     /**
+     * Get Spotify catalog information about an show’s episodes. Optional parameters can be used to limit the number of episodes returned.
+     *
+     * @scope user-read-playback-position
      * @see https://developer.spotify.com/documentation/web-api/reference/get-a-shows-episodes
      */
     public function episodes(string $id, array $payload = []): PaginatedResults
@@ -55,6 +65,9 @@ class Shows extends SpotifyResource
     }
 
     /**
+     * Get a list of shows saved in the current Spotify user's library. Optional parameters can be used to limit the number of shows returned.
+     *
+     * @scope user-library-read
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-shows
      *
      * @return PaginatedResults<SavedShow>
@@ -70,6 +83,9 @@ class Shows extends SpotifyResource
     }
 
     /**
+     * Save one or more shows to current Spotify user's library.
+     *
+     * @scope user-library-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/save-shows-user
      *
      * @param  string|array<string>  $ids
@@ -80,6 +96,9 @@ class Shows extends SpotifyResource
     }
 
     /**
+     * Delete one or more shows from current Spotify user's library.
+     *
+     * @scope user-library-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/save-shows-user
      *
      * @param  string|array<string>  $ids
@@ -90,6 +109,9 @@ class Shows extends SpotifyResource
     }
 
     /**
+     * Check if one or more shows is already saved in the current Spotify user's library.
+     *
+     * @scope user-library-read
      * @see https://developer.spotify.com/documentation/web-api/reference/check-users-saved-shows
      *
      * @param  string|array<string>  $ids

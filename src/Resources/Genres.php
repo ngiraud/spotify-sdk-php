@@ -7,6 +7,8 @@ use Spotify\Helpers\Arr;
 class Genres extends SpotifyResource
 {
     /**
+     * Retrieve a list of available genres seed parameter values for recommendations.
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-recommendation-genres
      */
     public function seeds(): array

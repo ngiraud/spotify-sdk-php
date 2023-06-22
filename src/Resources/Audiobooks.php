@@ -10,9 +10,13 @@ use Spotify\Support\PaginatedResults;
 class Audiobooks extends SpotifyResource
 {
     /**
+     * Get Spotify catalog information for a single or multiple audiobooks.
+     * Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-an-audiobook
      *
      * @param  string|array<string>  $id
+     *
      * @return Audiobook|PaginatedResults<Audiobook>
      */
     public function find(string|array $id, array $payload = []): Audiobook|PaginatedResults
@@ -25,9 +29,13 @@ class Audiobooks extends SpotifyResource
     }
 
     /**
+     * Get Spotify catalog information for several audiobooks identified by their Spotify IDs.
+     * Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-multiple-audiobooks
      *
      * @param  array<string>  $ids
+     *
      * @return PaginatedResults<Audiobook>
      */
     public function findMultiple(array $ids, array $payload = []): PaginatedResults
@@ -42,6 +50,9 @@ class Audiobooks extends SpotifyResource
     }
 
     /**
+     * Get Spotify catalog information about an audiobook's chapters.
+     * Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-audiobook-chapters
      */
     public function chapters(string $id, array $payload = []): PaginatedResults
@@ -55,6 +66,9 @@ class Audiobooks extends SpotifyResource
     }
 
     /**
+     * Get a list of the audiobooks saved in the current Spotify user's 'Your Music' library.
+     *
+     * @scope user-library-read
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-audiobooks
      *
      * @return PaginatedResults<SavedAudiobook>
@@ -70,6 +84,9 @@ class Audiobooks extends SpotifyResource
     }
 
     /**
+     * Save one or more audiobooks to the current Spotify user's library.
+     *
+     * @scope user-library-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/save-audiobooks-user
      *
      * @param  string|array<string>  $ids
@@ -80,6 +97,9 @@ class Audiobooks extends SpotifyResource
     }
 
     /**
+     * Remove one or more audiobooks from the Spotify user's library.
+     *
+     * @scope user-library-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/remove-audiobooks-user
      *
      * @param  string|array<string>  $ids
@@ -90,6 +110,9 @@ class Audiobooks extends SpotifyResource
     }
 
     /**
+     * Check if one or more audiobooks are already saved in the current Spotify user's library.
+     *
+     * @scope user-library-read
      * @see https://developer.spotify.com/documentation/web-api/reference/check-users-saved-audiobooks
      *
      * @param  string|array<string>  $ids

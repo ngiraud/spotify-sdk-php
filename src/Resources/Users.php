@@ -11,6 +11,9 @@ use Spotify\Support\PaginatedResults;
 class Users extends SpotifyResource
 {
     /**
+     * Get detailed profile information about the current user (including the current user's username).
+     *
+     * @scope user-read-private, user-read-email
      * @see https://developer.spotify.com/documentation/web-api/reference/get-current-users-profile
      */
     public function me(): User
@@ -19,6 +22,8 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Get public profile information about a Spotify user.
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-profile
      */
     public function profile(?string $id = null): User
@@ -31,6 +36,9 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Get the current user's top artists based on calculated affinity.
+     *
+     * @scope user-top-read
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
      *
      * @throws ResourceNotFoundException
@@ -41,6 +49,9 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Get the current user's top tracks based on calculated affinity.
+     *
+     * @scope user-top-read
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
      *
      * @throws ResourceNotFoundException
@@ -51,6 +62,9 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Get the current user's top artists or tracks based on calculated affinity.
+     *
+     * @scope user-top-read
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
      *
      * @return PaginatedResults<Artist|Track>
@@ -72,6 +86,9 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Add the current user as a follower of a playlist.
+     *
+     * @scope playlist-modify-public, playlist-modify-private
      * @see https://developer.spotify.com/documentation/web-api/reference/follow-playlist
      */
     public function followPlaylist(string $id, bool $public = true): mixed
@@ -80,6 +97,9 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Remove the current user as a follower of a playlist.
+     *
+     * @scope playlist-modify-public, playlist-modify-private
      * @see https://developer.spotify.com/documentation/web-api/reference/unfollow-playlist
      */
     public function unfollowPlaylist(string $id): mixed
@@ -88,6 +108,8 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Check to see if one or more Spotify users are following a specified playlist.
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/check-if-user-follows-playlist
      */
     public function followingPlaylist(string $id, string|array $ids): mixed
@@ -98,6 +120,9 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Get the current user's followed artists.
+     *
+     * @scope user-follow-read
      * @see https://developer.spotify.com/documentation/web-api/reference/get-followed
      */
     public function followedArtists(string $type = 'artist', array $payload = []): PaginatedResults
@@ -112,6 +137,9 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Add the current user as a follower of one or more artists.
+     *
+     * @scope user-follow-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/follow-artists-users
      */
     public function followArtists(string|array $ids): mixed
@@ -120,6 +148,9 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Add the current user as a follower of one or more other Spotify users.
+     *
+     * @scope user-follow-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/follow-artists-users
      */
     public function followUsers(string|array $ids): mixed
@@ -128,6 +159,9 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Add the current user as a follower of one or more artists or other Spotify users.
+     *
+     * @scope user-follow-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/follow-artists-users
      */
     public function followArtistsOrUsers(string $type, string|array $ids): mixed
@@ -138,6 +172,9 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Remove the current user as a follower of one or more artists.
+     *
+     * @scope user-follow-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/unfollow-artists-users
      */
     public function unfollowArtists(string|array $ids): mixed
@@ -146,6 +183,9 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Remove the current user as a follower of one or more other Spotify users.
+     *
+     * @scope user-follow-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/unfollow-artists-users
      */
     public function unfollowUsers(string|array $ids): mixed
@@ -154,6 +194,9 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Remove the current user as a follower of one or more artists or other Spotify users.
+     *
+     * @scope user-follow-modify
      * @see https://developer.spotify.com/documentation/web-api/reference/unfollow-artists-users
      */
     public function unfollowArtistsOrUsers(string $type, string|array $ids): mixed
@@ -164,6 +207,9 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Check to see if the current user is following one or more artists.
+     *
+     * @scope user-follow-read
      * @see https://developer.spotify.com/documentation/web-api/reference/check-current-user-follows
      */
     public function followingArtists(string|array $ids): mixed
@@ -172,6 +218,9 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Check to see if the current user is following one or more other Spotify users.
+     *
+     * @scope user-follow-read
      * @see https://developer.spotify.com/documentation/web-api/reference/check-current-user-follows
      */
     public function followingUsers(string|array $ids): mixed
@@ -180,6 +229,9 @@ class Users extends SpotifyResource
     }
 
     /**
+     * Check to see if the current user is following one or more artists or other Spotify users.
+     *
+     * @scope user-follow-read
      * @see https://developer.spotify.com/documentation/web-api/reference/check-current-user-follows
      */
     public function followingArtistsOrUsers(string $type, string|array $ids): mixed

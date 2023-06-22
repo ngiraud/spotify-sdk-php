@@ -7,6 +7,7 @@ use Psr\Http\Message\ResponseInterface;
 use Spotify\Exceptions\BadRequestException;
 use Spotify\Exceptions\ForbiddenException;
 use Spotify\Exceptions\ResourceNotFoundException;
+use Spotify\Exceptions\TooManyRequestsException;
 use Spotify\Exceptions\UnauthorizedException;
 
 trait MakesHttpRequests
@@ -46,7 +47,7 @@ trait MakesHttpRequests
             empty($payload) ? [] : [($verb === 'GET' ? 'query' : $payloadType) => $payload]
         );
 
-        if (! $this->isSuccessful($response)) {
+        if (!$this->isSuccessful($response)) {
             $this->handleRequestError($response);
         }
 
@@ -65,10 +66,11 @@ trait MakesHttpRequests
         $body = (string) $response->getBody();
 
         throw match ($response->getStatusCode()) {
-            404 => new ResourceNotFoundException(),
             400 => new BadRequestException($body),
             401 => new UnauthorizedException($body),
             403 => new ForbiddenException($body),
+            404 => new ResourceNotFoundException(),
+            429 => new TooManyRequestsException($body),
             default => new Exception($body),
         };
     }

@@ -25,23 +25,23 @@ class Client
     protected string $endpoint = 'https://api.spotify.com/v1';
 
     public function __construct(
-        protected string $apiKey,
+        protected string $accessToken,
         protected ?ClientInterface $client = null
     ) {
         $this->client ??= new GuzzleClient([
             'http_errors' => false,
             'base_uri' => $this->endpoint.'/',
             'headers' => [
-                'Authorization' => "Bearer {$this->apiKey}",
+                'Authorization' => "Bearer {$this->accessToken}",
                 'Accept' => 'application/json',
                 'Content-Type' => 'application/json',
             ],
         ]);
     }
 
-    public function apiToken(): string
+    public function accessToken(): string
     {
-        return $this->apiKey;
+        return $this->accessToken;
     }
 
     public function endpoint(): string
@@ -55,6 +55,8 @@ class Client
     }
 
     /**
+     * Get Spotify catalog information about albums, artists, playlists, tracks, shows, episodes or audiobooks that match a keyword string.
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/search
      */
     public function search(string $q, string|array $type, array $payload = []): Search
@@ -64,63 +66,99 @@ class Client
         );
     }
 
-    public function artists(): Artists
-    {
-        return new Artists($this);
-    }
-
+    /**
+     * Manages Albums endpoints
+     */
     public function albums(): Albums
     {
         return new Albums($this);
     }
 
-    public function tracks(): Tracks
+    /**
+     * Manages Artists endpoints
+     */
+    public function artists(): Artists
     {
-        return new Tracks($this);
+        return new Artists($this);
     }
 
-    public function categories(): Categories
-    {
-        return new Categories($this);
-    }
-
-    public function genres(): Genres
-    {
-        return new Genres($this);
-    }
-
-    public function markets(): Markets
-    {
-        return new Markets($this);
-    }
-
+    /**
+     * Manages Audiobooks endpoints
+     */
     public function audiobooks(): Audiobooks
     {
         return new Audiobooks($this);
     }
 
+    /**
+     * Manages Categories endpoints
+     */
+    public function categories(): Categories
+    {
+        return new Categories($this);
+    }
+
+    /**
+     * Manages Episodes endpoints
+     */
     public function episodes(): Episodes
     {
         return new Episodes($this);
     }
 
-    public function shows(): Shows
+    /**
+     * Manages Genres endpoints
+     */
+    public function genres(): Genres
     {
-        return new Shows($this);
+        return new Genres($this);
     }
 
-    public function users(): Users
+    /**
+     * Manages Markets endpoints
+     */
+    public function markets(): Markets
     {
-        return new Users($this);
+        return new Markets($this);
     }
 
+    /**
+     * Manages Player endpoints
+     */
+    public function player(): Player
+    {
+        return new Player($this);
+    }
+
+    /**
+     * Manages Playlists endpoints
+     */
     public function playlists(): Playlists
     {
         return new Playlists($this);
     }
 
-    public function player(): Player
+    /**
+     * Manages Shows endpoints
+     */
+    public function shows(): Shows
     {
-        return new Player($this);
+        return new Shows($this);
+    }
+
+    /**
+     * Manages Tracks endpoints
+     */
+    public function tracks(): Tracks
+    {
+        return new Tracks($this);
+    }
+
+    /**
+     * Manages Users endpoints
+     */
+    public function users(): Users
+    {
+        return new Users($this);
     }
 }

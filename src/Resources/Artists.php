@@ -10,9 +10,12 @@ use Spotify\Support\PaginatedResults;
 class Artists extends SpotifyResource
 {
     /**
+     * Get Spotify catalog information for a single or multiple artists identified by their unique Spotify IDs.
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-an-artist
      *
      * @param  string|array<string>  $id
+     *
      * @return Artist|PaginatedResults<Artist>
      */
     public function find(string|array $id): Artist|PaginatedResults
@@ -25,9 +28,12 @@ class Artists extends SpotifyResource
     }
 
     /**
+     * Get Spotify catalog information for several artists based on their Spotify IDs.
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-multiple-artists
      *
      * @param  array<string>  $ids
+     *
      * @return PaginatedResults<Artist>
      */
     public function findMultiple(array $ids): PaginatedResults
@@ -42,6 +48,8 @@ class Artists extends SpotifyResource
     }
 
     /**
+     * Get Spotify catalog information about an artist's albums.
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-an-artists-albums
      */
     public function albums(string $id, array $payload = []): PaginatedResults
@@ -55,6 +63,8 @@ class Artists extends SpotifyResource
     }
 
     /**
+     * Get Spotify catalog information about an artist's top tracks by country.
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-an-artists-top-tracks
      */
     public function topTracks(string $id, array $payload = []): PaginatedResults
@@ -69,6 +79,9 @@ class Artists extends SpotifyResource
     }
 
     /**
+     * Get Spotify catalog information about artists similar to a given artist.
+     * Similarity is based on analysis of the Spotify community's listening history.
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-an-artists-related-artists
      */
     public function relatedArtists(string $id): PaginatedResults
