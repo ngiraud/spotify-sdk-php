@@ -36,19 +36,19 @@ class ApiResource
 
         $this->fill();
 
-        if (!empty($this->singleObjectLists)) {
+        if (! empty($this->singleObjectLists)) {
             foreach ($this->singleObjectLists as $attribute => $mappingClass) {
                 $this->mapToSingleObjectArray($attribute, $mappingClass);
             }
         }
 
-        if (!empty($this->singleObjects)) {
+        if (! empty($this->singleObjects)) {
             foreach ($this->singleObjects as $attribute => $mappingClass) {
                 $this->mapToSingleObject($attribute, $mappingClass);
             }
         }
 
-        if (!empty($this->paginatedResults)) {
+        if (! empty($this->paginatedResults)) {
             foreach ($this->paginatedResults as $attribute => $parameters) {
                 $this->mapToPaginatedResults($attribute, $parameters);
             }
@@ -101,16 +101,16 @@ class ApiResource
 
     protected function mapToSingleObjectArray(string $attribute, string $mappingClass): self
     {
-        if (!property_exists($this, $attribute)) {
+        if (! property_exists($this, $attribute)) {
             return $this;
         }
 
-        if (!is_array($this->{$attribute})) {
+        if (! is_array($this->{$attribute})) {
             return $this;
         }
 
         $this->{$attribute} = array_map(
-            fn(array $attributes) => new $mappingClass($attributes),
+            fn (array $attributes) => new $mappingClass($attributes),
             $this->{$attribute}
         );
 
@@ -119,7 +119,7 @@ class ApiResource
 
     protected function mapToSingleObject(string $attribute, string $mappingClass): self
     {
-        if (!property_exists($this, $attribute)) {
+        if (! property_exists($this, $attribute)) {
             return $this;
         }
 
@@ -133,7 +133,7 @@ class ApiResource
      */
     protected function mapToPaginatedResults(string $attribute, string|array $parameters): self
     {
-        if (!property_exists($this, $attribute)) {
+        if (! property_exists($this, $attribute)) {
             return $this;
         }
 

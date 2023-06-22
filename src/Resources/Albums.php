@@ -16,7 +16,6 @@ class Albums extends SpotifyResource
      *
      * @param  string|array<string>  $id
      * @param  array<string, string>  $payload
-     *
      * @return Album|PaginatedResults<Album>
      */
     public function find(string|array $id, array $payload = []): Album|PaginatedResults
@@ -35,7 +34,6 @@ class Albums extends SpotifyResource
      *
      * @param  array<string>  $ids
      * @param  array<string, string>  $payload
-     *
      * @return PaginatedResults<Album>
      */
     public function findMultiple(array $ids, array $payload = []): PaginatedResults
@@ -71,10 +69,10 @@ class Albums extends SpotifyResource
      * Get a list of the albums saved in the current Spotify user's 'Your Music' library.
      *
      * @scope user-library-read
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-albums
      *
      * @param  array<string, string|integer>  $payload
-     *
      * @return PaginatedResults<SavedAlbum>
      */
     public function findSaved(array $payload = []): PaginatedResults
@@ -91,6 +89,7 @@ class Albums extends SpotifyResource
      * Save one or more albums to the current user's 'Your Music' library.
      *
      * @scope user-library-modify
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/save-albums-user
      *
      * @param  string|array<string>  $ids
@@ -104,6 +103,7 @@ class Albums extends SpotifyResource
      * Remove one or more albums from the current user's 'Your Music' library.
      *
      * @scope user-library-modify
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/remove-albums-user
      *
      * @param  string|array<string>  $ids
@@ -117,6 +117,7 @@ class Albums extends SpotifyResource
      * Check if one or more albums is already saved in the current Spotify user's 'Your Music' library.
      *
      * @scope user-library-read
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/check-users-saved-albums
      *
      * @param  string|array<string>  $ids
@@ -132,7 +133,6 @@ class Albums extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-albums
      *
      * @param  array<string, string|integer>  $payload
-     *
      * @return PaginatedResults<Album>
      */
     public function newReleases(array $payload = []): PaginatedResults

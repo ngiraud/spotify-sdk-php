@@ -14,6 +14,7 @@ class Player extends SpotifyResource
      * Get information about the user’s current playback state, including track or episode, progress, and active device.
      *
      * @scope user-read-playback-state
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-information-about-the-users-current-playback
      *
      * @param  array<string, string>  $payload
@@ -27,6 +28,7 @@ class Player extends SpotifyResource
      * Transfer playback to a new device and determine if it should start playing.
      *
      * @scope user-modify-playback-state
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/transfer-a-users-playback
      *
      * @param  array<string>  $deviceIds
@@ -43,12 +45,13 @@ class Player extends SpotifyResource
      * Get information about a user’s available devices.
      *
      * @scope user-read-playback-state
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-a-users-available-devices
      */
     public function availableDevices(): mixed
     {
         return array_map(
-            fn($attributes) => new Device($attributes),
+            fn ($attributes) => new Device($attributes),
             Arr::get((array) $this->client->get('me/player/devices'), 'devices', [])
         );
     }
@@ -57,6 +60,7 @@ class Player extends SpotifyResource
      * Get the object currently being played on the user's Spotify account.
      *
      * @scope user-read-currently-playing
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-the-users-currently-playing-track
      *
      * @param  array<string, string>  $payload
@@ -70,6 +74,7 @@ class Player extends SpotifyResource
      * Start a new context or resume current playback on the user's active device.
      *
      * @scope user-modify-playback-state
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/start-a-users-playback
      */
     public function start(?string $deviceId = null): mixed
@@ -81,6 +86,7 @@ class Player extends SpotifyResource
      * Pause playback on the user's account.
      *
      * @scope user-modify-playback-state
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/pause-a-users-playback
      */
     public function pause(?string $deviceId = null): mixed
@@ -92,6 +98,7 @@ class Player extends SpotifyResource
      * Skips to next track in the user’s queue.
      *
      * @scope user-modify-playback-state
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/skip-users-playback-to-next-track
      */
     public function next(?string $deviceId = null): mixed
@@ -103,6 +110,7 @@ class Player extends SpotifyResource
      * Skips to previous track in the user’s queue.
      *
      * @scope user-modify-playback-state
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/skip-users-playback-to-previous-track
      */
     public function previous(?string $deviceId = null): mixed
@@ -114,6 +122,7 @@ class Player extends SpotifyResource
      * Seeks to the given position in the user’s currently playing track.
      *
      * @scope user-modify-playback-state
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/seek-to-position-in-currently-playing-track
      */
     public function seek(int $positionMs, ?string $deviceId = null): mixed
@@ -128,6 +137,7 @@ class Player extends SpotifyResource
      * Set the repeat mode for the user's playback. Options are repeat-track, repeat-context, and off.
      *
      * @scope user-modify-playback-state
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/set-repeat-mode-on-users-playback
      */
     public function repeat(string $state, ?string $deviceId = null): mixed
@@ -142,6 +152,7 @@ class Player extends SpotifyResource
      * Set the volume for the user’s current playback device.
      *
      * @scope user-modify-playback-state
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/set-volume-for-users-playback
      */
     public function volume(int $volumePercent, ?string $deviceId = null): mixed
@@ -156,6 +167,7 @@ class Player extends SpotifyResource
      * Toggle shuffle on or off for user’s playback.
      *
      * @scope user-modify-playback-state
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/toggle-shuffle-for-users-playback
      */
     public function shuffle(bool $state, ?string $deviceId = null): mixed
@@ -171,6 +183,7 @@ class Player extends SpotifyResource
      * Note: Currently doesn't support podcast episodes.
      *
      * @scope user-read-recently-played
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-recently-played
      *
      * @param  array<string, string|integer>  $payload
@@ -189,6 +202,7 @@ class Player extends SpotifyResource
      * Get the list of objects that make up the user's queue.
      *
      * @scope user-read-playback-state
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/toggle-shuffle-for-users-playback
      */
     public function queue(): mixed
@@ -200,6 +214,7 @@ class Player extends SpotifyResource
      * Add an item to the end of the user's current playback queue.
      *
      * @scope user-modify-playback-state
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/add-to-queue
      */
     public function addToQueue(string $uri, ?string $deviceId = null): mixed

@@ -15,7 +15,6 @@ class Artists extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-an-artist
      *
      * @param  string|array<string>  $id
-     *
      * @return Artist|PaginatedResults<Artist>
      */
     public function find(string|array $id): Artist|PaginatedResults
@@ -33,7 +32,6 @@ class Artists extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-multiple-artists
      *
      * @param  array<string>  $ids
-     *
      * @return PaginatedResults<Artist>
      */
     public function findMultiple(array $ids): PaginatedResults

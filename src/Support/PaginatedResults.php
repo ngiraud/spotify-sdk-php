@@ -44,8 +44,6 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
 
     /**
      * @param  array<string, mixed>  $payload
-     *
-     * @return self
      */
     public static function make(
         string $endpoint,
@@ -91,7 +89,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
 
     public function previous(Client $client): ?self
     {
-        if (!$previousUrl = $this->previousUrl()) {
+        if (! $previousUrl = $this->previousUrl()) {
             return null;
         }
 
@@ -106,7 +104,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
 
     public function next(Client $client): ?self
     {
-        if (!$nextUrl = $this->nextUrl()) {
+        if (! $nextUrl = $this->nextUrl()) {
             return null;
         }
 
@@ -135,7 +133,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
     protected function mapResults(): self
     {
         $this->results = array_map(
-            fn($attributes) => new $this->mappingClass($attributes),
+            fn ($attributes) => new $this->mappingClass($attributes),
             Arr::get(Arr::get($this->response, $this->entryKey, []), $this->itemsKey, []),
         );
 

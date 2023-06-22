@@ -18,7 +18,6 @@ class Tracks extends SpotifyResource
      *
      * @param  string|array<string>  $id
      * @param  array<string, string>  $payload
-     *
      * @return Track|PaginatedResults<Track>
      */
     public function find(string|array $id, array $payload = []): Track|PaginatedResults
@@ -37,7 +36,6 @@ class Tracks extends SpotifyResource
      *
      * @param  array<string>  $ids
      * @param  array<string, string>  $payload
-     *
      * @return PaginatedResults<Track>
      */
     public function findMultiple(array $ids, array $payload = []): PaginatedResults
@@ -55,10 +53,10 @@ class Tracks extends SpotifyResource
      * Get a list of the songs saved in the current Spotify user's 'Your Music' library.
      *
      * @scope user-library-read
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-tracks
      *
      * @param  array<string, string|integer>  $payload
-     *
      * @return PaginatedResults<SavedTrack>
      */
     public function findSaved(array $payload = []): PaginatedResults
@@ -75,6 +73,7 @@ class Tracks extends SpotifyResource
      * Save one or more tracks to the current user's 'Your Music' library.
      *
      * @scope user-library-modify
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/save-tracks-user
      *
      * @param  string|array<string>  $ids
@@ -88,6 +87,7 @@ class Tracks extends SpotifyResource
      * Remove one or more tracks from the current user's 'Your Music' library.
      *
      * @scope user-library-modify
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/remove-tracks-user
      *
      * @param  string|array<string>  $ids
@@ -101,6 +101,7 @@ class Tracks extends SpotifyResource
      * Check if one or more tracks is already saved in the current Spotify user's 'Your Music' library.
      *
      * @scope user-library-read
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/check-users-saved-tracks
      *
      * @param  string|array<string>  $ids
@@ -117,7 +118,6 @@ class Tracks extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-several-audio-features
      *
      * @param  string|array<string>  $id
-     *
      * @return AudioFeature|PaginatedResults<AudioFeature>
      */
     public function audioFeatures(string|array $id): AudioFeature|PaginatedResults
@@ -154,7 +154,6 @@ class Tracks extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-recommendations
      *
      * @param  array<string, string|integer|numeric>  $payload
-     *
      * @return PaginatedResults<SavedAlbum>
      */
     public function recommendations(array $payload = []): PaginatedResults

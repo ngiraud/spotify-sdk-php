@@ -24,6 +24,7 @@ class Playlists extends SpotifyResource
      * Get a list of the playlists owned or followed by the current Spotify user.
      *
      * @scope playlist-read-private
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-a-list-of-current-users-playlists
      *
      * @param  array<string, integer>  $payload
@@ -37,6 +38,7 @@ class Playlists extends SpotifyResource
      * Get a list of the playlists owned or followed by a Spotify user.
      *
      * @scope playlist-read-private, playlist-read-collaborative
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-list-users-playlists
      *
      * @param  array<string, integer>  $payload
@@ -55,6 +57,7 @@ class Playlists extends SpotifyResource
      * Create a playlist for a Spotify user. (The playlist will be empty until you add tracks.)
      *
      * @scope playlist-modify-public, playlist-modify-private
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/create-playlist
      *
      * @param  array<string, string|boolean>  $payload
@@ -68,6 +71,7 @@ class Playlists extends SpotifyResource
      * Change a playlist's name and public/private state. (The user must, of course, own the playlist.)
      *
      * @scope playlist-modify-public, playlist-modify-private
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/change-playlist-details
      *
      * @param  array<string, string|boolean>  $payload
@@ -81,6 +85,7 @@ class Playlists extends SpotifyResource
      * Get full details of the items of a playlist owned by a Spotify user.
      *
      * @scope playlist-read-private
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-playlists-tracks
      *
      * @param  array<string, string|integer>  $payload
@@ -103,6 +108,7 @@ class Playlists extends SpotifyResource
      * Note: Replace and reorder are mutually exclusive operations which share the same endpoint, but have different parameters. These operations can't be applied together in a single request.
      *
      * @scope playlist-modify-public, playlist-modify-private
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/reorder-or-replace-playlists-tracks
      *
      * @param  array<string, string|integer>  $payload
@@ -120,6 +126,7 @@ class Playlists extends SpotifyResource
      * Note: Replace and reorder are mutually exclusive operations which share the same endpoint, but have different parameters. These operations can't be applied together in a single request.
      *
      * @scope playlist-modify-public, playlist-modify-private
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/reorder-or-replace-playlists-tracks
      *
      * @param  string|array<string>  $uris
@@ -137,6 +144,7 @@ class Playlists extends SpotifyResource
      * Add one or more items to a user's playlist.
      *
      * @scope playlist-modify-public, playlist-modify-private
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/add-tracks-to-playlist
      *
      * @param  string|array<string>  $uris
@@ -153,6 +161,7 @@ class Playlists extends SpotifyResource
      * Remove one or more items from a user's playlist.
      *
      * @scope playlist-modify-public, playlist-modify-private
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/remove-tracks-playlist
      *
      * @param  string|array<string>  $uris
@@ -162,7 +171,7 @@ class Playlists extends SpotifyResource
     {
         return $this->client->delete(
             "playlists/{$id}/tracks",
-            ['tracks' => array_map(fn($uri) => ['uri' => $uri], (array) $uris), ...$payload],
+            ['tracks' => array_map(fn ($uri) => ['uri' => $uri], (array) $uris), ...$payload],
         );
     }
 
@@ -206,6 +215,7 @@ class Playlists extends SpotifyResource
      * Get the current image associated with a specific playlist.
      *
      * @scope ugc-image-upload,playlist-modify-public, playlist-modify-private
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-playlist-cover
      *
      * @return array<string, string|integer>

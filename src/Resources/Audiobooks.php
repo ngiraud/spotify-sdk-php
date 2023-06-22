@@ -17,7 +17,6 @@ class Audiobooks extends SpotifyResource
      *
      * @param  string|array<string>  $id
      * @param  array<string, string>  $payload
-     *
      * @return Audiobook|PaginatedResults<Audiobook>
      */
     public function find(string|array $id, array $payload = []): Audiobook|PaginatedResults
@@ -37,7 +36,6 @@ class Audiobooks extends SpotifyResource
      *
      * @param  array<string>  $ids
      * @param  array<string, string>  $payload
-     *
      * @return PaginatedResults<Audiobook>
      */
     public function findMultiple(array $ids, array $payload = []): PaginatedResults
@@ -73,10 +71,10 @@ class Audiobooks extends SpotifyResource
      * Get a list of the audiobooks saved in the current Spotify user's 'Your Music' library.
      *
      * @scope user-library-read
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-audiobooks
      *
      * @param  array<string, integer>  $payload
-     *
      * @return PaginatedResults<SavedAudiobook>
      */
     public function findSaved(array $payload = []): PaginatedResults
@@ -93,6 +91,7 @@ class Audiobooks extends SpotifyResource
      * Save one or more audiobooks to the current Spotify user's library.
      *
      * @scope user-library-modify
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/save-audiobooks-user
      *
      * @param  string|array<string>  $ids
@@ -106,6 +105,7 @@ class Audiobooks extends SpotifyResource
      * Remove one or more audiobooks from the Spotify user's library.
      *
      * @scope user-library-modify
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/remove-audiobooks-user
      *
      * @param  string|array<string>  $ids
@@ -119,6 +119,7 @@ class Audiobooks extends SpotifyResource
      * Check if one or more audiobooks are already saved in the current Spotify user's library.
      *
      * @scope user-library-read
+     *
      * @see https://developer.spotify.com/documentation/web-api/reference/check-users-saved-audiobooks
      *
      * @param  string|array<string>  $ids

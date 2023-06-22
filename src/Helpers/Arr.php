@@ -30,7 +30,6 @@ class Arr
     /**
      * @param  array<mixed>  $array
      * @param  array<mixed>|string  $keys
-     *
      * @return array<mixed>
      */
     public static function only(array $array, array|string $keys): array
@@ -44,7 +43,7 @@ class Arr
      */
     public static function get(array $array, array|string|null $key, mixed $default = null): mixed
     {
-        if (!self::accessible($array)) {
+        if (! self::accessible($array)) {
             return $default;
         }
 
@@ -56,7 +55,7 @@ class Arr
             return $array[$key];
         }
 
-        if (!str_contains($key, '.')) {
+        if (! str_contains($key, '.')) {
             return $array[$key] ?? $default;
         }
 

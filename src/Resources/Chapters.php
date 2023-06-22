@@ -15,7 +15,6 @@ class Chapters extends SpotifyResource
      *
      * @param  string|array<string>  $id
      * @param  array<string, string>  $payload
-     *
      * @return Chapter|PaginatedResults<Chapter>
      */
     public function find(string|array $id, array $payload = []): Chapter|PaginatedResults
@@ -35,7 +34,6 @@ class Chapters extends SpotifyResource
      *
      * @param  array<string>  $ids
      * @param  array<string, string>  $payload
-     *
      * @return PaginatedResults<Chapter>
      */
     public function findMultiple(array $ids, array $payload = []): PaginatedResults
