@@ -4,17 +4,7 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/ngiraud/spotify-sdk-php/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/ngiraud/spotify-sdk-php/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/ngiraud/spotify-sdk-php.svg?style=flat-square)](https://packagist.org/packages/ngiraud/spotify-sdk-php)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/spotify-sdk-php.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/spotify-sdk-php)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us
-by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address
-on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+This package contains the PHP SDK to work with the [Spotify Wep API](https://developer.spotify.com/documentation/web-api).
 
 ## Installation
 
@@ -24,12 +14,48 @@ You can install the package via composer:
 composer require ngiraud/spotify-sdk-php
 ```
 
-## Usage
+You must also install Guzzle:
+
+```bash
+composer require guzzlehttp/guzzle
+```
+
+In order to use the SDK, you need to request an access_token. You can get an example from
+the [Spotify Web API docs](https://developer.spotify.com/documentation/web-api/tutorials/code-flow).
+
+If you use Laravel, you can use [Socialite](https://laravel.com/docs/10.x/socialite) and the adapter provided by the community
+on [their website](https://socialiteproviders.com/Spotify/).
+
+Here is an example:
 
 ```php
-$skeleton = new Spotify\Client();
-echo $skeleton->echoPhrase('Hello, Spotify!');
+Route::get('/spotify/redirect', function () {
+    return Socialite::driver('spotify')
+                    ->scopes([
+                    // the list of scopes you want to allow
+                    ])
+                    ->redirect();
+});
+
+Route::get('/spotify/callback', function () {
+    $user = Socialite::driver('spotify')->user();
+
+    return $user->token;
+});
 ```
+
+## Usage
+
+To get started, you must first new up an instance of `Spotify\Client`.
+
+```php
+$client = new Spotify\Client('<access-token>');
+```
+
+## TODO
+
+- Add tests
+- Present all the endpoints in the README.
 
 ## Testing
 
@@ -47,7 +73,7 @@ Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTI
 
 ## Security Vulnerabilities
 
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+If you discover any security related issues, please email [contact@ngiraud.me](mailto:contact@ngiraud.me) instead of using the issue tracker.
 
 ## Credits
 

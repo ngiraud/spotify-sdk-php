@@ -36,8 +36,8 @@
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test:coverage": "vendor/bin/phpunit --coverage",
-        "test:format": "vendor/bin/pint",
-        "test:phpstan": "vendor/bin/phpstan analyse --ansi"
+        "pint": "vendor/bin/pint",
+        "phpstan": "vendor/bin/phpstan analyse --ansi"
     },
     "config": {
         "sort-packages": true,
