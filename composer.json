@@ -2,8 +2,12 @@
     "name": "ngiraud/spotify-sdk-php",
     "description": "SDK for using Spotify in PHP",
     "keywords": [
-        "ngiraud",
-        "spotify-sdk-php"
+        "spotify",
+        "music",
+        "api",
+        "php",
+        "client",
+        "sdk"
     ],
     "homepage": "https://github.com/ngiraud/spotify-sdk-php",
     "license": "MIT",
