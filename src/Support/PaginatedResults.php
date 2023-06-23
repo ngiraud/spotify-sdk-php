@@ -146,8 +146,6 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
 
     /**
      * Get the total number of results across all pages.
-     *
-     * @return array<mixed>
      */
     public function total(): ?int
     {
