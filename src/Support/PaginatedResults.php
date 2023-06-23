@@ -62,6 +62,9 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
     }
 
     /**
+     * Get the results.
+     * A results object is also iterable, so you can also get to the results by simply using the object in a loop.
+     *
      * @return array<mixed>
      */
     public function results(): array
@@ -70,6 +73,8 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
     }
 
     /**
+     * Get the previous and next URL that will be called to get results.
+     *
      * @return array<mixed>
      */
     public function links(): array
@@ -77,16 +82,25 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         return $this->links;
     }
 
+    /**
+     * Get the URL that will be called to get the previous page of results.
+     */
     public function previousUrl(): ?string
     {
         return Arr::get($this->links, 'previous');
     }
 
+    /**
+     * Get the URL that will be called to get the next page of results.
+     */
     public function nextUrl(): ?string
     {
         return Arr::get($this->links, 'next');
     }
 
+    /**
+     * Fetch the previous page of results.
+     */
     public function previous(Client $client): ?self
     {
         if (! $previousUrl = $this->previousUrl()) {
@@ -102,6 +116,9 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         );
     }
 
+    /**
+     * Fetch the next page of results.
+     */
     public function next(Client $client): ?self
     {
         if (! $nextUrl = $this->nextUrl()) {
@@ -118,6 +135,8 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
     }
 
     /**
+     * Returns a list of meta like total, limit, offset, href, seeds, cursors.
+     *
      * @return array<mixed>
      */
     public function meta(): array
@@ -125,11 +144,19 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         return $this->meta;
     }
 
+    /**
+     * Get the total number of results across all pages.
+     *
+     * @return array<mixed>
+     */
     public function total(): ?int
     {
         return Arr::get($this->meta, 'total');
     }
 
+    /**
+     * Map results to their according mapping class
+     */
     protected function mapResults(): self
     {
         $this->results = array_map(

@@ -10,16 +10,22 @@ This package contains the PHP SDK to work with the [Spotify Wep API](https://dev
 
 - [Get Started](#get-started)
 - [Usage](#usage)
-    - [Models Resource](#models-resource)
-    - [Completions Resource](#completions-resource)
-    - [Chat Resource](#chat-resource)
-    - [Audio Resource](#audio-resource)
-    - [Edits Resource](#edits-resource)
-    - [Embeddings Resource](#embeddings-resource)
-    - [Files Resource](#files-resource)
-    - [FineTunes Resource](#finetunes-resource)
-    - [Moderations Resource](#moderations-resource)
-    - [Images Resource](#images-resource)
+    - [Handling Pagination](#handling-pagination)
+    - [Albums Resource](#albums-resource)
+    - [Artists Resource](#artists-resource)
+    - [Audiobooks Resource](#audiobooks-resource)
+    - [Categories Resource](#categories-resource)
+    - [Chapters Resource](#chapters-resource)
+    - [Episodes Resource](#episodes-resource)
+    - [Genres Resource](#genres-resource)
+    - [Markets Resource](#markets-resource)
+    - [Player Resource](#player-resource)
+    - [Playlists Resource](#playlists-resource)
+    - [Search Resource](#search-resource)
+    - [Shows Resource](#shows-resource)
+    - [Tracks Resource](#tracks-resource)
+    - [Users Resource](#users-resource)
+- [TODO](#todo)
 - [Testing](#testing)
 - [Changelog](#changelog)
 - [Contributing](#contributing)
@@ -77,45 +83,382 @@ $album = $client->albums()->find('<spotify-album-id>', ['market' => 'FR']);
 
 ## Usage
 
+### Handling Pagination
+
+On some resources, some methods such as `findMultiple` will return an instance of `Spotify\Support\PaginatedResults`.
+This instance returns a list of records, and can handle other things like fetch the next or previous page of results.
+
+#### Available methods
+
+- `results()`
+- `links()`
+- `previousUrl()`
+- `nextUrl()`
+- `previous()`
+- `next()`
+- `meta()`
+- `total()`
+
 ### `Albums` Resource
 
-#### `find`
+You can access the Albums resource via the `albums` method from the client.
 
-Get Spotify catalog information for a single or multiple albums.
+#### Available methods:
+
+- `find()`
+- `findMultiple()`
+- `tracks()`
+- `findSaved()`
+- `save()`
+- `deleteSaved()`
+- `checkSaved()`
+- `newReleases()`
+
+#### Example
 
 ```php
 // Returns an instance of Spotify\SingleObjects\Album
 $album = $client->albums()->find('<spotify-album-id>');
-
 echo $album->name;
+
+// Returns an instance of Spotify\Support\PaginatedResults
+$tracks = $client->albums()->tracks('<spotify-album-id>', ['market' => 'FR', 'limit' => 5]);
+echo $tracks->results();
 ```
 
-#### `findMultiple`
+### `Artists` Resource
 
-Get Spotify catalog information for multiple albums identified by their Spotify IDs.
+You can access the Artists resource via the `artists` method from the client.
+
+#### Available methods:
+
+- `find()`
+- `findMultiple()`
+- `albums()`
+- `topTracks()`
+- `relatedArtists()`
+
+#### Example
 
 ```php
-// Returns an instance of Spotify\Support\PaginatedResults
-$album = $client->albums()->findMultiple(['<spotify-album-id-1>', '<spotify-album-id-2>']);
+// Returns an instance of Spotify\SingleObjects\Artist
+$artist = $client->artists()->find('<spotify-artist-id>');
+echo $artist->name;
 
-echo $album->results();
+// Returns an instance of Spotify\Support\PaginatedResults
+$albums = $client->artists()->albums('<spotify-artist-id>', ['market' => 'FR', 'limit' => 5]);
+echo $albums->results();
 ```
 
-#### `tracks`
+### `Audiobooks` Resource
 
-Get Spotify catalog information about an album’s tracks.
+> **Note: Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.**
+
+You can access the Audiobooks resource via the `audiobooks` method from the client.
+
+#### Available methods:
+
+- `find()`
+- `findMultiple()`
+- `chapters()`
+- `findSaved()`
+- `save()`
+- `deleteSaved()`
+- `checkSaved()`
+
+#### Example
 
 ```php
-// Returns an instance of Spotify\Support\PaginatedResults
-$album = $client->albums()->findMultiple(['<spotify-album-id-1>', '<spotify-album-id-2>']);
+// Returns an instance of Spotify\SingleObjects\Audiobook
+$audiobook = $client->audiobooks()->find('<spotify-audiobook-id>');
+echo $audiobook->name;
 
-echo $album->results();
+// Returns an instance of Spotify\Support\PaginatedResults
+$chapters = $client->audiobooks()->chapters('<spotify-audiobook-id>', ['limit' => 5]);
+echo $chapters->results();
+```
+
+### `Categories` Resource
+
+You can access the Categories resource via the `categories` method from the client.
+
+#### Available methods:
+
+- `find()`
+- `browse()`
+
+#### Example
+
+```php
+// Returns an instance of Spotify\SingleObjects\Category
+$category = $client->categories()->find('<spotify-category-id>');
+echo $category->name;
+
+// Returns an instance of Spotify\Support\PaginatedResults
+$categories = $client->categories()->browse();
+echo $categories->results();
+```
+
+### `Chapters` Resource
+
+You can access the Chapters resource via the `chapters` method from the client.
+
+#### Available methods:
+
+- `find()`
+- `findMultiple()`
+
+#### Example
+
+```php
+// Returns an instance of Spotify\SingleObjects\Category
+$chapter = $client->chapters()->find('<spotify-chapter-id>');
+echo $chapter->name;
+
+// Returns an instance of Spotify\Support\PaginatedResults
+$chapters = $client->chapters()->browse();
+echo $chapters->results();
+```
+
+### `Episodes` Resource
+
+You can access the Episodes resource via the `episodes` method from the client.
+
+#### Available methods:
+
+- `find()`
+- `findMultiple()`
+- `findSaved()`
+- `save()`
+- `deleteSaved()`
+- `checkSaved()`
+
+#### Example
+
+```php
+// Returns an instance of Spotify\SingleObjects\Episode
+$episode = $client->episodes()->find('<spotify-episode-id>');
+echo $episode->name;
+
+// Returns an array with the status for each episode
+$episodes = $client->episodes()->checkSaved(['<spotify-episode-id>', '<spotify-episode-id>']);
+echo $episodes;
+```
+
+### `Genres` Resource
+
+You can access the Genres resource via the `genres` method from the client.
+
+#### Available methods:
+
+- `seeds()`
+
+#### Example
+
+```php
+// Returns an array of genres
+$seeds = $client->genres()->seeds();
+echo $seeds;
+```
+
+### `Markets` Resource
+
+You can access the Markets resource via the `markets` method from the client.
+
+#### Available methods:
+
+- `all()`
+
+#### Example
+
+```php
+// Returns an array of markets
+$markets = $client->markets()->all();
+echo $markets;
+```
+
+### `Player` Resource
+
+You can access the Player resource via the `player` method from the client.
+
+#### Available methods:
+
+- `state()`
+- `transfer()`
+- `availableDevices()`
+- `currentlyPlayingTrack()`
+- `start()`
+- `pause()`
+- `next()`
+- `previous()`
+- `seek()`
+- `repeat()`
+- `volume()`
+- `shuffle()`
+- `recentlyPlayedTracks()`
+- `queue()`
+- `addToQueue()`
+
+#### Example
+
+```php
+// Returns an instance of Spotify\SingleObjects\Player
+$player = $client->player()->state();
+echo $player->is_playing;
+```
+
+### `Playlists` Resource
+
+You can access the Playlists resource via the `playlists` method from the client.
+
+#### Available methods:
+
+- `find()`
+- `forCurrentUser()`
+- `forUser()`
+- `create()`
+- `update()`
+- `tracks()`
+- `reorderTracks()`
+- `replaceTracks()`
+- `addTracks()`
+- `deleteTracks()`
+- `featured()`
+- `forCategory()`
+- `coverImage()`
+- `addCoverImage()`
+
+#### Example
+
+```php
+// Returns an instance of Spotify\SingleObjects\Playlist
+$playlist = $client->playlists()->find('<spotify-playlist-id>');
+echo $playlist->name;
+
+// Returns an instance of Spotify\Support\PaginatedResults
+$playlists = $client->playlists()->forCategory('<spotify-category-id>');
+echo $playlists->results();
+```
+
+### `Search` Resource
+
+You can access the Search resource via the `search` method from the client.
+The search method will return an instance of `Spotify\SingleObjects\Search`, and every type of results is accessible via its own method.
+This end method will return an instance of `Spotify\Support\PaginatedResults`.
+
+#### Available methods after the search
+
+- `audiobooks()`
+- `albums()`
+- `artists()`
+- `episodes()`
+- `playlists()`
+- `shows()`
+- `tracks()`
+
+#### Example
+
+```php
+// Returns an instance of Spotify\SingleObjects\Search
+$results = $client->search('alice cooper', 'artist');
+
+// $results->artists() is an instance of Spotify\Support\PaginatedResults
+// $artist is an instance of Spotify\SingleObjects\Artist
+foreach ($results->artists() as $artist) {
+    echo $artist->name;
+}
+```
+
+### `Shows` Resource
+
+You can access the Shows resource via the `shows` method from the client.
+
+#### Available methods:
+
+- `find()`
+- `findMultiple()`
+- `episodes()`
+- `findSaved()`
+- `save()`
+- `deleteSaved()`
+- `checkSaved()`
+
+#### Example
+
+```php
+// Returns an instance of Spotify\SingleObjects\Show
+$show = $client->shows()->find('<spotify-show-id>');
+echo $show->name;
+
+// Returns an instance of Spotify\Support\PaginatedResults
+$episodes = $client->shows()->episodes('<spotify-show-id>');
+echo $episodes->results();
+```
+
+### `Tracks` Resource
+
+You can access the Tracks resource via the `tracks` method from the client.
+
+#### Available methods:
+
+- `find()`
+- `findMultiple()`
+- `findSaved()`
+- `save()`
+- `deleteSaved()`
+- `checkSaved()`
+- `audioFeatures()`
+- `audioAnalysis()`
+- `recommendations()`
+
+#### Example
+
+```php
+// Returns an instance of Spotify\SingleObjects\Track
+$track = $client->tracks()->find('<spotify-track-id>');
+echo $track->name;
+
+// Returns an instance of Spotify\Support\PaginatedResults
+$recommendedTracks = $client->tracks()->recommendations();
+echo $recommendedTracks->results();
+```
+
+### `Users` Resource
+
+You can access the Users resource via the `users` method from the client.
+
+#### Available methods:
+
+- `me()`
+- `profile()`
+- `topArtists()`
+- `topTracks()`
+- `topItems()`
+- `followPlaylist()`
+- `unfollowPlaylist()`
+- `followingPlaylist()`
+- `followedArtists()`
+- `followArtists()`
+- `followUsers()`
+- `followArtistsOrUsers()`
+- `unfollowArtists()`
+- `unfollowUsers()`
+- `unfollowArtistsOrUsers()`
+- `followingArtists()`
+- `followingUsers()`
+- `followingArtistsOrUsers()`
+
+#### Example
+
+```php
+// Returns an instance of Spotify\SingleObjects\User
+$me = $client->users()->me();
+echo $me->display_name;
 ```
 
 ## TODO
 
 - Add tests
-- Present all the endpoints in the README.
 
 ## Testing
 
