@@ -4,7 +4,7 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/ngiraud/spotify-sdk-php/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/ngiraud/spotify-sdk-php/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/ngiraud/spotify-sdk-php.svg?style=flat-square)](https://packagist.org/packages/ngiraud/spotify-sdk-php)
 
-This package contains the PHP SDK to work with the [Spotify Wep API](https://developer.spotify.com/documentation/web-api).
+This package contains the PHP SDK to work with the [Spotify Web API](https://developer.spotify.com/documentation/web-api).
 
 ## Table of Contents
 
