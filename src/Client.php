@@ -4,6 +4,7 @@ namespace Spotify;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\ClientInterface;
+use Spotify\Exceptions\AccessTokenRequiredException;
 use Spotify\Resources\Albums;
 use Spotify\Resources\Artists;
 use Spotify\Resources\Audiobooks;
@@ -25,9 +26,13 @@ class Client
     protected string $endpoint = 'https://api.spotify.com/v1';
 
     public function __construct(
-        protected string $accessToken,
+        protected ?string $accessToken = null,
         protected ?ClientInterface $client = null
     ) {
+        if (is_null($this->accessToken)) {
+            throw new AccessTokenRequiredException();
+        }
+
         $this->client ??= new GuzzleClient([
             'http_errors' => false,
             'base_uri' => $this->endpoint.'/',
