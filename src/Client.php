@@ -203,11 +203,6 @@ class Client
             'form_params' => ['grant_type' => 'client_credentials']
         ]);
 
-        $status = $response->getStatusCode();
-        $content = $response->getBody()->getContents();
-        var_dump($status, $content);
-        exit;
-
         if ($response->getStatusCode() !== 200) {
             throw new UnableToAuthenticateException('Unable to authenticate through the client credentials flow.');
         }
