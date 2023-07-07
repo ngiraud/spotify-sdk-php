@@ -81,6 +81,19 @@ $client = new Spotify\Client('<access-token>');
 $album = $client->albums()->find('<spotify-album-id>', ['market' => 'FR']);
 ```
 
+You can also use the [Client Credentials flow](https://developer.spotify.com/documentation/web-api/tutorials/client-credentials-flow) to authenticate:
+
+```php
+$client = Spotify\Client::makeWithClientCredentials(
+    clientId: '<spotify-client-id>',
+    clientSecret: '<spotify-client-secret>'
+);
+
+$seeds = $client->genres()->seeds();
+```
+
+Please keep in mind that only endpoints that do not access user information can be accessed using this particular authentication flow.
+
 ## Usage
 
 ### Handling Pagination

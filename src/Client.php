@@ -5,6 +5,8 @@ namespace Spotify;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\ClientInterface;
 use Spotify\Exceptions\AccessTokenRequiredException;
+use Spotify\Exceptions\UnableToAuthenticateException;
+use Spotify\Helpers\Arr;
 use Spotify\Resources\Albums;
 use Spotify\Resources\Artists;
 use Spotify\Resources\Audiobooks;
@@ -23,7 +25,9 @@ class Client
 {
     use MakesHttpRequests;
 
-    protected string $endpoint = 'https://api.spotify.com/v1';
+    protected static string $endpoint = 'https://api.spotify.com/v1';
+
+    protected static string $authEndpoint = 'https://accounts.spotify.com/api/token/';
 
     public function __construct(
         protected ?string $accessToken = null,
@@ -35,7 +39,7 @@ class Client
 
         $this->client ??= new GuzzleClient([
             'http_errors' => false,
-            'base_uri' => $this->endpoint.'/',
+            'base_uri' => self::$endpoint.'/',
             'headers' => [
                 'Authorization' => "Bearer {$this->accessToken}",
                 'Accept' => 'application/json',
@@ -49,9 +53,16 @@ class Client
         return $this->accessToken;
     }
 
+    public function setAccessToken(string $accessToken): self
+    {
+        $this->accessToken = $accessToken;
+
+        return $this;
+    }
+
     public function endpoint(): string
     {
-        return $this->endpoint;
+        return self::$endpoint;
     }
 
     public function client(): ?ClientInterface
@@ -168,5 +179,42 @@ class Client
     public function users(): Users
     {
         return new Users($this);
+    }
+
+    /**
+     * Authenticate with Client Credentials flow
+     *
+     * @see https://developer.spotify.com/documentation/web-api/tutorials/client-credentials-flow
+     */
+    public static function makeWithClientCredentials(string $clientId, string $clientSecret): self
+    {
+        $credentials = base64_encode(implode(':', [$clientId, $clientSecret]));
+
+        $client = new GuzzleClient([
+            'http_errors' => false,
+            'headers' => [
+                'Authorization' => "Basic {$credentials}",
+                'Accept' => 'application/json',
+                'Content-Type' => 'application/x-www-form-urlencoded',
+            ],
+        ]);
+
+        $response = $client->post(self::$authEndpoint, [
+            'form_params' => ['grant_type' => 'client_credentials']
+        ]);
+
+        $status = $response->getStatusCode();
+        $content = $response->getBody()->getContents();
+        var_dump($status, $content);
+        exit;
+
+        if ($response->getStatusCode() !== 200) {
+            throw new UnableToAuthenticateException('Unable to authenticate through the client credentials flow.');
+        }
+
+        return new self(Arr::get(
+            json_decode($response->getBody()->getContents(), true),
+            'access_token'
+        ));
     }
 }
