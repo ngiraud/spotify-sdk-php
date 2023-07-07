@@ -2,6 +2,14 @@
 
 All notable changes to `spotify-sdk-php` will be documented in this file.
 
+## 1.0.3 - 2023-07-07
+
+### What's Changed
+
+- Add authentication with Client Credentials flow @ngiraud
+
+**Full Changelog**: https://github.com/ngiraud/spotify-sdk-php/compare/1.0.2...1.0.3
+
 ## 1.0.2 - 2023-07-05
 
 ### What's Changed
