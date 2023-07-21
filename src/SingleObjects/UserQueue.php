@@ -27,14 +27,14 @@ class UserQueue extends ApiResource
     {
         if (! empty($this->queue)) {
             foreach ($this->queue as $key => $item) {
-                $mappingClass = match (Arr::get($item, 'type')) {
+                $mappingClass = match (Arr::get($item->toArray(), 'type')) {
                     'track' => Track::class,
                     'episode' => Episode::class,
                     default => null,
                 };
 
                 if (! is_null($mappingClass)) {
-                    $this->queue[$key] = new $mappingClass($item);
+                    $this->queue[$key] = new $mappingClass($item->toArray());
                 }
             }
         }
