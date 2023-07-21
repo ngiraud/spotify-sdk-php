@@ -6,6 +6,7 @@ use Spotify\Resources\Albums;
 use Spotify\Resources\Artists;
 use Spotify\Resources\Audiobooks;
 use Spotify\Resources\Categories;
+use Spotify\Resources\Chapters;
 use Spotify\Resources\Episodes;
 use Spotify\Resources\Genres;
 use Spotify\Resources\Markets;
@@ -67,6 +68,14 @@ class Client
     public function categories(): Categories
     {
         return new Categories($this->factory);
+    }
+
+    /**
+     * Manages Chapters endpoints
+     */
+    public function chapters(): Chapters
+    {
+        return new Chapters($this->factory);
     }
 
     /**

@@ -38,6 +38,17 @@ class Audiobook extends ApiResource
 
     public string $edition;
 
+    public bool $explicit;
+
+    /**
+     * @var array<string,string>
+     */
+    public array $externalUrls;
+
+    public string $href;
+
+    public string $id;
+
     /**
      * @var array<Image>
      */

@@ -10,7 +10,7 @@ class TracksTest extends TestCase
     /** @test */
     public function it_can_find_a_single_track()
     {
-        $client = $this->mockClient('get', 'Tracks/Find.json');
+        $client = $this->mockClient('get', 'Tracks/Track.json');
 
         $track = $client->tracks()->find('some-id');
 

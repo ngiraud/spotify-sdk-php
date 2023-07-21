@@ -8,7 +8,7 @@ use Spotify\Factory;
 
 abstract class TestCase extends \PHPUnit\Framework\TestCase
 {
-    public function mockClient(string $method, string $fixturePath): Client
+    protected function mockClient(string $method, string $fixturePath): Client
     {
         $factory = Mockery::mock(Factory::class);
 
