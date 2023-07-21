@@ -16,6 +16,7 @@ class Albums extends SpotifyResource
      *
      * @param  string|array<string>  $id
      * @param  array<string, string>  $payload
+     *
      * @return Album|PaginatedResults<Album>
      */
     public function find(string|array $id, array $payload = []): Album|PaginatedResults
@@ -34,6 +35,7 @@ class Albums extends SpotifyResource
      *
      * @param  array<string>  $ids
      * @param  array<string, string>  $payload
+     *
      * @return PaginatedResults<Album>
      */
     public function findMultiple(array $ids, array $payload = []): PaginatedResults
@@ -41,7 +43,7 @@ class Albums extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'albums',
             mappingClass: Album::class,
-            client: $this->client,
+            factory: $this->client,
             payload: ['ids' => implode(',', array_filter($ids)), ...$payload],
             itemsKey: 'albums',
         );
@@ -60,7 +62,7 @@ class Albums extends SpotifyResource
         return PaginatedResults::make(
             endpoint: "albums/{$id}/tracks",
             mappingClass: Track::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload
         );
     }
@@ -73,6 +75,7 @@ class Albums extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-albums
      *
      * @param  array<string, string|integer>  $payload
+     *
      * @return PaginatedResults<SavedAlbum>
      */
     public function findSaved(array $payload = []): PaginatedResults
@@ -80,7 +83,7 @@ class Albums extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'me/albums',
             mappingClass: SavedAlbum::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
         );
     }
@@ -133,6 +136,7 @@ class Albums extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-albums
      *
      * @param  array<string, string|integer>  $payload
+     *
      * @return PaginatedResults<Album>
      */
     public function newReleases(array $payload = []): PaginatedResults
@@ -140,7 +144,7 @@ class Albums extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'browse/new-releases',
             mappingClass: Album::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
             entryKey: 'albums'
         );

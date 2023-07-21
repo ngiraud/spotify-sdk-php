@@ -15,6 +15,7 @@ class Artists extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-an-artist
      *
      * @param  string|array<string>  $id
+     *
      * @return Artist|PaginatedResults<Artist>
      */
     public function find(string|array $id): Artist|PaginatedResults
@@ -32,6 +33,7 @@ class Artists extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-multiple-artists
      *
      * @param  array<string>  $ids
+     *
      * @return PaginatedResults<Artist>
      */
     public function findMultiple(array $ids): PaginatedResults
@@ -39,7 +41,7 @@ class Artists extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'artists',
             mappingClass: Artist::class,
-            client: $this->client,
+            factory: $this->client,
             payload: ['ids' => implode(',', array_filter($ids))],
             itemsKey: 'artists',
         );
@@ -57,7 +59,7 @@ class Artists extends SpotifyResource
         return PaginatedResults::make(
             endpoint: "artists/{$id}/albums",
             mappingClass: Album::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload
         );
     }
@@ -74,7 +76,7 @@ class Artists extends SpotifyResource
         return PaginatedResults::make(
             endpoint: "artists/{$id}/top-tracks",
             mappingClass: Track::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
             itemsKey: 'tracks'
         );
@@ -91,7 +93,7 @@ class Artists extends SpotifyResource
         return PaginatedResults::make(
             endpoint: "artists/{$id}/related-artists",
             mappingClass: Artist::class,
-            client: $this->client,
+            factory: $this->client,
             itemsKey: 'artists'
         );
     }

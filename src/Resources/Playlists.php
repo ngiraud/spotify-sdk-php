@@ -48,7 +48,7 @@ class Playlists extends SpotifyResource
         return PaginatedResults::make(
             endpoint: is_null($id) ? 'me/playlists' : "users/{$id}/playlists",
             mappingClass: Playlist::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload
         );
     }
@@ -95,7 +95,7 @@ class Playlists extends SpotifyResource
         return PaginatedResults::make(
             endpoint: "playlists/{$id}/tracks",
             mappingClass: PlaylistTrack::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload
         );
     }
@@ -171,7 +171,7 @@ class Playlists extends SpotifyResource
     {
         return $this->client->delete(
             "playlists/{$id}/tracks",
-            ['tracks' => array_map(fn ($uri) => ['uri' => $uri], (array) $uris), ...$payload],
+            ['tracks' => array_map(fn($uri) => ['uri' => $uri], (array) $uris), ...$payload],
         );
     }
 
@@ -187,7 +187,7 @@ class Playlists extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'browse/featured-playlists',
             mappingClass: Playlist::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
             entryKey: 'playlists'
         );
@@ -205,7 +205,7 @@ class Playlists extends SpotifyResource
         return PaginatedResults::make(
             endpoint: "browse/categories/{$id}/playlists",
             mappingClass: Playlist::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
             entryKey: 'playlists'
         );

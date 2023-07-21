@@ -15,6 +15,7 @@ class Chapters extends SpotifyResource
      *
      * @param  string|array<string>  $id
      * @param  array<string, string>  $payload
+     *
      * @return Chapter|PaginatedResults<Chapter>
      */
     public function find(string|array $id, array $payload = []): Chapter|PaginatedResults
@@ -34,6 +35,7 @@ class Chapters extends SpotifyResource
      *
      * @param  array<string>  $ids
      * @param  array<string, string>  $payload
+     *
      * @return PaginatedResults<Chapter>
      */
     public function findMultiple(array $ids, array $payload = []): PaginatedResults
@@ -41,7 +43,7 @@ class Chapters extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'chapters',
             mappingClass: Chapter::class,
-            client: $this->client,
+            factory: $this->client,
             payload: ['ids' => implode(',', array_filter($ids)), ...$payload],
             itemsKey: 'chapters',
         );

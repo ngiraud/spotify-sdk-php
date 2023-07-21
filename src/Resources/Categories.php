@@ -25,6 +25,7 @@ class Categories extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-categories
      *
      * @param  array<string, string|integer>  $payload
+     *
      * @return PaginatedResults<Category>
      */
     public function browse(array $payload = []): PaginatedResults
@@ -32,7 +33,7 @@ class Categories extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'browse/categories',
             mappingClass: Category::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
             entryKey: 'categories',
         );

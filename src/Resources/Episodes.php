@@ -17,6 +17,7 @@ class Episodes extends SpotifyResource
      *
      * @param  string|array<string>  $id
      * @param  array<string, string>  $payload
+     *
      * @return Episode|PaginatedResults<Episode>
      */
     public function find(string|array $id, array $payload = []): Episode|PaginatedResults
@@ -37,6 +38,7 @@ class Episodes extends SpotifyResource
      *
      * @param  array<string>  $ids
      * @param  array<string, string>  $payload
+     *
      * @return PaginatedResults<Episode>
      */
     public function findMultiple(array $ids, array $payload = []): PaginatedResults
@@ -44,7 +46,7 @@ class Episodes extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'episodes',
             mappingClass: Episode::class,
-            client: $this->client,
+            factory: $this->client,
             payload: ['ids' => implode(',', array_filter($ids)), ...$payload],
             itemsKey: 'episodes',
         );
@@ -59,6 +61,7 @@ class Episodes extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-episodes
      *
      * @param  array<string, string|integer>  $payload
+     *
      * @return PaginatedResults<SavedEpisode>
      */
     public function findSaved(array $payload = []): PaginatedResults
@@ -66,7 +69,7 @@ class Episodes extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'me/episodes',
             mappingClass: SavedEpisode::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
         );
     }

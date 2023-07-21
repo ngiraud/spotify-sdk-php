@@ -59,13 +59,13 @@ trait MakesHttpRequests
     {
         $verb = strtoupper($verb);
 
-        $response = $this->client->request(
+        $response = $this->httpClient->request(
             $verb,
             $uri,
             empty($payload) ? [] : [($verb === 'GET' ? 'query' : $payloadType) => $payload]
         );
 
-        if (! $this->isSuccessful($response)) {
+        if (!$this->isSuccessful($response)) {
             $this->handleRequestError($response);
         }
 
