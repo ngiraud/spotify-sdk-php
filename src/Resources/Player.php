@@ -4,8 +4,9 @@ namespace Spotify\Resources;
 
 use Spotify\Helpers\Arr;
 use Spotify\SingleObjects\Device;
-use Spotify\SingleObjects\Player as PlayerSingleObject;
+use Spotify\SingleObjects\PlaybackState;
 use Spotify\SingleObjects\PlayHistory;
+use Spotify\SingleObjects\UserQueue;
 use Spotify\Support\PaginatedResults;
 
 class Player extends SpotifyResource
@@ -19,9 +20,9 @@ class Player extends SpotifyResource
      *
      * @param  array<string, string>  $payload
      */
-    public function state(array $payload = []): mixed
+    public function state(array $payload = []): PlaybackState
     {
-        return new PlayerSingleObject($this->client->get('me/player', $payload));
+        return new PlaybackState($this->client->get('me/player', $payload));
     }
 
     /**
@@ -67,7 +68,7 @@ class Player extends SpotifyResource
      */
     public function currentlyPlayingTrack(array $payload = []): mixed
     {
-        return new PlayerSingleObject($this->client->get('me/player/currently-playing', $payload));
+        return new PlaybackState($this->client->get('me/player/currently-playing', $payload));
     }
 
     /**
@@ -203,11 +204,11 @@ class Player extends SpotifyResource
      *
      * @scope user-read-playback-state
      *
-     * @see https://developer.spotify.com/documentation/web-api/reference/toggle-shuffle-for-users-playback
+     * @see https://developer.spotify.com/documentation/web-api/reference/get-queue
      */
-    public function queue(): mixed
+    public function queue(): UserQueue
     {
-        return new PlayerSingleObject($this->client->get('me/player/queue'));
+        return new UserQueue($this->client->get('me/player/queue'));
     }
 
     /**

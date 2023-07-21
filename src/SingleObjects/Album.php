@@ -78,5 +78,8 @@ class Album extends ApiResource
      */
     public array $artists;
 
+    /**
+     * @var PaginatedResults<Track>
+     */
     public PaginatedResults $tracks;
 }

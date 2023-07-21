@@ -60,7 +60,7 @@ class Track extends ApiResource
 
     public int $popularity;
 
-    public string $previewUrl;
+    public ?string $previewUrl = null;
 
     public int $trackNumber;
 

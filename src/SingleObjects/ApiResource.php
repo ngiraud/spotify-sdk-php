@@ -35,7 +35,11 @@ class ApiResource
     {
         $this->attributes = $attributes;
 
+        $this->beforeFill();
+
         $this->fill();
+
+        $this->afterFill();
     }
 
     /**
@@ -44,10 +48,10 @@ class ApiResource
     public function toArray(): array
     {
         $publicProperties = get_object_vars($this);
-        unset($publicProperties['attributes']);
-        unset($publicProperties['singleObjectLists']);
-        unset($publicProperties['singleObjects']);
-        unset($publicProperties['paginatedResults']);
+//        unset($publicProperties['attributes']);
+//        unset($publicProperties['singleObjectLists']);
+//        unset($publicProperties['singleObjects']);
+//        unset($publicProperties['paginatedResults']);
 
         $properties = [];
 
@@ -95,5 +99,13 @@ class ApiResource
         }
 
         return $value;
+    }
+
+    protected function beforeFill(): void
+    {
+    }
+
+    protected function afterFill(): void
+    {
     }
 }
