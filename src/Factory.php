@@ -94,11 +94,11 @@ class Factory
             ];
         }
 
-        if (!Arr::exists($this->headers, 'Accept')) {
+        if (! Arr::exists($this->headers, 'Accept')) {
             $this->headers['Accept'] = 'application/json';
         }
 
-        if (!Arr::exists($this->headers, 'Content-Type')) {
+        if (! Arr::exists($this->headers, 'Content-Type')) {
             $this->headers['Content-Type'] = 'application/json';
         }
 
@@ -139,9 +139,6 @@ class Factory
         return new Client($this->prepareHttpClient());
     }
 
-    /**
-     * @return string|null
-     */
     public function getAccessToken(): ?string
     {
         return $this->accessToken;
@@ -151,10 +148,10 @@ class Factory
     {
         // We prepare the client for basic authentication and request the API to get an access token
         $response = $this->withHttpHeader('Authorization', "Basic {$credentials}")
-                         ->withHttpHeader('Content-Type', 'application/x-www-form-urlencoded')
-                         ->withBaseUri(self::$authEndpoint)
-                         ->prepareHttpClient()
-                         ->request('post', 'api/token', ['grant_type' => 'client_credentials'], 'form_params');
+            ->withHttpHeader('Content-Type', 'application/x-www-form-urlencoded')
+            ->withBaseUri(self::$authEndpoint)
+            ->prepareHttpClient()
+            ->request('post', 'api/token', ['grant_type' => 'client_credentials'], 'form_params');
 
         return Arr::get($response, 'access_token');
     }

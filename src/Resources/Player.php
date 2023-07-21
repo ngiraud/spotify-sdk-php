@@ -52,7 +52,7 @@ class Player extends SpotifyResource
     public function availableDevices(): mixed
     {
         return array_map(
-            fn($attributes) => new Device($attributes),
+            fn ($attributes) => new Device($attributes),
             Arr::get((array) $this->client->get('me/player/devices'), 'devices', [])
         );
     }

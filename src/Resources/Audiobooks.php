@@ -17,7 +17,6 @@ class Audiobooks extends SpotifyResource
      *
      * @param  string|array<string>  $id
      * @param  array<string, string>  $payload
-     *
      * @return Audiobook|PaginatedResults<Audiobook>
      */
     public function find(string|array $id, array $payload = []): Audiobook|PaginatedResults
@@ -37,7 +36,6 @@ class Audiobooks extends SpotifyResource
      *
      * @param  array<string>  $ids
      * @param  array<string, string>  $payload
-     *
      * @return PaginatedResults<Audiobook>
      */
     public function findMultiple(array $ids, array $payload = []): PaginatedResults
@@ -77,7 +75,6 @@ class Audiobooks extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-audiobooks
      *
      * @param  array<string, integer>  $payload
-     *
      * @return PaginatedResults<SavedAudiobook>
      */
     public function findSaved(array $payload = []): PaginatedResults

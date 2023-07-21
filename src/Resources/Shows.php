@@ -18,7 +18,6 @@ class Shows extends SpotifyResource
      *
      * @param  string|array<string>  $id
      * @param  array<string, string>  $payload
-     *
      * @return Show|PaginatedResults<Show>
      */
     public function find(string|array $id, array $payload = []): Show|PaginatedResults
@@ -37,7 +36,6 @@ class Shows extends SpotifyResource
      *
      * @param  array<string>  $ids
      * @param  array<string, string>  $payload
-     *
      * @return PaginatedResults<Show>
      */
     public function findMultiple(array $ids, array $payload = []): PaginatedResults
@@ -78,7 +76,6 @@ class Shows extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-saved-shows
      *
      * @param  array<string, integer>  $payload
-     *
      * @return PaginatedResults<SavedShow>
      */
     public function findSaved(array $payload = []): PaginatedResults

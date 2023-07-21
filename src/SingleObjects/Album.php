@@ -79,7 +79,7 @@ class Album extends ApiResource
     public int $popularity;
 
     public ?string $albumGroup = null;
-    
+
     /**
      * @var array<Artist>
      */

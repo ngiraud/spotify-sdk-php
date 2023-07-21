@@ -13,8 +13,8 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
         $factory = Mockery::mock(Factory::class);
 
         $factory->shouldReceive($method)
-                ->once()
-                ->andReturn(json_decode(file_get_contents("tests/Fixtures/{$fixturePath}"), true));
+            ->once()
+            ->andReturn(json_decode(file_get_contents("tests/Fixtures/{$fixturePath}"), true));
 
         return new Client($factory);
     }

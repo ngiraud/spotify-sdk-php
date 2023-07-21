@@ -12,8 +12,8 @@ class Spotify
     public static function client(string $accessToken): Client
     {
         return self::factory()
-                   ->withAccessToken($accessToken)
-                   ->make();
+            ->withAccessToken($accessToken)
+            ->make();
     }
 
     /**
@@ -24,8 +24,8 @@ class Spotify
     public static function basic(string $clientId, string $clientSecret): Client
     {
         return self::factory()
-                   ->authenticateBasic($clientId, $clientSecret)
-                   ->make();
+            ->authenticateBasic($clientId, $clientSecret)
+            ->make();
     }
 
     public static function factory(): Factory

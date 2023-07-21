@@ -44,7 +44,6 @@ class Users extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
      *
      * @param  array<string, string|integer>  $payload
-     *
      * @return PaginatedResults<Artist>
      *
      * @throws ResourceNotFoundException
@@ -62,7 +61,6 @@ class Users extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
      *
      * @param  array<string, string|integer>  $payload
-     *
      * @return PaginatedResults<Track>
      *
      * @throws ResourceNotFoundException
@@ -80,7 +78,6 @@ class Users extends SpotifyResource
      * @see https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
      *
      * @param  array<string, string|integer>  $payload
-     *
      * @return PaginatedResults<Artist|Track>
      *
      * @throws ResourceNotFoundException

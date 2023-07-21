@@ -171,7 +171,7 @@ class Playlists extends SpotifyResource
     {
         return $this->client->delete(
             "playlists/{$id}/tracks",
-            ['tracks' => array_map(fn($uri) => ['uri' => $uri], (array) $uris), ...$payload],
+            ['tracks' => array_map(fn ($uri) => ['uri' => $uri], (array) $uris), ...$payload],
         );
     }
 

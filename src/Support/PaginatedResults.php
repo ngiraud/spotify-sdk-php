@@ -103,7 +103,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
      */
     public function previous(Factory $factory): ?self
     {
-        if (!$previousUrl = $this->previousUrl()) {
+        if (! $previousUrl = $this->previousUrl()) {
             return null;
         }
 
@@ -121,7 +121,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
      */
     public function next(Factory $factory): ?self
     {
-        if (!$nextUrl = $this->nextUrl()) {
+        if (! $nextUrl = $this->nextUrl()) {
             return null;
         }
 
@@ -158,7 +158,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
     protected function mapResults(): self
     {
         $this->results = array_map(
-            fn($attributes) => new $this->mappingClass($attributes),
+            fn ($attributes) => new $this->mappingClass($attributes),
             Arr::get(Arr::get($this->response, $this->entryKey, []), $this->itemsKey, []),
         );
 

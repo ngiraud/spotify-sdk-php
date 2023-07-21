@@ -34,7 +34,7 @@ class PlaybackState extends ApiResource
 
     protected function beforeFill(): void
     {
-        if (!empty($type = Arr::get($this->attributes, 'currently_playing_type'))) {
+        if (! empty($type = Arr::get($this->attributes, 'currently_playing_type'))) {
             $this->singleObjects['item'] = match ($type) {
                 'episode' => Episode::class,
                 default => Track::class,
