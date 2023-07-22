@@ -476,7 +476,6 @@ Tests are being written. Currently missing tests for:
 
 - Player
 - Search
-- Shows
 - Tracks
 - Users
 - PaginatedResults
