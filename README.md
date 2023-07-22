@@ -25,8 +25,8 @@ This package contains the PHP SDK to work with the [Spotify Web API](https://dev
     - [Shows Resource](#shows-resource)
     - [Tracks Resource](#tracks-resource)
     - [Users Resource](#users-resource)
-- [TODO](#todo)
 - [Testing](#testing)
+- [Linting](#linting)
 - [Changelog](#changelog)
 - [Contributing](#contributing)
 - [Security Vulnerabilities](#security-vulnerabilities)
@@ -470,16 +470,17 @@ $me = $client->users()->me();
 echo $me->display_name;
 ```
 
-## TODO
-
-Tests are being written. Currently missing tests for:
-
-- Player
-
 ## Testing
 
 ```bash
 composer test
+composer phpstan
+```
+
+## Linting
+
+```bash
+composer pint
 ```
 
 ## Changelog
@@ -495,6 +496,9 @@ Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTI
 If you discover any security related issues, please email [contact@ngiraud.me](mailto:contact@ngiraud.me) instead of using the issue tracker.
 
 ## Credits
+
+This package is inspired by the [OpenAI PHP](https://github.com/openai-php/client) client package made by Nuno Maduro and Sandro Gehri
+and the [Mailcoach API SDK](https://github.com/spatie/mailcoach-sdk-php) from Spatie.
 
 - [Nicolas Giraud](https://github.com/ngiraud)
 - [All Contributors](../../contributors)

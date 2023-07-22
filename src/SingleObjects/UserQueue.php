@@ -9,13 +9,13 @@ class UserQueue extends ApiResource
     public Track|Episode|null $currentlyPlaying = null;
 
     /**
-     * @var array<Track|Episode>|null
+     * @var array<Track|Episode>
      */
-    public ?array $queue = null;
+    public array $queue = [];
 
     protected function beforeFill(): void
     {
-        if (! empty($type = Arr::get($this->attributes, 'currently_playing.type'))) {
+        if (!empty($type = Arr::get($this->attributes, 'currently_playing.type'))) {
             $this->singleObjects['currentlyPlaying'] = match ($type) {
                 'episode' => Episode::class,
                 default => Track::class,
@@ -25,16 +25,16 @@ class UserQueue extends ApiResource
 
     protected function afterFill(): void
     {
-        if (! empty($this->queue)) {
-            foreach ($this->queue as $key => $item) {
-                $mappingClass = match (Arr::get($item->toArray(), 'type')) {
+        if (!empty($this->attributes['queue'])) {
+            foreach ($this->attributes['queue'] as $key => $item) {
+                $mappingClass = match (Arr::get($item, 'type')) {
                     'track' => Track::class,
                     'episode' => Episode::class,
                     default => null,
                 };
 
-                if (! is_null($mappingClass)) {
-                    $this->queue[$key] = new $mappingClass($item->toArray());
+                if (!is_null($mappingClass)) {
+                    $this->queue[$key] = new $mappingClass($item);
                 }
             }
         }

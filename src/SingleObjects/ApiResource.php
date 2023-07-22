@@ -48,10 +48,6 @@ class ApiResource
     public function toArray(): array
     {
         $publicProperties = get_object_vars($this);
-        //        unset($publicProperties['attributes']);
-        //        unset($publicProperties['singleObjectLists']);
-        //        unset($publicProperties['singleObjects']);
-        //        unset($publicProperties['paginatedResults']);
 
         $properties = [];
 
@@ -67,9 +63,9 @@ class ApiResource
         foreach ($this->attributes as $key => $value) {
             $key = Str::camelCase($key);
 
-            //            if (!property_exists($this, $key)) {
-            //                continue;
-            //            }
+            if (!property_exists($this, $key)) {
+                continue;
+            }
 
             $this->{$key} = $this->mapValue($key, $value);
         }
@@ -77,18 +73,18 @@ class ApiResource
 
     protected function mapValue(string $key, mixed $value): mixed
     {
-        if (! empty($mappingClass = Arr::get($this->singleObjects, $key))) {
+        if (!empty($mappingClass = Arr::get($this->singleObjects, $key))) {
             return new $mappingClass($value);
         }
 
-        if (! empty($mappingClass = Arr::get($this->singleObjectLists, $key))) {
+        if (!empty($mappingClass = Arr::get($this->singleObjectLists, $key))) {
             return array_map(
-                fn (array $attributes) => new $mappingClass($attributes),
+                fn(array $attributes) => new $mappingClass($attributes),
                 $value
             );
         }
 
-        if (! empty($parameters = Arr::get($this->paginatedResults, $key))) {
+        if (!empty($parameters = Arr::get($this->paginatedResults, $key))) {
             if (is_string($parameters)) {
                 $parameters = ['mappingClass' => $parameters, 'entryKey' => $key];
             }

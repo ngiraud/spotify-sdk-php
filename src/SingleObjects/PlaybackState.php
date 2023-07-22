@@ -6,6 +6,10 @@ use Spotify\Helpers\Arr;
 
 class PlaybackState extends ApiResource
 {
+    protected array $singleObjects = [
+        'device' => Device::class,
+    ];
+
     public Device $device;
 
     public string $repeatState;
@@ -34,7 +38,7 @@ class PlaybackState extends ApiResource
 
     protected function beforeFill(): void
     {
-        if (! empty($type = Arr::get($this->attributes, 'currently_playing_type'))) {
+        if (!empty($type = Arr::get($this->attributes, 'currently_playing_type'))) {
             $this->singleObjects['item'] = match ($type) {
                 'episode' => Episode::class,
                 default => Track::class,

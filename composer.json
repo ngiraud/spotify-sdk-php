@@ -40,7 +40,6 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
-        "test:coverage": "vendor/bin/phpunit --coverage",
         "pint": "vendor/bin/pint",
         "phpstan": "vendor/bin/phpstan analyse --ansi"
     },
