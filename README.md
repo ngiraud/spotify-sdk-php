@@ -475,7 +475,6 @@ echo $me->display_name;
 Tests are being written. Currently missing tests for:
 
 - Player
-- Search
 
 ## Testing
 

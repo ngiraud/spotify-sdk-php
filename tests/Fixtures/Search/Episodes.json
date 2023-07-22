@@ -1,0 +1,812 @@
+{
+    "episodes": {
+        "href": "https://api.spotify.com/v1/search?query=remaster%2520track%3ADoxy%2520artist%3AMiles%2520Davis&type=episode&locale=fr-FR%2Cfr%3Bq%3D0.9%2Cen-US%3Bq%3D0.8%2Cen%3Bq%3D0.7%2Cla%3Bq%3D0.6&offset=0&limit=20",
+        "items": [
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/7tyHPkdlSFf9kAtE7nTih6/clip_448165_508165.mp3",
+                "description": "Hachem a bon dos ... (conférence à Marseille 2023) by Rav David Touitou",
+                "duration_ms": 4155779,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/5dvUNuvFgBWq7HUOYyFm2O"
+                },
+                "href": "https://api.spotify.com/v1/episodes/5dvUNuvFgBWq7HUOYyFm2O",
+                "html_description": "Hachem a bon dos ... (conférence à Marseille 2023) by Rav David Touitou",
+                "id": "5dvUNuvFgBWq7HUOYyFm2O",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8a2acd7f30906435609b01a193",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1f2acd7f30906435609b01a193",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68d2acd7f30906435609b01a193",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "fr",
+                "languages": [
+                    "fr"
+                ],
+                "name": "Hachem a bon dos ... (conférence à Marseille 2023)",
+                "release_date": "2023-07-14",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:5dvUNuvFgBWq7HUOYyFm2O"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/5XVSmvdyMxufOz7yrJFdP3/clip_340728_400728.mp3",
+                "description": "Respecte l'autre comme tu aimerais être respecté by Rav David Touitou",
+                "duration_ms": 2021028,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/70AMZbnki4EglQ2isGmxyj"
+                },
+                "href": "https://api.spotify.com/v1/episodes/70AMZbnki4EglQ2isGmxyj",
+                "html_description": "Respecte l&#39;autre comme tu aimerais être respecté by Rav David Touitou",
+                "id": "70AMZbnki4EglQ2isGmxyj",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8a7027ff6573f0ed1684e8b6d3",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1f7027ff6573f0ed1684e8b6d3",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68d7027ff6573f0ed1684e8b6d3",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "fr",
+                "languages": [
+                    "fr"
+                ],
+                "name": "Respecte l'autre comme tu aimerais être respecté",
+                "release_date": "2023-07-05",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:70AMZbnki4EglQ2isGmxyj"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/4yKMp5IKcW9fvQfYZrlhML/clip_526989_586989.mp3",
+                "description": "La naissance d un mérite particulier (selon le Baal Chem Tov) by Rav David Touitou",
+                "duration_ms": 1357308,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/3EUXJdE76dhSo2zG91Z02Z"
+                },
+                "href": "https://api.spotify.com/v1/episodes/3EUXJdE76dhSo2zG91Z02Z",
+                "html_description": "La naissance d un mérite particulier (selon le Baal Chem Tov) by Rav David Touitou",
+                "id": "3EUXJdE76dhSo2zG91Z02Z",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8aa5d4a3a8b6640f1c1bbbe43e",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1fa5d4a3a8b6640f1c1bbbe43e",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68da5d4a3a8b6640f1c1bbbe43e",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "fr",
+                "languages": [
+                    "fr"
+                ],
+                "name": "La naissance d un mérite particulier (selon le Baal Chem Tov)",
+                "release_date": "2023-07-09",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:3EUXJdE76dhSo2zG91Z02Z"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/03xDW5BX19v9bs6jZYOyaV/clip_140360_200360.mp3",
+                "description": "La rancune by Rav David Touitou",
+                "duration_ms": 2825628,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/3EsYl3bYqaeJ5wo72qCZCK"
+                },
+                "href": "https://api.spotify.com/v1/episodes/3EsYl3bYqaeJ5wo72qCZCK",
+                "html_description": "La rancune by Rav David Touitou",
+                "id": "3EsYl3bYqaeJ5wo72qCZCK",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8a9a2d8cc87707f0330fbf7e65",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1f9a2d8cc87707f0330fbf7e65",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68d9a2d8cc87707f0330fbf7e65",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "fr",
+                "languages": [
+                    "fr"
+                ],
+                "name": "La rancune",
+                "release_date": "2023-07-18",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:3EsYl3bYqaeJ5wo72qCZCK"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/4cYKAXTWO9luP9lYbPqzOa/clip_185194_245194.mp3",
+                "description": "Avoir été tout le monde sauf moi même by Rav David Touitou",
+                "duration_ms": 2494692,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/7Hqws2P4z8ERmcb6ggCKJR"
+                },
+                "href": "https://api.spotify.com/v1/episodes/7Hqws2P4z8ERmcb6ggCKJR",
+                "html_description": "Avoir été tout le monde sauf moi même by Rav David Touitou",
+                "id": "7Hqws2P4z8ERmcb6ggCKJR",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8a09cfc1c2aa2049f7adaa3557",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1f09cfc1c2aa2049f7adaa3557",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68d09cfc1c2aa2049f7adaa3557",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "fr",
+                "languages": [
+                    "fr"
+                ],
+                "name": "Avoir été tout le monde sauf moi même",
+                "release_date": "2023-07-03",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:7Hqws2P4z8ERmcb6ggCKJR"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/71Rk50l8LJzN8KdKYFcM4t/clip_384899_444899.mp3",
+                "description": "Hachem sa Terre et Am Israël ne faisons qu’un (selon le Rabbi) by Rav David Touitou",
+                "duration_ms": 958740,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/54SZNWwwhMZOa9yu5hLyg2"
+                },
+                "href": "https://api.spotify.com/v1/episodes/54SZNWwwhMZOa9yu5hLyg2",
+                "html_description": "Hachem sa Terre et Am Israël ne faisons qu’un (selon le Rabbi) by Rav David Touitou",
+                "id": "54SZNWwwhMZOa9yu5hLyg2",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8afb8b449f6a73a7cc31908833",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1ffb8b449f6a73a7cc31908833",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68dfb8b449f6a73a7cc31908833",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "fr",
+                "languages": [
+                    "fr"
+                ],
+                "name": "Hachem sa Terre et Am Israël ne faisons qu’un (selon le Rabbi)",
+                "release_date": "2023-07-18",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:54SZNWwwhMZOa9yu5hLyg2"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/484e2Egr3ZJZLEgklViRlE/clip_43103_103103.mp3",
+                "description": "Les 3 clés pour rapprocher vers la Torah … - Question au Rav by Rav David Touitou",
+                "duration_ms": 187068,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/1Xu00bAAJRDK4oog82T36Y"
+                },
+                "href": "https://api.spotify.com/v1/episodes/1Xu00bAAJRDK4oog82T36Y",
+                "html_description": "Les 3 clés pour rapprocher vers la Torah … - Question au Rav by Rav David Touitou",
+                "id": "1Xu00bAAJRDK4oog82T36Y",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8ae931fe50dc5fe29ed419d934",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1fe931fe50dc5fe29ed419d934",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68de931fe50dc5fe29ed419d934",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "fr",
+                "languages": [
+                    "fr"
+                ],
+                "name": "Les 3 clés pour rapprocher vers la Torah … - Question au Rav",
+                "release_date": "2023-07-18",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:1Xu00bAAJRDK4oog82T36Y"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/1tLVR5WieeTRTNyUOOeCeO/clip_132871_192871.mp3",
+                "description": "L’été est là!!! 2 halakhot très importantes by Rav David Touitou",
+                "duration_ms": 269460,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/6Kl7TFTRpke7RJzBS7HSlK"
+                },
+                "href": "https://api.spotify.com/v1/episodes/6Kl7TFTRpke7RJzBS7HSlK",
+                "html_description": "L’été est là!!! 2 halakhot très importantes by Rav David Touitou",
+                "id": "6Kl7TFTRpke7RJzBS7HSlK",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8adc66e27bd43d23973e0467f7",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1fdc66e27bd43d23973e0467f7",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68ddc66e27bd43d23973e0467f7",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "fr",
+                "languages": [
+                    "fr"
+                ],
+                "name": "L’été est là!!! 2 halakhot très importantes",
+                "release_date": "2023-07-10",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:6Kl7TFTRpke7RJzBS7HSlK"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/4QfWSEMK6EDKdxklGTtdn7/clip_0_60000.mp3",
+                "description": "Tout ce qu’il est permis de faire aujourd’hui - 17 Tamouz by Rav David Touitou",
+                "duration_ms": 231540,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/4d5ptf1Q2ynK5dfyPUXEXF"
+                },
+                "href": "https://api.spotify.com/v1/episodes/4d5ptf1Q2ynK5dfyPUXEXF",
+                "html_description": "Tout ce qu’il est permis de faire aujourd’hui - 17 Tamouz by Rav David Touitou",
+                "id": "4d5ptf1Q2ynK5dfyPUXEXF",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8a17d8996def012be476ae695c",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1f17d8996def012be476ae695c",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68d17d8996def012be476ae695c",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "fr",
+                "languages": [
+                    "fr"
+                ],
+                "name": "Tout ce qu’il est permis de faire aujourd’hui - 17 Tamouz",
+                "release_date": "2023-07-06",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:4d5ptf1Q2ynK5dfyPUXEXF"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/0lis7w0sOMilYYLHKzkML2/clip_16028_76028.mp3",
+                "description": "3 semaines (Chééh’éyanou, musique, voyages…) by Rav David Touitou",
+                "duration_ms": 200148,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/50TPWWm5DLGmTOiNMxwaU9"
+                },
+                "href": "https://api.spotify.com/v1/episodes/50TPWWm5DLGmTOiNMxwaU9",
+                "html_description": "3 semaines (Chééh’éyanou, musique, voyages…) by Rav David Touitou",
+                "id": "50TPWWm5DLGmTOiNMxwaU9",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8ac05614d9fed487ba6d362352",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1fc05614d9fed487ba6d362352",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68dc05614d9fed487ba6d362352",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "fr",
+                "languages": [
+                    "fr"
+                ],
+                "name": "3 semaines (Chééh’éyanou, musique, voyages…)",
+                "release_date": "2023-07-03",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:50TPWWm5DLGmTOiNMxwaU9"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/3RcpguMzfr3hmYhgKFKEYf/clip_35328_95328.mp3",
+                "description": "Savoir si c’est mon âme sœur? by Rav David Touitou",
+                "duration_ms": 135732,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/53hkd92LQq5aXxPjJcDKHM"
+                },
+                "href": "https://api.spotify.com/v1/episodes/53hkd92LQq5aXxPjJcDKHM",
+                "html_description": "Savoir si c’est mon âme sœur? by Rav David Touitou",
+                "id": "53hkd92LQq5aXxPjJcDKHM",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8a0e7dd6aaf5dc30b3263cbef4",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1f0e7dd6aaf5dc30b3263cbef4",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68d0e7dd6aaf5dc30b3263cbef4",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "fr",
+                "languages": [
+                    "fr"
+                ],
+                "name": "Savoir si c’est mon âme sœur?",
+                "release_date": "2023-06-30",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:53hkd92LQq5aXxPjJcDKHM"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/4Vvs3sS7DTGpt0hBFkr3lo/clip_446820_506820.mp3",
+                "description": "Live Tiktok - Questions/réponses du 25/06/23 by Rav David Touitou",
+                "duration_ms": 5667276,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/6fcOSH27DzUAGsjae2CoDJ"
+                },
+                "href": "https://api.spotify.com/v1/episodes/6fcOSH27DzUAGsjae2CoDJ",
+                "html_description": "Live Tiktok - Questions/réponses du 25/06/23 by Rav David Touitou",
+                "id": "6fcOSH27DzUAGsjae2CoDJ",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8a74f6ca322aa1afb074d881cb",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1f74f6ca322aa1afb074d881cb",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68d74f6ca322aa1afb074d881cb",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "fr",
+                "languages": [
+                    "fr"
+                ],
+                "name": "Live Tiktok - Questions/réponses du 25/06/23",
+                "release_date": "2023-06-26",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:6fcOSH27DzUAGsjae2CoDJ"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/11W9nDwsxepddjXCyzisjV/clip_533225_593225.mp3",
+                "description": "Quand la destinée vient te chercher by Rav David Touitou",
+                "duration_ms": 1997508,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/2GefzDIM4CfdD78rcA68Oi"
+                },
+                "href": "https://api.spotify.com/v1/episodes/2GefzDIM4CfdD78rcA68Oi",
+                "html_description": "Quand la destinée vient te chercher by Rav David Touitou",
+                "id": "2GefzDIM4CfdD78rcA68Oi",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8a72ccac45ac4dd3a4733adc44",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1f72ccac45ac4dd3a4733adc44",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68d72ccac45ac4dd3a4733adc44",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "fr",
+                "languages": [
+                    "fr"
+                ],
+                "name": "Quand la destinée vient te chercher",
+                "release_date": "2023-06-29",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:2GefzDIM4CfdD78rcA68Oi"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/0p9V93ACRvC49c9rnvBCKk/clip_153509_213509.mp3",
+                "description": "La haine de 2023 by Rav David Touitou",
+                "duration_ms": 2236500,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/6YlmgUOFoYIzBUzsSl4Ydp"
+                },
+                "href": "https://api.spotify.com/v1/episodes/6YlmgUOFoYIzBUzsSl4Ydp",
+                "html_description": "La haine de 2023 by Rav David Touitou",
+                "id": "6YlmgUOFoYIzBUzsSl4Ydp",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8a667b0b85ad4b23efb8cb9f22",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1f667b0b85ad4b23efb8cb9f22",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68d667b0b85ad4b23efb8cb9f22",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "fr",
+                "languages": [
+                    "fr"
+                ],
+                "name": "La haine de 2023",
+                "release_date": "2023-07-03",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:6YlmgUOFoYIzBUzsSl4Ydp"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/2zoMP6r4xIHHvYtUIytf2S/clip_1214800_1276850.mp3",
+                "description": "Hot off the heels of the Pesach break, we're excited to bring you our discussion with one of the pioneers in the Jewish Podcasting world, Rabbi Dovid Bashevkin. In addition to talking about life in the US, touching on politics here and abroad, and talks of Mashiach we finally get to the bottom of the long standing 'feud' with Rabbi Greenspan aka Awkward Bochur. Check out R Bashevkin's website at: https://18forty.org/   Visit https://www.buymeacoffee.com/KiddushClub and buy us a coffee! Follow us: Instagram: https://www.instagram.com/kiddushclubpodcast/ Twitter: https://twitter.com/kiddushclubcast Join our WhatsApp chat: https://chat.whatsapp.com/HTWhnT1WiVFCioXjatEFi6 Send us you thoughts comments and suggestions via email: hock@kiddushclubpodcast.com",
+                "duration_ms": 3030944,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/4DiR4XnbBKfDnUuGOtQBah"
+                },
+                "href": "https://api.spotify.com/v1/episodes/4DiR4XnbBKfDnUuGOtQBah",
+                "html_description": "<p>Hot off the heels of the Pesach break, we&#39;re excited to bring you our discussion with one of the pioneers in the Jewish Podcasting world, Rabbi Dovid Bashevkin. In addition to talking about life in the US, touching on politics here and abroad, and talks of Mashiach we finally get to the bottom of the long standing &#39;feud&#39; with Rabbi Greenspan aka Awkward Bochur.</p><br/><p>Check out R Bashevkin&#39;s website at: https://18forty.org/</p><br/><p> </p><br/><p>Visit <a href=\"https://www.buymeacoffee.com/KiddushClub\" rel=\"nofollow\">https://www.buymeacoffee.com/KiddushClub</a> and buy us a coffee!</p><br/><p>Follow us:<br /><br/>Instagram: https://www.instagram.com/kiddushclubpodcast/</p><br/><p>Twitter: https://twitter.com/kiddushclubcast</p><br/><p>Join our WhatsApp chat: https://chat.whatsapp.com/HTWhnT1WiVFCioXjatEFi6</p><br/><p>Send us you thoughts comments and suggestions via email: hock&#64;kiddushclubpodcast.com</p>",
+                "id": "4DiR4XnbBKfDnUuGOtQBah",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8a62a2408e9d9f4c2908a431d4",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1f62a2408e9d9f4c2908a431d4",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68d62a2408e9d9f4c2908a431d4",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "en",
+                "languages": [
+                    "en"
+                ],
+                "name": "Special: Talking Life, Mashiach And 18Forty With Rabbi Dovid Bashevkin (Epis 68)",
+                "release_date": "2023-04-16",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:4DiR4XnbBKfDnUuGOtQBah"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/6Nx2oIcUfjmiBSAN2b6w0S/clip_192108_252108.mp3",
+                "description": "Tes choix fixeront ta destinée by Rav David Touitou",
+                "duration_ms": 2045196,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/4FdSmi0Zp8kQZ8GILVzUqC"
+                },
+                "href": "https://api.spotify.com/v1/episodes/4FdSmi0Zp8kQZ8GILVzUqC",
+                "html_description": "Tes choix fixeront ta destinée by Rav David Touitou",
+                "id": "4FdSmi0Zp8kQZ8GILVzUqC",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8ad3126f31932566080260051a",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1fd3126f31932566080260051a",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68dd3126f31932566080260051a",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "fr",
+                "languages": [
+                    "fr"
+                ],
+                "name": "Tes choix fixeront ta destinée",
+                "release_date": "2023-06-25",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:4FdSmi0Zp8kQZ8GILVzUqC"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/1qO7hc1y1FfC4BFhPyxCTS/clip_2552500_2596100.mp3",
+                "description": "No Adam this week, but Mike has got you. Bob Lung is here to talk all things Fantasy Football Expo. Thinking about making the trip this year? You should! Bob breaks down all the new happenings at this year's Expo and what you can expect for events. It’s one hell of a party too! Bob also puts out one of the best Fantasy Publications every single year. We’ll talk about this year's version and what you can expect is inside it.  New additions to 2023? Can this get any bigger!? Party Central! Plans for the future? Advice to 1st timers 2023 Consistency Guide Sign up today using promo code - 4DCHESS https://play.underdogfantasy.com/pc-AYYHtZZveN 100% of your deposit up to the first $100 will be matched! The best benefit? You will get access to the Destination Devy Discord for a WHOLE YEAR! Don’t miss out on the tools and strategy talk! Sign up for the Newsletter TODAY! https://bit.ly/AllGasNL  Learn more about your ad choices. Visit megaphone.fm/adchoices",
+                "duration_ms": 3445054,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/3JK97jmov7bE8PitfcV3iU"
+                },
+                "href": "https://api.spotify.com/v1/episodes/3JK97jmov7bE8PitfcV3iU",
+                "html_description": "<p>No Adam this week, but Mike has got you. Bob Lung is here to talk all things Fantasy Football Expo. Thinking about making the trip this year? You should! Bob breaks down all the new happenings at this year&#39;s Expo and what you can expect for events. It’s one hell of a party too! Bob also puts out one of the best Fantasy Publications every single year. We’ll talk about this year&#39;s version and what you can expect is inside it. </p><p>New additions to 2023?</p><p>Can this get any bigger!?</p><p>Party Central!</p><p>Plans for the future?</p><p>Advice to 1st timers</p><p>2023 Consistency Guide</p><p>Sign up today using promo code - 4DCHESS</p><p><a href=\"https://play.underdogfantasy.com/pc-AYYHtZZveN\" rel=\"nofollow\">https://play.underdogfantasy.com/pc-AYYHtZZveN</a></p><p>100% of your deposit up to the first $100 will be matched!</p><p>The best benefit? You will get access to the Destination Devy Discord for a WHOLE YEAR!</p><p>Don’t miss out on the tools and strategy talk!</p><p>Sign up for the Newsletter TODAY! https://bit.ly/AllGasNL</p><p><br /></p><p> </p><p>Learn more about your ad choices. Visit <a href=\"https://megaphone.fm/adchoices\" rel=\"nofollow\">megaphone.fm/adchoices</a></p>",
+                "id": "3JK97jmov7bE8PitfcV3iU",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8a43cb098716a0270de8d68e96",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1f43cb098716a0270de8d68e96",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68d43cb098716a0270de8d68e96",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "en",
+                "languages": [
+                    "en"
+                ],
+                "name": "2023 Fantasy Football Expo Primer Ft. Bob Lung",
+                "release_date": "2023-06-30",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:3JK97jmov7bE8PitfcV3iU"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/2VodwEqoILcQYfwGGWSIAT/clip_400300_460300.mp3",
+                "description": "What is the meaning in Judaism of מִכָּאן מוֹדָעָה רַבָּה לְאוֹרָיְתָא?",
+                "duration_ms": 2012961,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/4WJsyWAwswiTmde1T8aaCz"
+                },
+                "href": "https://api.spotify.com/v1/episodes/4WJsyWAwswiTmde1T8aaCz",
+                "html_description": "What is the meaning in Judaism of מִכָּאן מוֹדָעָה רַבָּה לְאוֹרָיְתָא?",
+                "id": "4WJsyWAwswiTmde1T8aaCz",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/2bcfbe19bab700549bcf64bbca378855ce399111",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/9ad19973a29e7ca0fc9ebfdb72b348d086d6b541",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/bf3a3fe5e9caa79cffaaf637105e56a366a2681a",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "en",
+                "languages": [
+                    "en"
+                ],
+                "name": "Traditionalist Jews in Israel and the Question of Religious Coercion ",
+                "release_date": "2023-07-10",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:4WJsyWAwswiTmde1T8aaCz"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/40LkknusDZp6tFhpg6KPRl/clip_0_60000.mp3",
+                "description": "In today's episode, I will share some tips through which you will be able to convert your nervousness into excitement. ",
+                "duration_ms": 394657,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/0G4WXAHkz3jE67jcyRlWhA"
+                },
+                "href": "https://api.spotify.com/v1/episodes/0G4WXAHkz3jE67jcyRlWhA",
+                "html_description": "<p>In today&#39;s episode, I will share some tips through which you will be able to convert your nervousness into excitement. </p><p><br /></p>",
+                "id": "0G4WXAHkz3jE67jcyRlWhA",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8a98dc356ce95c13cd40b2acf4",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1f98dc356ce95c13cd40b2acf4",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68d98dc356ce95c13cd40b2acf4",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "en-GB",
+                "languages": [
+                    "en-GB"
+                ],
+                "name": "How to Remove your Nervousness?",
+                "release_date": "2022-07-14",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:0G4WXAHkz3jE67jcyRlWhA"
+            },
+            {
+                "audio_preview_url": "https://podz-content.spotifycdn.com/audio/clips/2bOvghgkxlPtQtR4HEX6o8/clip_0_60000.mp3",
+                "description": "Full TorahAnytime LectureVideo or AudioMore classes from R' Dovid Goldwasser⭐ 1,700👤 By R' Dovid Goldwasser💊 Double Dose #1700Want to sponsor a future Dose?Click HereWant to to Receive the Daily Dose Video via WhatsApp?Simply Click Here💫 Thank You to the Sponsors of Today's Daily Dose:❤️ Shidduchim forl גרשון בל רחל🤕 Refuah Shelema forAharon Yonaton ben Mohtaram",
+                "duration_ms": 256678,
+                "explicit": false,
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/episode/5rrLbof5gNhK0k7G2Y1hOO"
+                },
+                "href": "https://api.spotify.com/v1/episodes/5rrLbof5gNhK0k7G2Y1hOO",
+                "html_description": "<p><br />Full TorahAnytime Lecture<br /><a href=\"https://www.torahanytime.com/#/lectures?v&#61;223001\" rel=\"nofollow\">Video</a> or <a href=\"https://www.torahanytime.com/#/lectures?a&#61;223001\" rel=\"nofollow\">Audio</a><br /><a href=\"https://www.torahanytime.com/#/speaker?l&#61;34\" rel=\"nofollow\">More classes</a> from R&#39; Dovid Goldwasser<br /><br />⭐ 1,700<br />&#x1f464; By R&#39; Dovid Goldwasser<br />&#x1f48a; Double Dose #1700<br /><br />Want to sponsor a future Dose?<br /><a href=\"https://www.torahanytime.com/dose-sponsor\" rel=\"nofollow\">Click Here</a><br /><br />Want to to Receive the Daily Dose Video via WhatsApp?<br /><a href=\"https://wa.me/19293554268?text&#61;Add%20Me\" rel=\"nofollow\">Simply Click Here</a><br /><br />&#x1f4ab; Thank You to the Sponsors of Today&#39;s Daily Dose:<br />❤️ Shidduchim for<br />l גרשון בל רחל<br />&#x1f915; Refuah Shelema for<br />Aharon Yonaton ben Mohtaram<br /></p>",
+                "id": "5rrLbof5gNhK0k7G2Y1hOO",
+                "images": [
+                    {
+                        "height": 640,
+                        "url": "https://i.scdn.co/image/ab6765630000ba8ae3d0a5146033a8d220bf0aa4",
+                        "width": 640
+                    },
+                    {
+                        "height": 300,
+                        "url": "https://i.scdn.co/image/ab67656300005f1fe3d0a5146033a8d220bf0aa4",
+                        "width": 300
+                    },
+                    {
+                        "height": 64,
+                        "url": "https://i.scdn.co/image/ab6765630000f68de3d0a5146033a8d220bf0aa4",
+                        "width": 64
+                    }
+                ],
+                "is_externally_hosted": false,
+                "is_playable": true,
+                "language": "en",
+                "languages": [
+                    "en"
+                ],
+                "name": "Double Dose #1,700: A Good Reason? - R' Dovid Goldwasser",
+                "release_date": "2023-06-30",
+                "release_date_precision": "day",
+                "type": "episode",
+                "uri": "spotify:episode:5rrLbof5gNhK0k7G2Y1hOO"
+            }
+        ],
+        "limit": 20,
+        "next": "https://api.spotify.com/v1/search?query=remaster%2520track%3ADoxy%2520artist%3AMiles%2520Davis&type=episode&locale=fr-FR%2Cfr%3Bq%3D0.9%2Cen-US%3Bq%3D0.8%2Cen%3Bq%3D0.7%2Cla%3Bq%3D0.6&offset=20&limit=20",
+        "offset": 0,
+        "previous": null,
+        "total": 536
+    }
+}

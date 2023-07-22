@@ -45,7 +45,7 @@ class Playlist extends ApiResource
 
     public User $owner;
 
-    public bool $public;
+    public ?bool $public = null;
 
     public string $snapshotId;
 
@@ -57,4 +57,6 @@ class Playlist extends ApiResource
     public string $type;
 
     public string $uri;
+
+    public ?string $primaryColor = null;
 }

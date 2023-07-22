@@ -1,0 +1,732 @@
+{
+    "playlists": {
+        "href": "https://api.spotify.com/v1/search?query=remaster%2520track%3ADoxy%2520artist%3AMiles%2520Davis&type=playlist&locale=fr-FR%2Cfr%3Bq%3D0.9%2Cen-US%3Bq%3D0.8%2Cen%3Bq%3D0.7%2Cla%3Bq%3D0.6&offset=0&limit=20",
+        "items": [
+            {
+                "collaborative": false,
+                "description": "This Is David Bowie. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO0auErC"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0auErC",
+                "id": "37i9dQZF1DZ06evO0auErC",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO0auErC-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is David Bowie",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDA2Y2VjMTlkNTU5NDA5MGRkZDU0MWUzZTg2NzBjZTIyYQ==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0auErC/tracks",
+                    "total": 55
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO0auErC"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is David Guetta. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO0TXLQk"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0TXLQk",
+                "id": "37i9dQZF1DZ06evO0TXLQk",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO0TXLQk-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is David Guetta",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDBmNWEzOGVmNTU1M2RmMzczOTdiYmUzOTMwYmQzNTU1MQ==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0TXLQk/tracks",
+                    "total": 53
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO0TXLQk"
+            },
+            {
+                "collaborative": false,
+                "description": "Soft and cozy vocal and instrumental Jazz. Cover: Melody Gardot",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX52ln8eMkne9"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX52ln8eMkne9",
+                "id": "37i9dQZF1DX52ln8eMkne9",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://i.scdn.co/image/ab67706f000000031ce01a772c51201e25beeedb",
+                        "width": null
+                    }
+                ],
+                "name": "Cozy Jazz",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MTY4NzMzNjk1MiwwMDAwMDAwMDlmMjJmYjUzNDQ5OWFjZDg5M2RkMTIwMTBmMmU5Yzg2",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX52ln8eMkne9/tracks",
+                    "total": 200
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DX52ln8eMkne9"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is Da Vosk Docta. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO04vqq4"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO04vqq4",
+                "id": "37i9dQZF1DZ06evO04vqq4",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO04vqq4-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is Da Vosk Docta",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDBjZmM4NTc5Y2QyODU5NzljMDc2NWQ5OWRmZmQ3OTM0MA==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO04vqq4/tracks",
+                    "total": 51
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO04vqq4"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is DOXX. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO4r3TRT"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO4r3TRT",
+                "id": "37i9dQZF1DZ06evO4r3TRT",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO4r3TRT-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is DOXX",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDA0NTcyMDhiYmY3Nzc1NWY4NjE2MGRkZjNiM2U1N2E0ZQ==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO4r3TRT/tracks",
+                    "total": 50
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO4r3TRT"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is Davodka. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO22hldM"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO22hldM",
+                "id": "37i9dQZF1DZ06evO22hldM",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO22hldM-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is Davodka",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDA0MjQwNGI0ZjlkZDFkMGQwZGYwNjgwNzBhMzFjOTg5YQ==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO22hldM/tracks",
+                    "total": 50
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO22hldM"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is Davuiside. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO4cqbqp"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO4cqbqp",
+                "id": "37i9dQZF1DZ06evO4cqbqp",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO4cqbqp-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is Davuiside",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDBmNTVkNzJjYTRhZmJmMGM3MWFjZTNmZDM3NjljMGY0Mw==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO4cqbqp/tracks",
+                    "total": 46
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO4cqbqp"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is Davido. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO0vEAMw"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0vEAMw",
+                "id": "37i9dQZF1DZ06evO0vEAMw",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO0vEAMw-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is Davido",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDBmMmU1Y2M4MzBlZjdmMDI2NTUwYTllNjA3OWY0ODVjYw==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0vEAMw/tracks",
+                    "total": 51
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO0vEAMw"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is Davus. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO1xJgly"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO1xJgly",
+                "id": "37i9dQZF1DZ06evO1xJgly",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO1xJgly-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is Davus",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDBiMTc2MDJjZDI1NTZjZGE0ZGMzNjFlYzE1OWNlOGEzNw==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO1xJgly/tracks",
+                    "total": 50
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO1xJgly"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is David Hallyday. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO4r4nDl"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO4r4nDl",
+                "id": "37i9dQZF1DZ06evO4r4nDl",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO4r4nDl-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is David Hallyday",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDAzNDM5YzAyYzljYzZmZDU4Yzc0NjBjMTc0MmVjMmQ5NQ==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO4r4nDl/tracks",
+                    "total": 50
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO4r4nDl"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is David Bisbal. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO36aKQ0"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO36aKQ0",
+                "id": "37i9dQZF1DZ06evO36aKQ0",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO36aKQ0-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is David Bisbal",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDAxZGNhODNiZTM2ZjM3MmM0ZWRmMmNjMmRhYWI2OTk2YQ==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO36aKQ0/tracks",
+                    "total": 50
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO36aKQ0"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is Disciple. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO2IiOpC"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO2IiOpC",
+                "id": "37i9dQZF1DZ06evO2IiOpC",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO2IiOpC-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is Disciple",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDAxYTk1MGZhNDVlYzY3NTQ3MWRiOTMyMTVmYjk5ZjYwNg==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO2IiOpC/tracks",
+                    "total": 50
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO2IiOpC"
+            },
+            {
+                "collaborative": false,
+                "description": "A taste of South Africa's biggest three-day music experience.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWWtY25h9mKJW"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWtY25h9mKJW",
+                "id": "37i9dQZF1DWWtY25h9mKJW",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://i.scdn.co/image/ab67706f00000003343449a0f9e1ccc9a7b04d1b",
+                        "width": null
+                    }
+                ],
+                "name": "Daisies Radio",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MTY4NjgzNjA3MSwwMDAwMDAwMDUyN2VhZjI3NGQ4ZmUyMDAxZWRhNDg2Njc2MDg4Nzhj",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWtY25h9mKJW/tracks",
+                    "total": 38
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DWWtY25h9mKJW"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is DYSTINCT. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO0EvblS"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0EvblS",
+                "id": "37i9dQZF1DZ06evO0EvblS",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO0EvblS-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is DYSTINCT",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDA0NDJlNTc4N2ViMzhkZjI3NmJiZTc2ZWJiNzI2MDQyMA==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0EvblS/tracks",
+                    "total": 50
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO0EvblS"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is Deyvis Orosco. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO2V7uXC"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO2V7uXC",
+                "id": "37i9dQZF1DZ06evO2V7uXC",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO2V7uXC-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is Deyvis Orosco",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDBhYjdlMTIwZGYyZjQyZjdiNDE0OGQxZDY2ODFlZDk3NQ==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO2V7uXC/tracks",
+                    "total": 48
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO2V7uXC"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is David Iztambul. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO3u0MIp"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO3u0MIp",
+                "id": "37i9dQZF1DZ06evO3u0MIp",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO3u0MIp-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is David Iztambul",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDA4YTMyNDJlYTUxNzE3NTNmM2UwNmU5NjliODJiMGI3Yg==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO3u0MIp/tracks",
+                    "total": 50
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO3u0MIp"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is Davidson Silva. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO0OfjNK"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0OfjNK",
+                "id": "37i9dQZF1DZ06evO0OfjNK",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO0OfjNK-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is Davidson Silva",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDBjMzQ2NTk5NjJiOTMzYWE5YWUwOTZjZTQ3NjllNmIxYw==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0OfjNK/tracks",
+                    "total": 51
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO0OfjNK"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is David Osborne. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO0ajENz"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0ajENz",
+                "id": "37i9dQZF1DZ06evO0ajENz",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO0ajENz-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is David Osborne",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDAwYjU2NWMxODhmYzRhYzg0MWYwNzBkNGI4NjU5Nzc2Yw==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO0ajENz/tracks",
+                    "total": 50
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO0ajENz"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is David Ingles. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO3yRv1D"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO3yRv1D",
+                "id": "37i9dQZF1DZ06evO3yRv1D",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO3yRv1D-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is David Ingles",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDAyZDU0NWYzN2RlZDM3OWU2ZWI1MWRhYTYzMTZlNjI3Ng==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO3yRv1D/tracks",
+                    "total": 50
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO3yRv1D"
+            },
+            {
+                "collaborative": false,
+                "description": "This Is Discopraise. Les titres incontournables, réunis dans une seule et même playlist.",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO2k7s83"
+                },
+                "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO2k7s83",
+                "id": "37i9dQZF1DZ06evO2k7s83",
+                "images": [
+                    {
+                        "height": null,
+                        "url": "https://thisis-images.scdn.co/37i9dQZF1DZ06evO2k7s83-large.jpg",
+                        "width": null
+                    }
+                ],
+                "name": "This Is Discopraise",
+                "owner": {
+                    "display_name": "Spotify",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/user/spotify"
+                    },
+                    "href": "https://api.spotify.com/v1/users/spotify",
+                    "id": "spotify",
+                    "type": "user",
+                    "uri": "spotify:user:spotify"
+                },
+                "primary_color": null,
+                "public": null,
+                "snapshot_id": "MjgxNjU3NzcsMDAwMDAwMDA2ZTA5OWEyNTYwNDk5Y2RjMmM0NDkwNjM2YjNjY2ZiMQ==",
+                "tracks": {
+                    "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DZ06evO2k7s83/tracks",
+                    "total": 50
+                },
+                "type": "playlist",
+                "uri": "spotify:playlist:37i9dQZF1DZ06evO2k7s83"
+            }
+        ],
+        "limit": 20,
+        "next": "https://api.spotify.com/v1/search?query=remaster%2520track%3ADoxy%2520artist%3AMiles%2520Davis&type=playlist&locale=fr-FR%2Cfr%3Bq%3D0.9%2Cen-US%3Bq%3D0.8%2Cen%3Bq%3D0.7%2Cla%3Bq%3D0.6&offset=20&limit=20",
+        "offset": 0,
+        "previous": null,
+        "total": 741
+    }
+}
