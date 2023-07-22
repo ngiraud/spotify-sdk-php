@@ -2,6 +2,19 @@
 
 All notable changes to `spotify-sdk-php` will be documented in this file.
 
+## 1.0.4 - 2023-07-22
+
+### What's Changed
+
+- Adding tests by @ngiraud in https://github.com/ngiraud/spotify-sdk-php/pull/4
+- Removing the Client::makeWithClientCredentials() method
+- New way to authenticate through the Spotify class :
+- - Spotify::client('access-token')
+- - Spotify::basic('client-id', 'client-secret')
+- 
+
+**Full Changelog**: https://github.com/ngiraud/spotify-sdk-php/compare/1.0.3...1.0.4
+
 ## 1.0.3 - 2023-07-07
 
 ### What's Changed
