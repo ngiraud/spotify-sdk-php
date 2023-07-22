@@ -2,13 +2,10 @@
 
 namespace Spotify\SingleObjects;
 
+use Spotify\Helpers\Arr;
+
 class PlaylistTrack extends ApiResource
 {
-    protected array $singleObjects = [
-        // @todo track can be a Track or an Episode
-        'track' => Track::class,
-    ];
-
     public string $addedAt;
 
     /**
@@ -19,4 +16,14 @@ class PlaylistTrack extends ApiResource
     public bool $isLocal;
 
     public Track|Episode $track;
+
+    protected function beforeFill(): void
+    {
+        if (!empty($type = Arr::get($this->attributes, 'track.type'))) {
+            $this->singleObjects['track'] = match ($type) {
+                'episode' => Episode::class,
+                default => Track::class,
+            };
+        }
+    }
 }

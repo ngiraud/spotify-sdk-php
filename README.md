@@ -472,7 +472,14 @@ echo $me->display_name;
 
 ## TODO
 
-- Tests are being written. Current status : Player resource.
+Tests are being written. Currently missing tests for:
+
+- Player
+- Search
+- Shows
+- Tracks
+- Users
+- PaginatedResults
 
 ## Testing
 
