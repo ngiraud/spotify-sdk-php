@@ -25,8 +25,8 @@ This package contains the PHP SDK to work with the [Spotify Web API](https://dev
     - [Shows Resource](#shows-resource)
     - [Tracks Resource](#tracks-resource)
     - [Users Resource](#users-resource)
-- [TODO](#todo)
 - [Testing](#testing)
+- [Linting](#linting)
 - [Changelog](#changelog)
 - [Contributing](#contributing)
 - [Security Vulnerabilities](#security-vulnerabilities)
@@ -76,7 +76,9 @@ Route::get('/spotify/callback', function () {
 You can now interact with Spotify's API:
 
 ```php
-$client = new Spotify\Client('<access-token>');
+use Spotify\Spotify;
+
+$client = Spotify::client('<access-token>');
 
 $album = $client->albums()->find('<spotify-album-id>', ['market' => 'FR']);
 ```
@@ -84,10 +86,9 @@ $album = $client->albums()->find('<spotify-album-id>', ['market' => 'FR']);
 You can also use the [Client Credentials flow](https://developer.spotify.com/documentation/web-api/tutorials/client-credentials-flow) to authenticate:
 
 ```php
-$client = Spotify\Client::makeWithClientCredentials(
-    clientId: '<spotify-client-id>',
-    clientSecret: '<spotify-client-secret>'
-);
+use Spotify\Spotify;
+
+$client = Spotify::basic('<client-id>', '<client-secret>');
 
 $seeds = $client->genres()->seeds();
 ```
@@ -469,14 +470,17 @@ $me = $client->users()->me();
 echo $me->display_name;
 ```
 
-## TODO
-
-- Add tests
-
 ## Testing
 
 ```bash
 composer test
+composer phpstan
+```
+
+## Linting
+
+```bash
+composer pint
 ```
 
 ## Changelog
@@ -492,6 +496,9 @@ Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTI
 If you discover any security related issues, please email [contact@ngiraud.me](mailto:contact@ngiraud.me) instead of using the issue tracker.
 
 ## Credits
+
+This package is inspired by the [OpenAI PHP](https://github.com/openai-php/client) client package made by Nuno Maduro and Sandro Gehri
+and the [Mailcoach API SDK](https://github.com/spatie/mailcoach-sdk-php) from Spatie.
 
 - [Nicolas Giraud](https://github.com/ngiraud)
 - [All Contributors](../../contributors)

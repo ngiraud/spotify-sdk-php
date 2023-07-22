@@ -6,6 +6,49 @@ use Spotify\Support\PaginatedResults;
 
 class Search extends ApiResource
 {
+    const TYPE_ALBUM = 'album';
+    const TYPE_ARTIST = 'artist';
+    const TYPE_PLAYLIST = 'playlist';
+    const TYPE_TRACK = 'track';
+    const TYPE_SHOW = 'show';
+    const TYPE_EPISODE = 'episode';
+    const TYPE_AUDIOBOOK = 'audiobook';
+
+    /**
+     * @var array<string,mixed>
+     */
+    protected array $albums;
+
+    /**
+     * @var array<string,mixed>
+     */
+    protected array $artists;
+
+    /**
+     * @var array<string,mixed>
+     */
+    protected array $playlists;
+
+    /**
+     * @var array<string,mixed>
+     */
+    protected array $tracks;
+
+    /**
+     * @var array<string,mixed>
+     */
+    protected array $shows;
+
+    /**
+     * @var array<string,mixed>
+     */
+    protected array $episodes;
+
+    /**
+     * @var array<string,mixed>
+     */
+    protected array $audiobooks;
+
     public function audiobooks(): PaginatedResults
     {
         return new PaginatedResults(

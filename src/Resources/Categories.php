@@ -32,7 +32,7 @@ class Categories extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'browse/categories',
             mappingClass: Category::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
             entryKey: 'categories',
         );

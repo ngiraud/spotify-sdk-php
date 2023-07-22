@@ -44,7 +44,7 @@ class Episodes extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'episodes',
             mappingClass: Episode::class,
-            client: $this->client,
+            factory: $this->client,
             payload: ['ids' => implode(',', array_filter($ids)), ...$payload],
             itemsKey: 'episodes',
         );
@@ -66,7 +66,7 @@ class Episodes extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'me/episodes',
             mappingClass: SavedEpisode::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
         );
     }

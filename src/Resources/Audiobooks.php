@@ -43,7 +43,7 @@ class Audiobooks extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'audiobooks',
             mappingClass: Audiobook::class,
-            client: $this->client,
+            factory: $this->client,
             payload: ['ids' => implode(',', array_filter($ids)), ...$payload],
             itemsKey: 'audiobooks',
         );
@@ -62,7 +62,7 @@ class Audiobooks extends SpotifyResource
         return PaginatedResults::make(
             endpoint: "audiobooks/{$id}/chapters",
             mappingClass: Chapter::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload
         );
     }
@@ -82,7 +82,7 @@ class Audiobooks extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'me/audiobooks',
             mappingClass: SavedAudiobook::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
         );
     }

@@ -2,15 +2,11 @@
 
 namespace Spotify;
 
-use GuzzleHttp\Client as GuzzleClient;
-use GuzzleHttp\ClientInterface;
-use Spotify\Exceptions\AccessTokenRequiredException;
-use Spotify\Exceptions\UnableToAuthenticateException;
-use Spotify\Helpers\Arr;
 use Spotify\Resources\Albums;
 use Spotify\Resources\Artists;
 use Spotify\Resources\Audiobooks;
 use Spotify\Resources\Categories;
+use Spotify\Resources\Chapters;
 use Spotify\Resources\Episodes;
 use Spotify\Resources\Genres;
 use Spotify\Resources\Markets;
@@ -23,51 +19,8 @@ use Spotify\SingleObjects\Search;
 
 class Client
 {
-    use MakesHttpRequests;
-
-    protected static string $endpoint = 'https://api.spotify.com/v1';
-
-    protected static string $authEndpoint = 'https://accounts.spotify.com/api/token/';
-
-    public function __construct(
-        protected ?string $accessToken = null,
-        protected ?ClientInterface $client = null
-    ) {
-        if (is_null($this->accessToken)) {
-            throw new AccessTokenRequiredException();
-        }
-
-        $this->client ??= new GuzzleClient([
-            'http_errors' => false,
-            'base_uri' => self::$endpoint.'/',
-            'headers' => [
-                'Authorization' => "Bearer {$this->accessToken}",
-                'Accept' => 'application/json',
-                'Content-Type' => 'application/json',
-            ],
-        ]);
-    }
-
-    public function accessToken(): string
+    public function __construct(protected Factory $factory)
     {
-        return $this->accessToken;
-    }
-
-    public function setAccessToken(string $accessToken): self
-    {
-        $this->accessToken = $accessToken;
-
-        return $this;
-    }
-
-    public function endpoint(): string
-    {
-        return self::$endpoint;
-    }
-
-    public function client(): ?ClientInterface
-    {
-        return $this->client;
     }
 
     /**
@@ -81,7 +34,7 @@ class Client
     public function search(string $q, string|array $type, array $payload = []): Search
     {
         return new Search(
-            (array) $this->get('search', ['q' => $q, 'type' => implode(',', (array) $type), ...$payload])
+            (array) $this->factory->get('search', ['q' => $q, 'type' => implode(',', (array) $type), ...$payload])
         );
     }
 
@@ -90,7 +43,7 @@ class Client
      */
     public function albums(): Albums
     {
-        return new Albums($this);
+        return new Albums($this->factory);
     }
 
     /**
@@ -98,7 +51,7 @@ class Client
      */
     public function artists(): Artists
     {
-        return new Artists($this);
+        return new Artists($this->factory);
     }
 
     /**
@@ -106,7 +59,7 @@ class Client
      */
     public function audiobooks(): Audiobooks
     {
-        return new Audiobooks($this);
+        return new Audiobooks($this->factory);
     }
 
     /**
@@ -114,7 +67,15 @@ class Client
      */
     public function categories(): Categories
     {
-        return new Categories($this);
+        return new Categories($this->factory);
+    }
+
+    /**
+     * Manages Chapters endpoints
+     */
+    public function chapters(): Chapters
+    {
+        return new Chapters($this->factory);
     }
 
     /**
@@ -122,7 +83,7 @@ class Client
      */
     public function episodes(): Episodes
     {
-        return new Episodes($this);
+        return new Episodes($this->factory);
     }
 
     /**
@@ -130,7 +91,7 @@ class Client
      */
     public function genres(): Genres
     {
-        return new Genres($this);
+        return new Genres($this->factory);
     }
 
     /**
@@ -138,7 +99,7 @@ class Client
      */
     public function markets(): Markets
     {
-        return new Markets($this);
+        return new Markets($this->factory);
     }
 
     /**
@@ -146,7 +107,7 @@ class Client
      */
     public function player(): Player
     {
-        return new Player($this);
+        return new Player($this->factory);
     }
 
     /**
@@ -154,7 +115,7 @@ class Client
      */
     public function playlists(): Playlists
     {
-        return new Playlists($this);
+        return new Playlists($this->factory);
     }
 
     /**
@@ -162,7 +123,7 @@ class Client
      */
     public function shows(): Shows
     {
-        return new Shows($this);
+        return new Shows($this->factory);
     }
 
     /**
@@ -170,7 +131,7 @@ class Client
      */
     public function tracks(): Tracks
     {
-        return new Tracks($this);
+        return new Tracks($this->factory);
     }
 
     /**
@@ -178,38 +139,6 @@ class Client
      */
     public function users(): Users
     {
-        return new Users($this);
-    }
-
-    /**
-     * Authenticate with Client Credentials flow
-     *
-     * @see https://developer.spotify.com/documentation/web-api/tutorials/client-credentials-flow
-     */
-    public static function makeWithClientCredentials(string $clientId, string $clientSecret): self
-    {
-        $credentials = base64_encode(implode(':', [$clientId, $clientSecret]));
-
-        $client = new GuzzleClient([
-            'http_errors' => false,
-            'headers' => [
-                'Authorization' => "Basic {$credentials}",
-                'Accept' => 'application/json',
-                'Content-Type' => 'application/x-www-form-urlencoded',
-            ],
-        ]);
-
-        $response = $client->post(self::$authEndpoint, [
-            'form_params' => ['grant_type' => 'client_credentials']
-        ]);
-
-        if ($response->getStatusCode() !== 200) {
-            throw new UnableToAuthenticateException('Unable to authenticate through the client credentials flow.');
-        }
-
-        return new self(Arr::get(
-            json_decode($response->getBody()->getContents(), true),
-            'access_token'
-        ));
+        return new Users($this->factory);
     }
 }

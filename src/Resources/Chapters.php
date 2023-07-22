@@ -41,7 +41,7 @@ class Chapters extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'chapters',
             mappingClass: Chapter::class,
-            client: $this->client,
+            factory: $this->client,
             payload: ['ids' => implode(',', array_filter($ids)), ...$payload],
             itemsKey: 'chapters',
         );

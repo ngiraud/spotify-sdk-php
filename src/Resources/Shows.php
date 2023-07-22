@@ -43,7 +43,7 @@ class Shows extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'shows',
             mappingClass: Show::class,
-            client: $this->client,
+            factory: $this->client,
             payload: ['ids' => implode(',', array_filter($ids)), ...$payload],
             itemsKey: 'shows',
         );
@@ -63,7 +63,7 @@ class Shows extends SpotifyResource
         return PaginatedResults::make(
             endpoint: "shows/{$id}/episodes",
             mappingClass: Episode::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload
         );
     }
@@ -83,7 +83,7 @@ class Shows extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'me/shows',
             mappingClass: SavedShow::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
         );
     }

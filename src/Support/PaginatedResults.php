@@ -5,7 +5,7 @@ namespace Spotify\Support;
 use ArrayAccess;
 use ArrayIterator;
 use IteratorAggregate;
-use Spotify\Client;
+use Spotify\Factory;
 use Spotify\Helpers\Arr;
 use Traversable;
 
@@ -48,13 +48,13 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
     public static function make(
         string $endpoint,
         string $mappingClass,
-        Client $client,
+        Factory $factory,
         array $payload = [],
         string $itemsKey = 'items',
         ?string $entryKey = null
     ): self {
         return new self(
-            $client->get($endpoint, $payload),
+            $factory->get($endpoint, $payload),
             $mappingClass,
             $itemsKey,
             $entryKey
@@ -101,7 +101,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
     /**
      * Fetch the previous page of results.
      */
-    public function previous(Client $client): ?self
+    public function previous(Factory $factory): ?self
     {
         if (! $previousUrl = $this->previousUrl()) {
             return null;
@@ -110,7 +110,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         return PaginatedResults::make(
             endpoint: $previousUrl,
             mappingClass: $this->mappingClass,
-            client: $client,
+            factory: $factory,
             itemsKey: $this->itemsKey,
             entryKey: $this->entryKey
         );
@@ -119,7 +119,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
     /**
      * Fetch the next page of results.
      */
-    public function next(Client $client): ?self
+    public function next(Factory $factory): ?self
     {
         if (! $nextUrl = $this->nextUrl()) {
             return null;
@@ -128,7 +128,7 @@ class PaginatedResults implements ArrayAccess, IteratorAggregate
         return PaginatedResults::make(
             endpoint: $nextUrl,
             mappingClass: $this->mappingClass,
-            client: $client,
+            factory: $factory,
             itemsKey: $this->itemsKey,
             entryKey: $this->entryKey
         );

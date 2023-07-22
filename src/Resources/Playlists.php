@@ -2,6 +2,7 @@
 
 namespace Spotify\Resources;
 
+use Spotify\SingleObjects\Image;
 use Spotify\SingleObjects\Playlist;
 use Spotify\SingleObjects\PlaylistTrack;
 use Spotify\Support\PaginatedResults;
@@ -48,7 +49,7 @@ class Playlists extends SpotifyResource
         return PaginatedResults::make(
             endpoint: is_null($id) ? 'me/playlists' : "users/{$id}/playlists",
             mappingClass: Playlist::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload
         );
     }
@@ -95,7 +96,7 @@ class Playlists extends SpotifyResource
         return PaginatedResults::make(
             endpoint: "playlists/{$id}/tracks",
             mappingClass: PlaylistTrack::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload
         );
     }
@@ -171,7 +172,7 @@ class Playlists extends SpotifyResource
     {
         return $this->client->delete(
             "playlists/{$id}/tracks",
-            ['tracks' => array_map(fn ($uri) => ['uri' => $uri], (array) $uris), ...$payload],
+            ['tracks' => array_map(fn($uri) => ['uri' => $uri], (array) $uris), ...$payload],
         );
     }
 
@@ -187,7 +188,7 @@ class Playlists extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'browse/featured-playlists',
             mappingClass: Playlist::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
             entryKey: 'playlists'
         );
@@ -205,7 +206,7 @@ class Playlists extends SpotifyResource
         return PaginatedResults::make(
             endpoint: "browse/categories/{$id}/playlists",
             mappingClass: Playlist::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
             entryKey: 'playlists'
         );
@@ -218,11 +219,17 @@ class Playlists extends SpotifyResource
      *
      * @see https://developer.spotify.com/documentation/web-api/reference/get-playlist-cover
      *
-     * @return array<string, string|integer>
+     * @return array<Image>
      */
     public function coverImage(string $id): array
     {
-        return $this->client->get("playlists/{$id}/images");
+        $images = $this->client->get("playlists/{$id}/images");
+
+        if (empty($images)) {
+            return $images;
+        }
+
+        return array_map(fn($image) => new Image($image), $images);
     }
 
     /**

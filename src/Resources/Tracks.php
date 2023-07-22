@@ -43,7 +43,7 @@ class Tracks extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'tracks',
             mappingClass: Track::class,
-            client: $this->client,
+            factory: $this->client,
             payload: ['ids' => implode(',', array_filter($ids)), ...$payload],
             itemsKey: 'tracks',
         );
@@ -64,7 +64,7 @@ class Tracks extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'me/tracks',
             mappingClass: SavedTrack::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
         );
     }
@@ -126,7 +126,7 @@ class Tracks extends SpotifyResource
             return PaginatedResults::make(
                 endpoint: 'audio-features',
                 mappingClass: AudioFeature::class,
-                client: $this->client,
+                factory: $this->client,
                 payload: ['ids' => implode(',', array_filter((array) $id))],
                 itemsKey: 'audio_features'
             );
@@ -161,7 +161,7 @@ class Tracks extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'recommendations',
             mappingClass: Track::class,
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
             itemsKey: 'tracks'
         );

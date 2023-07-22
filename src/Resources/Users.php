@@ -91,7 +91,7 @@ class Users extends SpotifyResource
                 'tracks' => Track::class,
                 default => throw new ResourceNotFoundException()
             },
-            client: $this->client,
+            factory: $this->client,
             payload: $payload,
         );
     }
@@ -148,7 +148,7 @@ class Users extends SpotifyResource
         return PaginatedResults::make(
             endpoint: 'me/following',
             mappingClass: Artist::class,
-            client: $this->client,
+            factory: $this->client,
             payload: ['type' => $type, ...$payload],
             entryKey: 'artists',
         );
