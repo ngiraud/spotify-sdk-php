@@ -476,8 +476,6 @@ Tests are being written. Currently missing tests for:
 
 - Player
 - Search
-- Users
-- PaginatedResults
 
 ## Testing
 

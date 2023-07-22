@@ -1,0 +1,804 @@
+{
+    "items": [
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/15uNxh8omvRvH71kcdIe2r"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "chanson",
+                "french pop",
+                "french rock"
+            ],
+            "href": "https://api.spotify.com/v1/artists/15uNxh8omvRvH71kcdIe2r",
+            "id": "15uNxh8omvRvH71kcdIe2r",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6761610000e5ebc2c9be6d4869a21ee46d0848",
+                    "width": 640
+                },
+                {
+                    "height": 320,
+                    "url": "https://i.scdn.co/image/ab67616100005174c2c9be6d4869a21ee46d0848",
+                    "width": 320
+                },
+                {
+                    "height": 160,
+                    "url": "https://i.scdn.co/image/ab6761610000f178c2c9be6d4869a21ee46d0848",
+                    "width": 160
+                }
+            ],
+            "name": "Renaud",
+            "popularity": 56,
+            "type": "artist",
+            "uri": "spotify:artist:15uNxh8omvRvH71kcdIe2r"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2R57sY41L9XvGPiIgHOaYq"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "alternative metal",
+                "candy pop"
+            ],
+            "href": "https://api.spotify.com/v1/artists/2R57sY41L9XvGPiIgHOaYq",
+            "id": "2R57sY41L9XvGPiIgHOaYq",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6761610000e5eb78d17452007b49a5ed878006",
+                    "width": 640
+                },
+                {
+                    "height": 320,
+                    "url": "https://i.scdn.co/image/ab6761610000517478d17452007b49a5ed878006",
+                    "width": 320
+                },
+                {
+                    "height": 160,
+                    "url": "https://i.scdn.co/image/ab6761610000f17878d17452007b49a5ed878006",
+                    "width": 160
+                }
+            ],
+            "name": "The Pretty Reckless",
+            "popularity": 57,
+            "type": "artist",
+            "uri": "spotify:artist:2R57sY41L9XvGPiIgHOaYq"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4boY3fDYvqcujNmLZpQdbc"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "french oi",
+                "french punk",
+                "french rock"
+            ],
+            "href": "https://api.spotify.com/v1/artists/4boY3fDYvqcujNmLZpQdbc",
+            "id": "4boY3fDYvqcujNmLZpQdbc",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6761610000e5eb23d3ee3860708bfa54599cdf",
+                    "width": 640
+                },
+                {
+                    "height": 320,
+                    "url": "https://i.scdn.co/image/ab6761610000517423d3ee3860708bfa54599cdf",
+                    "width": 320
+                },
+                {
+                    "height": 160,
+                    "url": "https://i.scdn.co/image/ab6761610000f17823d3ee3860708bfa54599cdf",
+                    "width": 160
+                }
+            ],
+            "name": "Bérurier Noir",
+            "popularity": 37,
+            "type": "artist",
+            "uri": "spotify:artist:4boY3fDYvqcujNmLZpQdbc"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/07XSN3sPlIlB2L2XNcTwJw"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "glam rock",
+                "hard rock",
+                "rock"
+            ],
+            "href": "https://api.spotify.com/v1/artists/07XSN3sPlIlB2L2XNcTwJw",
+            "id": "07XSN3sPlIlB2L2XNcTwJw",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6761610000e5eb4e85269a1f35917eddeadefd",
+                    "width": 640
+                },
+                {
+                    "height": 320,
+                    "url": "https://i.scdn.co/image/ab676161000051744e85269a1f35917eddeadefd",
+                    "width": 320
+                },
+                {
+                    "height": 160,
+                    "url": "https://i.scdn.co/image/ab6761610000f1784e85269a1f35917eddeadefd",
+                    "width": 160
+                }
+            ],
+            "name": "KISS",
+            "popularity": 70,
+            "type": "artist",
+            "uri": "spotify:artist:07XSN3sPlIlB2L2XNcTwJw"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/23wr9RJZg0PmYvVFyNkQ4j"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "blues rock",
+                "british blues",
+                "electric blues"
+            ],
+            "href": "https://api.spotify.com/v1/artists/23wr9RJZg0PmYvVFyNkQ4j",
+            "id": "23wr9RJZg0PmYvVFyNkQ4j",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6761610000e5eb445df6e3ccdb1684b75ab7b6",
+                    "width": 640
+                },
+                {
+                    "height": 320,
+                    "url": "https://i.scdn.co/image/ab67616100005174445df6e3ccdb1684b75ab7b6",
+                    "width": 320
+                },
+                {
+                    "height": 160,
+                    "url": "https://i.scdn.co/image/ab6761610000f178445df6e3ccdb1684b75ab7b6",
+                    "width": 160
+                }
+            ],
+            "name": "Gary Moore",
+            "popularity": 55,
+            "type": "artist",
+            "uri": "spotify:artist:23wr9RJZg0PmYvVFyNkQ4j"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2cnMpRsOVqtPMfq7YiFE6K"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "album rock",
+                "classic rock",
+                "hard rock",
+                "rock"
+            ],
+            "href": "https://api.spotify.com/v1/artists/2cnMpRsOVqtPMfq7YiFE6K",
+            "id": "2cnMpRsOVqtPMfq7YiFE6K",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6761610000e5ebd8475001d2700686e1008dfb",
+                    "width": 640
+                },
+                {
+                    "height": 320,
+                    "url": "https://i.scdn.co/image/ab67616100005174d8475001d2700686e1008dfb",
+                    "width": 320
+                },
+                {
+                    "height": 160,
+                    "url": "https://i.scdn.co/image/ab6761610000f178d8475001d2700686e1008dfb",
+                    "width": 160
+                }
+            ],
+            "name": "Van Halen",
+            "popularity": 71,
+            "type": "artist",
+            "uri": "spotify:artist:2cnMpRsOVqtPMfq7YiFE6K"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2p2uE4i92Dn4DkThfoKIB9"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "avant-garde metal",
+                "breakcore",
+                "cybergrind",
+                "french metal",
+                "opera metal"
+            ],
+            "href": "https://api.spotify.com/v1/artists/2p2uE4i92Dn4DkThfoKIB9",
+            "id": "2p2uE4i92Dn4DkThfoKIB9",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6761610000e5ebdb993c56dbacfe91e00d550f",
+                    "width": 640
+                },
+                {
+                    "height": 320,
+                    "url": "https://i.scdn.co/image/ab67616100005174db993c56dbacfe91e00d550f",
+                    "width": 320
+                },
+                {
+                    "height": 160,
+                    "url": "https://i.scdn.co/image/ab6761610000f178db993c56dbacfe91e00d550f",
+                    "width": 160
+                }
+            ],
+            "name": "Igorrr",
+            "popularity": 43,
+            "type": "artist",
+            "uri": "spotify:artist:2p2uE4i92Dn4DkThfoKIB9"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3e7awlrlDSwF3iM0WBjGMp"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "girl group",
+                "pop",
+                "talent show",
+                "uk pop"
+            ],
+            "href": "https://api.spotify.com/v1/artists/3e7awlrlDSwF3iM0WBjGMp",
+            "id": "3e7awlrlDSwF3iM0WBjGMp",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6761610000e5eb08cd53940cbf5813ee5fe565",
+                    "width": 640
+                },
+                {
+                    "height": 320,
+                    "url": "https://i.scdn.co/image/ab6761610000517408cd53940cbf5813ee5fe565",
+                    "width": 320
+                },
+                {
+                    "height": 160,
+                    "url": "https://i.scdn.co/image/ab6761610000f17808cd53940cbf5813ee5fe565",
+                    "width": 160
+                }
+            ],
+            "name": "Little Mix",
+            "popularity": 72,
+            "type": "artist",
+            "uri": "spotify:artist:3e7awlrlDSwF3iM0WBjGMp"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/7Ey4PD4MYsKc5I2dolUwbH"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "album rock",
+                "classic rock",
+                "hard rock",
+                "rock"
+            ],
+            "href": "https://api.spotify.com/v1/artists/7Ey4PD4MYsKc5I2dolUwbH",
+            "id": "7Ey4PD4MYsKc5I2dolUwbH",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6761610000e5ebc5733401b4689b2064458e7d",
+                    "width": 640
+                },
+                {
+                    "height": 320,
+                    "url": "https://i.scdn.co/image/ab67616100005174c5733401b4689b2064458e7d",
+                    "width": 320
+                },
+                {
+                    "height": 160,
+                    "url": "https://i.scdn.co/image/ab6761610000f178c5733401b4689b2064458e7d",
+                    "width": 160
+                }
+            ],
+            "name": "Aerosmith",
+            "popularity": 74,
+            "type": "artist",
+            "uri": "spotify:artist:7Ey4PD4MYsKc5I2dolUwbH"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/356c8AN5YWKvz86B4Sb1yf"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "alternative roots rock",
+                "modern blues rock"
+            ],
+            "href": "https://api.spotify.com/v1/artists/356c8AN5YWKvz86B4Sb1yf",
+            "id": "356c8AN5YWKvz86B4Sb1yf",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6761610000e5eb70ce062002464f966aa7f937",
+                    "width": 640
+                },
+                {
+                    "height": 320,
+                    "url": "https://i.scdn.co/image/ab6761610000517470ce062002464f966aa7f937",
+                    "width": 320
+                },
+                {
+                    "height": 160,
+                    "url": "https://i.scdn.co/image/ab6761610000f17870ce062002464f966aa7f937",
+                    "width": 160
+                }
+            ],
+            "name": "Rival Sons",
+            "popularity": 53,
+            "type": "artist",
+            "uri": "spotify:artist:356c8AN5YWKvz86B4Sb1yf"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/6PAt558ZEZl0DmdXlnjMgD"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "album rock",
+                "blues rock",
+                "classic rock",
+                "electric blues",
+                "mellow gold",
+                "rock",
+                "singer-songwriter",
+                "soft rock"
+            ],
+            "href": "https://api.spotify.com/v1/artists/6PAt558ZEZl0DmdXlnjMgD",
+            "id": "6PAt558ZEZl0DmdXlnjMgD",
+            "images": [
+                {
+                    "height": 1000,
+                    "url": "https://i.scdn.co/image/ab6772690000c46ca60e8f215103f6841d8a83f0",
+                    "width": 1000
+                },
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6772690000dd22a60e8f215103f6841d8a83f0",
+                    "width": 640
+                },
+                {
+                    "height": 200,
+                    "url": "https://i.scdn.co/image/ab6772690000bac3a60e8f215103f6841d8a83f0",
+                    "width": 200
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67726900008f74a60e8f215103f6841d8a83f0",
+                    "width": 64
+                }
+            ],
+            "name": "Eric Clapton",
+            "popularity": 69,
+            "type": "artist",
+            "uri": "spotify:artist:6PAt558ZEZl0DmdXlnjMgD"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4zYQWYmtimAEmI6WWEzGfO"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "alternative metal",
+                "alternative rock",
+                "modern blues rock",
+                "modern rock",
+                "rock",
+                "supergroup"
+            ],
+            "href": "https://api.spotify.com/v1/artists/4zYQWYmtimAEmI6WWEzGfO",
+            "id": "4zYQWYmtimAEmI6WWEzGfO",
+            "images": [
+                {
+                    "height": 1500,
+                    "url": "https://i.scdn.co/image/7e78d34c33af8c3555f8eec0f8823cbde00ae2cc",
+                    "width": 1000
+                },
+                {
+                    "height": 960,
+                    "url": "https://i.scdn.co/image/a1792d5eb9cee6c5faaee1b8aafa1cb7205641ca",
+                    "width": 640
+                },
+                {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/88810528b3dbeb136c03b1db10947e74075695ad",
+                    "width": 200
+                },
+                {
+                    "height": 96,
+                    "url": "https://i.scdn.co/image/5f1e9c2ef08edcebf4c028c85fccc6d86d7e22ce",
+                    "width": 64
+                }
+            ],
+            "name": "Them Crooked Vultures",
+            "popularity": 51,
+            "type": "artist",
+            "uri": "spotify:artist:4zYQWYmtimAEmI6WWEzGfO"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/02uYdhMhCgdB49hZlYRm9o"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "garage rock",
+                "garage rock revival",
+                "modern blues rock",
+                "palm desert scene"
+            ],
+            "href": "https://api.spotify.com/v1/artists/02uYdhMhCgdB49hZlYRm9o",
+            "id": "02uYdhMhCgdB49hZlYRm9o",
+            "images": [
+                {
+                    "height": 1000,
+                    "url": "https://i.scdn.co/image/9084649cb287a4cd52b6955fe9f5dd647fc4e431",
+                    "width": 1000
+                },
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/40d4d2ecbefa83067c6e4c1575f59682fcc55a01",
+                    "width": 640
+                },
+                {
+                    "height": 200,
+                    "url": "https://i.scdn.co/image/c5bda32bcaefd65b004fec303555900f8be53fec",
+                    "width": 200
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/4fd99c3f72971a5b67b653155fe00caf9289ba8c",
+                    "width": 64
+                }
+            ],
+            "name": "Eagles Of Death Metal",
+            "popularity": 51,
+            "type": "artist",
+            "uri": "spotify:artist:02uYdhMhCgdB49hZlYRm9o"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0FeWKiZSwBRdGzqeCdlH1a"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "modern blues",
+                "modern blues rock"
+            ],
+            "href": "https://api.spotify.com/v1/artists/0FeWKiZSwBRdGzqeCdlH1a",
+            "id": "0FeWKiZSwBRdGzqeCdlH1a",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6761610000e5eb38d802fb3518b75a8b3fb1be",
+                    "width": 640
+                },
+                {
+                    "height": 320,
+                    "url": "https://i.scdn.co/image/ab6761610000517438d802fb3518b75a8b3fb1be",
+                    "width": 320
+                },
+                {
+                    "height": 160,
+                    "url": "https://i.scdn.co/image/ab6761610000f17838d802fb3518b75a8b3fb1be",
+                    "width": 160
+                }
+            ],
+            "name": "Marcus King",
+            "popularity": 51,
+            "type": "artist",
+            "uri": "spotify:artist:0FeWKiZSwBRdGzqeCdlH1a"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2e53aHBQdCMKWqHDuyJsjC"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "album rock",
+                "blues rock",
+                "british blues",
+                "classic rock",
+                "country rock",
+                "hard rock",
+                "progressive rock"
+            ],
+            "href": "https://api.spotify.com/v1/artists/2e53aHBQdCMKWqHDuyJsjC",
+            "id": "2e53aHBQdCMKWqHDuyJsjC",
+            "images": [
+                {
+                    "height": 1000,
+                    "url": "https://i.scdn.co/image/b0710c8d0247d0710cfb5a2cd153908dc42ca08f",
+                    "width": 1000
+                },
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/1397bb90239b7322377b6933f280283ed2e0bed2",
+                    "width": 640
+                },
+                {
+                    "height": 200,
+                    "url": "https://i.scdn.co/image/1e9fb2235b246cfd756b134093521da17d85bb24",
+                    "width": 200
+                },
+                {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/c45d62957d25b36dc6d9783516480cb2ec89da53",
+                    "width": 64
+                }
+            ],
+            "name": "Free",
+            "popularity": 55,
+            "type": "artist",
+            "uri": "spotify:artist:2e53aHBQdCMKWqHDuyJsjC"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/49DW3KvkyjHO35mK1JnSyS"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "album rock",
+                "hard rock",
+                "new wave",
+                "rock"
+            ],
+            "href": "https://api.spotify.com/v1/artists/49DW3KvkyjHO35mK1JnSyS",
+            "id": "49DW3KvkyjHO35mK1JnSyS",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6761610000e5eb18eafefc1b9bbb2a62a5d636",
+                    "width": 640
+                },
+                {
+                    "height": 320,
+                    "url": "https://i.scdn.co/image/ab6761610000517418eafefc1b9bbb2a62a5d636",
+                    "width": 320
+                },
+                {
+                    "height": 160,
+                    "url": "https://i.scdn.co/image/ab6761610000f17818eafefc1b9bbb2a62a5d636",
+                    "width": 160
+                }
+            ],
+            "name": "The Cult",
+            "popularity": 58,
+            "type": "artist",
+            "uri": "spotify:artist:49DW3KvkyjHO35mK1JnSyS"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/7CHilrn81OdYjkh4uSVnYM"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "alternative metal",
+                "alternative rock",
+                "glam metal",
+                "grunge",
+                "hard rock",
+                "nu metal",
+                "post-grunge",
+                "rock",
+                "supergroup"
+            ],
+            "href": "https://api.spotify.com/v1/artists/7CHilrn81OdYjkh4uSVnYM",
+            "id": "7CHilrn81OdYjkh4uSVnYM",
+            "images": [
+                {
+                    "height": 667,
+                    "url": "https://i.scdn.co/image/3d41008a8274e878d45d90bfbe3d9325e5b5bc09",
+                    "width": 1000
+                },
+                {
+                    "height": 427,
+                    "url": "https://i.scdn.co/image/687b34aa631e526150b8bdabbe51267bf48bc45d",
+                    "width": 640
+                },
+                {
+                    "height": 133,
+                    "url": "https://i.scdn.co/image/d04b17b89de96bf5ef597feeecc0414b20c84be4",
+                    "width": 200
+                },
+                {
+                    "height": 43,
+                    "url": "https://i.scdn.co/image/ea0d3dbe691e36996b0c6b4bffc9b0d5cc005fbe",
+                    "width": 64
+                }
+            ],
+            "name": "Velvet Revolver",
+            "popularity": 52,
+            "type": "artist",
+            "uri": "spotify:artist:7CHilrn81OdYjkh4uSVnYM"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1kcWyDvrlPUbyxkIoM6pAV"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "blues",
+                "blues rock",
+                "british blues",
+                "electric blues"
+            ],
+            "href": "https://api.spotify.com/v1/artists/1kcWyDvrlPUbyxkIoM6pAV",
+            "id": "1kcWyDvrlPUbyxkIoM6pAV",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6761610000e5ebe21794f3b8bc495ce47ca3ac",
+                    "width": 640
+                },
+                {
+                    "height": 320,
+                    "url": "https://i.scdn.co/image/ab67616100005174e21794f3b8bc495ce47ca3ac",
+                    "width": 320
+                },
+                {
+                    "height": 160,
+                    "url": "https://i.scdn.co/image/ab6761610000f178e21794f3b8bc495ce47ca3ac",
+                    "width": 160
+                }
+            ],
+            "name": "Rory Gallagher",
+            "popularity": 49,
+            "type": "artist",
+            "uri": "spotify:artist:1kcWyDvrlPUbyxkIoM6pAV"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1tpXaFf2F55E7kVJON4j4G"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "garage rock",
+                "garage rock revival",
+                "modern blues rock",
+                "permanent wave"
+            ],
+            "href": "https://api.spotify.com/v1/artists/1tpXaFf2F55E7kVJON4j4G",
+            "id": "1tpXaFf2F55E7kVJON4j4G",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6761610000e5eb671e6bba4b119e7b9675f1a4",
+                    "width": 640
+                },
+                {
+                    "height": 320,
+                    "url": "https://i.scdn.co/image/ab67616100005174671e6bba4b119e7b9675f1a4",
+                    "width": 320
+                },
+                {
+                    "height": 160,
+                    "url": "https://i.scdn.co/image/ab6761610000f178671e6bba4b119e7b9675f1a4",
+                    "width": 160
+                }
+            ],
+            "name": "Black Rebel Motorcycle Club",
+            "popularity": 50,
+            "type": "artist",
+            "uri": "spotify:artist:1tpXaFf2F55E7kVJON4j4G"
+        },
+        {
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4DToQR3aKrHQSSRzSz8Nzt"
+            },
+            "followers": {
+                "href": null,
+                "total": 0
+            },
+            "genres": [
+                "alternative rock",
+                "garage rock",
+                "garage rock revival",
+                "modern rock",
+                "rock",
+                "swedish garage rock",
+                "swedish hard rock",
+                "swedish indie rock"
+            ],
+            "href": "https://api.spotify.com/v1/artists/4DToQR3aKrHQSSRzSz8Nzt",
+            "id": "4DToQR3aKrHQSSRzSz8Nzt",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab6761610000e5eb483be6edf9ba0ded3446c696",
+                    "width": 640
+                },
+                {
+                    "height": 320,
+                    "url": "https://i.scdn.co/image/ab67616100005174483be6edf9ba0ded3446c696",
+                    "width": 320
+                },
+                {
+                    "height": 160,
+                    "url": "https://i.scdn.co/image/ab6761610000f178483be6edf9ba0ded3446c696",
+                    "width": 160
+                }
+            ],
+            "name": "The Hives",
+            "popularity": 60,
+            "type": "artist",
+            "uri": "spotify:artist:4DToQR3aKrHQSSRzSz8Nzt"
+        }
+    ],
+    "total": 50,
+    "limit": 20,
+    "offset": 0,
+    "href": "https://api.spotify.com/v1/me/top/artists",
+    "next": "https://api.spotify.com/v1/me/top/artists?limit=20&offset=20",
+    "previous": null
+}
