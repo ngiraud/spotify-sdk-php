@@ -34,4 +34,4 @@ jobs:
         run: composer phpstan
 
       - name: Fix PHP code style issues
-        uses: aglipanci/laravel-pint-action@2.3.0
+        uses: aglipanci/laravel-pint-action@2.3.1
